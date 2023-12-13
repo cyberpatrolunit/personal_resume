@@ -1,7 +1,7 @@
 :root {
   font-size: 62.5%;
 
-  --background: rgb(17, 17, 17);
+  --background: rgba(17, 17, 17, 0);
   --bg-opaque: rgba(17, 17, 17, 0.25);
   --background-light: rgb(35, 35, 35);
   --background-dark: rgb(8, 8, 8);
@@ -40,6 +40,12 @@ body {
 body {
   color: var(--text);
   background: var(--background);
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 a {
