@@ -16,8 +16,9 @@
 
 .title {
   font-size: var(--text-2xl);
-  font-weight: 900;
+  font-weight: 700;
   line-height: 1.1;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.7), 0 0 20px rgba(255, 255, 255, 0.5);
 
   span {
     color: var(--brand);
@@ -39,6 +40,7 @@
   line-height: 1.1;
   margin-top: 1.6rem;
   font-weight: 200;
+  
 
   span {
     font-weight: bold;
@@ -56,4 +58,6 @@
   margin: 2.4rem 0;
   max-width: 420px;
   font-weight: 200;
+  text-shadow: 0 0 4px rgba(255, 255, 255, 0.7), 0 0 20px rgba(255, 255, 255, 0.9);
+
 }

@@ -16,23 +16,26 @@ export const Stats = () => {
             <span className="chip">JavaScript</span>
             <span className="chip">TypeScript</span>
             <span className="chip">Python</span>
-            <span className="chip">C++</span>
-            <span className="chip">Rust</span>
+            <span className="chip">Docker</span>
+            <span className="chip">ThreeJS</span>
+            <span className="chip">p5js</span>
             <span className="chip">HTML</span>
             <span className="chip">CSS</span>
             <span className="chip">SCSS</span>
-            <span className="chip">Tailwind</span>
+            <span className="chip">Git</span>
             <span className="chip">React</span>
             <span className="chip">NextJs</span>
-            <span className="chip">Redux</span>
-            <span className="chip">Redis</span>
+            <span className="chip">VSCode</span>
+            <span className="chip">Spline</span>
             <span className="chip">NodeJS</span>
-            <span className="chip">Express</span>
-            <span className="chip">MongoDB</span>
-            <span className="chip">MySql</span>
-            <span className="chip">Docker</span>
-            <span className="chip">Prisma</span>
-            <span className="chip">kubernetes</span>
+            <span className="chip">Vercel</span>
+            <span className="chip">Adobe Suite</span>
+            <span className="chip">WYSIWYG</span>
+            <span className="chip">Ableton</span>
+            <span className="chip">Unreal</span>
+            <span className="chip">TouchDesigner</span>
+            <span className="chip">Blender</span>
+            <span className="chip">MAX/MSP</span>
           </div>
         </div>
       </Reveal>
@@ -43,14 +46,14 @@ export const Stats = () => {
             <span>Others</span>
           </h4>
           <div className={styles.statGrid}>
-            <span className="chip">Linux</span>
-            <span className="chip">Vs Code</span>
-            <span className="chip">Git</span>
-            <span className="chip">Github</span>
-            <span className="chip">Vercel</span>
-            <span className="chip">Netlify</span>
-            <span className="chip">Railway</span>
-            <span className="chip">Postman</span>
+            <span className="chip">PreVisualization</span>
+            <span className="chip">Lighting Design</span>
+            <span className="chip">CAD</span>
+            <span className="chip">Additive Manufacturing</span>
+            <span className="chip">Rapid Prototyping</span>
+            <span className="chip">Skiing</span>
+            <span className="chip">Biking</span>
+            <span className="chip">Custom Drone Builds</span>
           </div>
         </div>
       </Reveal>
