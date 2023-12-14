@@ -1,7 +1,7 @@
 :root {
   font-size: 62.5%;
 
-  --background: rgba(17, 17, 17, 0);
+  --background: rgba(17, 17, 17);
   --bg-opaque: rgba(17, 17, 17, 0.25);
   --background-light: rgb(35, 35, 35);
   --background-dark: rgb(8, 8, 8);
