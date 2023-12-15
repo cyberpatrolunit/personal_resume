@@ -21,7 +21,7 @@
     cursor: pointer;
     display: none;
     svg{
-      color: red;
+      color: var(--brand);
       font-size: 40px;
     }
     @media (max-width:900px) {
