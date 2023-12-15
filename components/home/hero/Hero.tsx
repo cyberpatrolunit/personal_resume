@@ -1,6 +1,6 @@
 import { Reveal } from "@/components/utils/Reveal";
 // import { DotGrid } from "./DotGrid";
-// import { Planet } from "./Planet";
+import Icon from "./Icon";
 import styles from "./hero.module.scss";
 import { OutlineButton } from "../../buttons/OutlineButton";
 import ReactTypingEffect from 'react-typing-effect';
@@ -31,7 +31,7 @@ export const Hero = () => {
           concepts into interactive tapestries for the 
           digital age.
             <br />
-            Let&apos;s connect!
+          Let&apos;s connect!
           </p>
         </Reveal>
         <Reveal>
@@ -42,7 +42,7 @@ export const Hero = () => {
           </OutlineButton>
         </Reveal>
       </div>
-      
+    <Icon />
     </section>
   );
 };

@@ -12,13 +12,18 @@
 
   width: fit-content;
   margin: 4.8rem 0;
+  //border: 2px solid #ffffff; // Choose your border color
+  //border-radius: 0%; // Optional: if you want rounded corners
 }
 
 .title {
   font-size: var(--text-2xl);
   font-weight: 700;
   line-height: 1.1;
-  text-shadow: 0 0 8px rgba(255, 255, 255, 0.7), 0 0 20px rgba(255, 255, 255, 0.5);
+  padding: 1.5rem;
+  text-shadow: 0 0 4px rgb(255, 255, 255), 0 0 20px rgba(255, 255, 255, 0.5);
+  border: 2px solid #ffffff; // Choose your border color
+  border-radius: 0px; // Optional: if you want rounded corners
 
   span {
     color: var(--brand);
@@ -38,8 +43,12 @@
 .subTitle {
   font-size: var(--text-lg);
   line-height: 1.1;
-  margin-top: 1.6rem;
+  margin-top: -1rem;
+  margin-left: -.1rem;
+  padding: 1.9rem;
   font-weight: 200;
+  border: 2px solid #ffffff; // Choose your border color
+  border-radius: 0px; // Optional: if you want rounded corners
   
 
   span {
@@ -55,9 +64,12 @@
 }
 
 .aboutCopy {
-  margin: 2.4rem 0;
-  max-width: 420px;
+  margin: 0.5rem;
+  padding: 1.4rem;
+  max-width: 460px;
   font-weight: 200;
-  text-shadow: 0 0 4px rgba(255, 255, 255, 0.7), 0 0 20px rgba(255, 255, 255, 0.9);
+  //text-shadow: 0 0 4px rgba(255, 255, 255, 255), 0 0 20px rgba(255, 255, 255, 0.9);
+  //border: 2px solid #ffffff;
+  //border-radius: 0px;
 
 }

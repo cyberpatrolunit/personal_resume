@@ -3,8 +3,8 @@ import styles from "./dotgrid.module.scss";
 import anime from "animejs";
 
 export const DotGrid = () => {
-  const GRID_WIDTH = 30;
-  const GRID_HEIGHT = 30;
+  const GRID_WIDTH = 10;
+  const GRID_HEIGHT = 10;
 
   const animateDots = (startIndex) => {
     anime({

@@ -1,12 +1,17 @@
 .dotGrid {
   position: absolute;
   top: 120px;
-  bottom: 300px;
+  bottom: 120px;
   right: 4rem;
-  max-width: 75%;
   display: grid;
+  width: 400px; // Fixed width
+  height: 400px; // Fixed height
+  max-width: 100%; // You might want to adjust or remove this
   z-index: 0;
+  border: 2px solid #ffffff; // Choose your border color
+  border-radius: 28px; // Optional: if you want rounded corners
 }
+
 
 .dotWrapper {
   padding: 0.25rem;
