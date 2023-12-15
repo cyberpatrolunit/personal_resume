@@ -31,14 +31,13 @@ export const Hero = () => {
           concepts into interactive tapestries for the 
           digital age.
             <br />
-          Let&apos;s connect!
           </p>
         </Reveal>
         <Reveal>
           <OutlineButton
             onClick={() => document.getElementById("contact")?.scrollIntoView()}
           >
-            Contact me
+            Let&apos;s Talk!
           </OutlineButton>
         </Reveal>
       </div>

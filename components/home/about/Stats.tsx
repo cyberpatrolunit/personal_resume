@@ -33,7 +33,7 @@ export const Stats = () => {
             <span className="chip">Adobe Suite</span>
             <span className="chip">WYSIWYG</span>
             <span className="chip">Ableton</span>
-            <span className="chip">Unreal</span>
+            <span className="chip">Unreal Engine</span>
             <span className="chip">TouchDesigner</span>
             <span className="chip">Blender</span>
             <span className="chip">MAX/MSP</span>
