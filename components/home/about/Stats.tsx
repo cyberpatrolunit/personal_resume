@@ -18,6 +18,7 @@ export const Stats = () => {
             <span className="chip">Python</span>
             <span className="chip">Docker</span>
             <span className="chip">ThreeJS</span>
+            <span className="chip">GLSL</span>
             <span className="chip">p5js</span>
             <span className="chip">HTML</span>
             <span className="chip">CSS</span>
