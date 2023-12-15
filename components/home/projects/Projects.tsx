@@ -27,29 +27,44 @@ const projects = [
       "As the Lead Technical Director and Ventuz programmer for the Google Pier 57 site, I spearheaded a groundbreaking project to integrate generative visuals across a multitude of LED screens within the building. The primary objective was to create a dynamic, real-time, content-driven wayfinding system, controllable via a web-based CMS, enhancing the visitor experience with both functionality and aesthetic appeal.",
     modalContent: (
       <>
-        <p>
-        Innovative Approach and Technical Mastery
+        <p style={{ fontWeight: 'bold', fontSize: 'larger' }}>
+        Innovative Approach and Technical Mastery:
         </p>
         <p>
-          I navigated the complexity of managing and tracking multiple code repositories and configurations, tailored to various spaces and screen sizes. This required meticulous organization and a deep understanding of real-time systems. The challenge was amplified by the diverse requirements of each space, necessitating a flexible and scalable solution.
+          I navigated the complexity of managing and tracking multiple code repositories and configurations, 
+          tailored to various spaces and screen sizes. This required meticulous organization and a deep 
+          understanding of real-time systems. The challenge was amplified by the diverse requirements of each 
+          space, necessitating a flexible and scalable solution.
+        </p>
+        <p style={{ fontWeight: 'bold', fontSize: 'larger' }}>
+        Collaboration and Leadership:
         </p>
         <p>
-        Collaboration and Leadership
+        My role involved close collaboration with the design team, where I played a pivotal role in setting 
+        up templates and repositories. This ensured a streamlined workflow, facilitating seamless access and 
+        implementation by our development team. My approach fostered a collaborative environment, bridging the 
+        gap between technical and design aspects, and ensuring a cohesive execution of the project vision.
+        </p>
+        <p style={{ fontWeight: 'bold', fontSize: 'larger' }}>
+        Technology Integration:
         </p>
         <p>
-        My role involved close collaboration with the design team, where I played a pivotal role in setting up templates and repositories. This ensured a streamlined workflow, facilitating seamless access and implementation by our development team. My approach fostered a collaborative environment, bridging the gap between technical and design aspects, and ensuring a cohesive execution of the project vision.
+        Leveraging the capabilities of Google Cloud Platform and unified endpoint management utilities, I 
+        delivered a solution that was not only technically advanced but also highly integrated and user-friendly. 
+        This integration showcased my ability to utilize cutting-edge technology to meet complex project 
+        requirements.
+        </p>
+        <p style={{ fontWeight: 'bold', fontSize: 'larger' }}>
+        Outcome and Client Engagement:
         </p>
         <p>
-        Technology Integration
-        </p>
-        <p>
-        Leveraging the capabilities of Google Cloud Platform and unified endpoint management utilities, I delivered a solution that was not only technically advanced but also highly integrated and user-friendly. This integration showcased my ability to utilize cutting-edge technology to meet complex project requirements.
-        </p>
-        <p>
-        Outcome and Client Engagement
-        </p>
-        <p>
-        Working directly with the client, I was instrumental in incorporating design changes and revisions, ensuring that the final product aligned perfectly with Google's vision. The project culminated in extensive documentation and training for the operations team, facilitating a smooth transition and ongoing management. The final outcome is a testament to our team's ability to deliver a dynamic, real-time, content-driven wayfinding experience that allows Google to control the entire site. Through our programming, Google can schedule events, set preset generative looks, and upload custom media, thereby creating a cohesive and interactive experience throughout the building.
+        Working directly with the client, I was instrumental in incorporating design changes and revisions, 
+        ensuring that the final product aligned perfectly with Google's vision. The project culminated in 
+        extensive documentation and training for the operations team, facilitating a smooth transition and 
+        ongoing management. The final outcome is a testament to our team's ability to deliver a dynamic, 
+        real-time, content-driven wayfinding experience that allows Google to control the entire site. Through 
+        our programming, Google can schedule events, set preset generative looks, and upload custom media, 
+        thereby creating a cohesive and interactive experience throughout the building.
         </p>      
       </>
     ),
@@ -58,23 +73,59 @@ const projects = [
     title: "Adriatique: Projekt X",
     imgSrc: "/project-imgs/projektx/x-tri-image.png",
     code: "https://github.com/cyberpatrolunit",
-    projectLink: "https://immashiva.vercel.app/",
+    projectLink: "https://cyberpatrolunit.vercel.app/",
     tech: ["Creative Director", "Live Show Implementation"],
     description:
-      "Vermilion is a stunning portfolio template designed to showcase your creative work with style and sophistication. Built using the cutting-edge Next.js framework, this template offers lightning-fast page loading times and a smooth user experience.",
+      "A collaborative venture with the renowned DJ duo Adriatique, stands as a testament to my abilities as a Creative Director to transform artistic visions into tangible realities. This project was a harmonious blend of art, technology, and music, culminating in a modular sculpture that evolved visually across various live shows.",
     modalContent: (
       <>
-        <p>
-          Vermilion is an exceptional portfolio template designed to showcase your creative work in a stunning and dynamic way. The template is built using TypeScript, which provides static type checking and helps ensure your code is robust and error-free.
+        <p style={{ fontWeight: 'bold', fontSize: 'larger' }}>
+        Conceptualization and Collaboration:
         </p>
         <p>
-          Vermilion is built on the Next.js framework, which offers many benefits such as fast page loading times and server-side rendering. This ensures that your portfolio website is performant, responsive, and delivers an excellent user experience.
+        The genesis of Projekt X originated from Adriatique’s visionary ideas. My role was pivotal in assembling 
+        a skilled team to materialize this concept. My idea was to build a sculpture where it's design was inherently 
+        modular, allowing for the application of different materials to its outer facets, thereby offering varied 
+        aesthetics for different live events. This approach not only enhanced its visual appeal but will continue to 
+        extended its relevance and impact over time.
+        </p>
+        <p style={{ fontWeight: 'bold', fontSize: 'larger' }}>
+        Technical Ingenuity and Safety Measures:
         </p>
         <p>
-          The template also integrates with EmailJS, a simple and reliable email delivery service that allows you to send messages via the contact form.
+        A critical aspect of the project was engineering the X for utmost safety, especially considering its use 
+        above live audiences. Collaborating with an engineering firm, we meticulously modeled the structure to withstand 
+        wind loads and ensure secure hoisting. Balancing safety, weight considerations, and the need for portability for 
+        touring purposes was a significant challenge. The integration of LEDs into the sculpture was carefully planned to 
+        align with these safety and design parameters.
+        </p>
+        <p style={{ fontWeight: 'bold', fontSize: 'larger' }}>
+        Dynamic Collaboration Across Borders:
         </p>
         <p>
-          Overall, Vermilion is an outstanding portfolio template that combines the latest technologies and libraries to deliver a modern, professional, and highly effective website for showcasing your creative work.
+        Working with a geographically dispersed team, including artists in Switzerland and our team in Portland, Oregon, 
+        necessitated strategic planning for weekly meetings. This cross-continental collaboration highlighted our ability 
+        to overcome time zone challenges and maintain effective communication and coordination throughout the project's 
+        timeline.
+        </p>
+        <p style={{ fontWeight: 'bold', fontSize: 'larger' }}>
+        Artistic Vision and Emotional Resonance:
+        </p>
+        <p>
+        At its core, Projekt X symbolizes the crossroads of interaction and creativity. Its reflective chrome powder 
+        coating not only adds aesthetic value but also enhances the visual experience with laser mapping and light 
+        caustics. We employed various previsualization solutions, allowing us to experiment with the 3D model in virtual 
+        stage designs before physical construction.
+        </p>
+        <p style={{ fontWeight: 'bold', fontSize: 'larger' }}>
+        Impact and Reception:
+        </p>
+        <p>
+        Debuting in December 2022 in Zurich, Projekt X has since journeyed globally with Adriatique, becoming an iconic 
+        centerpiece and identity for their live shows. This project holds special significance for me, not only 
+        professionally as a creative director but also personally, given my friendship with the artists. Crafting techno 
+        art that comes alive in front of large audiences, enhancing the energy and experience of Adriatique's live shows, 
+        has been an immensely rewarding and fulfilling experience.
         </p>
       </>
     ),
@@ -108,7 +159,7 @@ const projects = [
   {
     title: "Google: St. John's Terminal",
     imgSrc: "/project-imgs/Synthia.png",
-    code: "https://github.com/ShivaBhattacharjee/Synthia",
+    code: "https://github.com/cyberpatrolunit",
     projectLink: "",
     tech: ["Rust"],
     description:
