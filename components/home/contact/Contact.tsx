@@ -58,24 +58,27 @@ export const Contact = () => {
             </h4>
           </Reveal>
           <Reveal width="100%">
-            <p className={styles.contactCopy}>
-              Shoot me an email if you want to connect! 
-            </p>
-            <p className={styles.contactCopy}>
-              You can also find me on{" "}
-              <Link
-                href="https://www.instagram.com/cyberpatrolunit/"
-                target="_blank"
-                rel="nofollow"
-              >
-                Instagram
-              </Link>{" "}
-              or{" "}
-              <Link href="https://www.twitter.com/cyberpatrolunit" target="_blank" rel="nofollow">
-                Twitter
-              </Link>{" "}
-              if that&apos;s more your jam.
-            </p>
+            <div>
+              {/* Multiple children go here */}
+              <p className={styles.contactCopy}>
+                Shoot me an email if you want to connect! 
+              </p>
+              <p className={styles.contactCopy}>
+                You can also find me on{" "}
+                <Link
+                  href="https://www.instagram.com/cyberpatrolunit/"
+                  target="_blank"
+                  rel="nofollow"
+                >
+                  Instagram
+                </Link>{" "}
+                or{" "}
+                <Link href="https://www.twitter.com/cyberpatrolunit" target="_blank" rel="nofollow">
+                  Twitter
+                </Link>{" "}
+                if that&apos;s more your jam.
+              </p>
+            </div>
           </Reveal>
           <Reveal width="100%">
             <Link href="mailto:bryant@futuretenseindustries.com">
@@ -102,10 +105,9 @@ export const Contact = () => {
                 Send Message
               </OutlineButton>
             </form>
-
           </Reveal>
         </div>
       </section>
     </>
   );
-};
+}
