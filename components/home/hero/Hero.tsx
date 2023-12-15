@@ -1,5 +1,6 @@
 import { Reveal } from "@/components/utils/Reveal";
-import { DotGrid } from "./DotGrid";
+// import { DotGrid } from "./DotGrid";
+// import { Planet } from "./Planet";
 import styles from "./hero.module.scss";
 import { OutlineButton } from "../../buttons/OutlineButton";
 import ReactTypingEffect from 'react-typing-effect';
@@ -41,7 +42,7 @@ export const Hero = () => {
           </OutlineButton>
         </Reveal>
       </div>
-      <DotGrid />
+      
     </section>
   );
 };

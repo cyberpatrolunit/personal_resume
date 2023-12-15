@@ -59,26 +59,29 @@ export const Contact = () => {
           </Reveal>
           <Reveal width="100%">
             <p className={styles.contactCopy}>
-              Shoot me an email if you want to connect! You can also find me on{" "}
+              Shoot me an email if you want to connect! 
+            </p>
+            <p className={styles.contactCopy}>
+              You can also find me on{" "}
               <Link
-                href="https://www.instagram.com/immashiva_/"
+                href="https://www.instagram.com/cyberpatrolunit/"
                 target="_blank"
                 rel="nofollow"
               >
                 Instagram
               </Link>{" "}
               or{" "}
-              <Link href="https://www.twitter.com/sh17va" target="_blank" rel="nofollow">
+              <Link href="https://www.twitter.com/cyberpatrolunit" target="_blank" rel="nofollow">
                 Twitter
               </Link>{" "}
-              if that&apos;s more your speed.
+              if that&apos;s more your jam.
             </p>
           </Reveal>
           <Reveal width="100%">
-            <Link href="mailto:heyitsshiva@protonmain.me">
+            <Link href="mailto:bryant@futuretenseindustries.com">
               <div className={styles.contactEmail}>
                 <AiFillMail size="2.4rem" />
-                <span>heyitsshiva@protonmail.me</span>
+                <span>bryant@futuretenseindustries.com</span>
               </div>
             </Link>
           </Reveal>

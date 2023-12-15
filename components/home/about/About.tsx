@@ -11,7 +11,7 @@ export const About = () => {
         <div>
           <Reveal>
             <p className={`${styles.aboutText}`}>
-              <span>Howdy</span> there! My name is Bryant CPU Place, and I&apos;m a highly 
+              <span>Howdy!</span>My name is Bryant CPU Place, and I&apos;m a highly 
               accomplished creative technologist with over 13 years of
 experience in the live entertainment and permanent installation industries. I have a strong
 track record of effectively leading projects and teams, and have consistently demonstrated an

@@ -36,6 +36,7 @@ export const Stats = () => {
             <span className="chip">TouchDesigner</span>
             <span className="chip">Blender</span>
             <span className="chip">MAX/MSP</span>
+            <span className="chip">Fleet Deployment</span>
           </div>
         </div>
       </Reveal>
@@ -54,6 +55,7 @@ export const Stats = () => {
             <span className="chip">Skiing</span>
             <span className="chip">Biking</span>
             <span className="chip">Custom Drone Builds</span>
+            <span className="chip">AI Technology</span>
           </div>
         </div>
       </Reveal>

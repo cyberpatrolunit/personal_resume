@@ -10,7 +10,7 @@ export default function home() {
     <>
       <Head>
         <title>CPU | Creative Technologist, Director, Artist, Engineer</title>
-        <meta name="description" content="I am a full stack web developer experienced in mern stack " />
+        <meta name="description" content="I am a creative technologist with 13 years of delivering exceptional installations." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/shivalogo.ico" />
       </Head>

@@ -5,7 +5,7 @@ import styles from "./projects.module.scss";
 export const Projects = () => {
   return (
     <section className="section-wrapper" id="projects">
-      <SectionHeader title="Projects" dir="r" />
+      <SectionHeader title="ExpWorks" dir="r" />
 
       <div className={styles.projects}>
         {projects.map((project) => {
@@ -18,39 +18,48 @@ export const Projects = () => {
 
 const projects = [
   {
-    title: "AnimeTrix",
-    imgSrc: "/project-imgs/animetrix-website.png",
-    code: "https://github.com/ShivaBhattacharjee/AnimeTrix-next",
-    projectLink: "https://animetrix.xyz/",
-    tech: ["Typescript", "NextJs", "TailwindCss", "MongoDb"],
+    title: "Google: Pier 57",
+    imgSrc: "/project-imgs/p57/p57-tri-image.png",
+    code: "https://github.com/cyberpatrolunit",
+    projectLink: "https://google.com/",
+    tech: ["Lead Technical Director", "Ventuz / TouchDesigner"],
     description:
-      "Animetrix is a project that utilizes the Anilist platform to obtain information on various anime titles, and it combines this data with the Gogoanime API to provide ad-free streaming of anime content.",
+      "As the Lead Technical Director and Ventuz programmer for the Google Pier 57 site, I spearheaded a groundbreaking project to integrate generative visuals across a multitude of LED screens within the building. The primary objective was to create a dynamic, real-time, content-driven wayfinding system, controllable via a web-based CMS, enhancing the visitor experience with both functionality and aesthetic appeal.",
     modalContent: (
       <>
         <p>
-          Anime Trix is an anime streaming / downloading site that offers a vast collection of anime shows for streaming and downloading.
+        Innovative Approach and Technical Mastery
         </p>
         <p>
-          With a user-friendly interface, you can easily find your favorite anime shows and watch them in high-definition quality.
+          I navigated the complexity of managing and tracking multiple code repositories and configurations, tailored to various spaces and screen sizes. This required meticulous organization and a deep understanding of real-time systems. The challenge was amplified by the diverse requirements of each space, necessitating a flexible and scalable solution.
         </p>
         <p>
-          Our platform is updated regularly with the latest anime episodes, so you can stay up-to-date with your favorite shows.
+        Collaboration and Leadership
         </p>
         <p>
-          Anime Trix is the go-to destination for anime lovers who want to watch their favorite shows anytime, anywhere.
+        My role involved close collaboration with the design team, where I played a pivotal role in setting up templates and repositories. This ensured a streamlined workflow, facilitating seamless access and implementation by our development team. My approach fostered a collaborative environment, bridging the gap between technical and design aspects, and ensuring a cohesive execution of the project vision.
         </p>
         <p>
-          AnimTrix is hosted in vercel
+        Technology Integration
         </p>
+        <p>
+        Leveraging the capabilities of Google Cloud Platform and unified endpoint management utilities, I delivered a solution that was not only technically advanced but also highly integrated and user-friendly. This integration showcased my ability to utilize cutting-edge technology to meet complex project requirements.
+        </p>
+        <p>
+        Outcome and Client Engagement
+        </p>
+        <p>
+        Working directly with the client, I was instrumental in incorporating design changes and revisions, ensuring that the final product aligned perfectly with Google's vision. The project culminated in extensive documentation and training for the operations team, facilitating a smooth transition and ongoing management. The final outcome is a testament to our team's ability to deliver a dynamic, real-time, content-driven wayfinding experience that allows Google to control the entire site. Through our programming, Google can schedule events, set preset generative looks, and upload custom media, thereby creating a cohesive and interactive experience throughout the building.
+        </p>      
       </>
     ),
   },
   {
-    title: "Vermilion",
-    imgSrc: "/project-imgs/portfolio.png",
-    code: "https://github.com/ShivaBhattacharjee/vermilion",
+    title: "Adriatique: Projekt X",
+    imgSrc: "/project-imgs/projektx/x-tri-image.png",
+    code: "https://github.com/cyberpatrolunit",
     projectLink: "https://immashiva.vercel.app/",
-    tech: ["TypeScript", "NextJs", "EmailJs", "Framer-Motion", "SCSS"],
+    tech: ["Creative Director", "Live Show Implementation"],
     description:
       "Vermilion is a stunning portfolio template designed to showcase your creative work with style and sophistication. Built using the cutting-edge Next.js framework, this template offers lightning-fast page loading times and a smooth user experience.",
     modalContent: (
@@ -71,13 +80,13 @@ const projects = [
     ),
   },
   {
-    title: "Muxik",
-    imgSrc: "/project-imgs/Muxik.png",
+    title: "Videoglove.com",
+    imgSrc: "/project-imgs/videoglove/videoglove-thumb.png",
     code: "https://github.com/ShivaBhattacharjee/Muxik",
-    projectLink: "https://muxik.netlify.app/",
-    tech: ["JavaScript", "ReactJs", "Vite", "Framer-Motion", "TailwindCSS"],
+    projectLink: "https://videoglove.com/",
+    tech: ["Personal Project", "NextJs", "GSAP", "Vercel", "ThreeJs"],
     description:
-      "Muxik is a music streaming and downloading platform developed on ReactJs. It provides users with a wide variety of songs, albums, playlists, and artists across different genres. Users can enjoy a seamless and immersive music listening experience through the platform.",
+      "An ever evloving personal project where I have a platfrom to showcase my work and also a place to experiment with new web technologies.",
     modalContent: (
       <>
         <p>
@@ -97,7 +106,7 @@ const projects = [
   },
 
   {
-    title: "Synthia",
+    title: "Google: St. John's Terminal",
     imgSrc: "/project-imgs/Synthia.png",
     code: "https://github.com/ShivaBhattacharjee/Synthia",
     projectLink: "",
