@@ -5,7 +5,7 @@ import styles from "./projects.module.scss";
 export const Projects = () => {
   return (
     <section className="section-wrapper" id="projects">
-      <SectionHeader title="ExpWorks" dir="r" />
+      <SectionHeader title="Projects" dir="r" />
 
       <div className={styles.projects}>
         {projects.map((project) => {
@@ -20,7 +20,7 @@ const projects = [
   {
     title: "Google: Pier 57",
     imgSrc: "/project-imgs/p57/p57-tri-image.png",
-    code: "https://github.com/cyberpatrolunit",
+    code: "",
     projectLink: "https://google.com/",
     tech: ["Lead Technical Director", "Ventuz / TouchDesigner"],
     description:
@@ -133,7 +133,7 @@ const projects = [
   {
     title: "Videoglove.com",
     imgSrc: "/project-imgs/videoglove/videoglove-thumb.png",
-    code: "https://github.com/ShivaBhattacharjee/Muxik",
+    code: "",
     projectLink: "https://videoglove.com/",
     tech: ["Personal Project", "NextJs", "GSAP", "Vercel", "ThreeJs"],
     description:
@@ -141,27 +141,34 @@ const projects = [
     modalContent: (
       <>
         <p>
-          Muxik is a music streaming / downloading site that offers a vast library for streaming and downloading. With a user-friendly interface, you can easily find your favorite song and stream them in high-definition quality. Our platform is updated regularly with the songs, so you can stay up-to-date with your favorite songs.Muxik is the go-to destination for audiophiles who want to stream or download their favorite music anytime, anywhere
+          An ever evloving personal project where I have a platfrom to showcase my work and also a place to experiment with new web technologies.
         </p>
         <p>
-          Users can conveniently batch download their favorite music and enjoy it offline, making it perfect for road trips or areas with limited internet connectivity. Muxik&apos;s Progressive Web Application (PWA) support ensures seamless access across devices without the need for separate installations.
+          Users can conveniently batch download their favorite music and enjoy it offline, making it perfect for road trips 
+          or areas with limited internet connectivity. Muxik&apos;s Progressive Web Application (PWA) support ensures seamless 
+          access across devices without the need for separate installations.
         </p>
         <p>
-          Enhancing the listening experience, Muxik allows users to adjust volume levels, auto-skip songs, and repeat tracks with ease. Personalized song recommendations and curated top playlists help users discover new music and diversify their library. With Muxik, users can enjoy a tailored and immersive audio experience, thanks to its volume change feature that adapts to individual preferences.
+          Enhancing the listening experience, Muxik allows users to adjust volume levels, auto-skip songs, and repeat tracks 
+          with ease. Personalized song recommendations and curated top playlists help users discover new music and diversify 
+          their library. With Muxik, users can enjoy a tailored and immersive audio experience, thanks to its volume change 
+          feature that adapts to individual preferences.
         </p>
         <p>
-          In summary, Muxik offers a convenient solution for music lovers. It provides batch downloading and offline streaming capabilities, along with features like PWA support, volume control, auto-skip, recommended songs, top playlists, and repeat functionality. With Muxik, users can effortlessly enjoy their favorite music, discover new tracks, and personalize their listening experience.
+          In summary, Muxik offers a convenient solution for music lovers. It provides batch downloading and offline streaming 
+          capabilities, along with features like PWA support, volume control, auto-skip, recommended songs, top playlists, and 
+          repeat functionality. With Muxik, users can effortlessly enjoy their favorite music, discover new tracks, and 
+          personalize their listening experience.
         </p>
       </>
     ),
   },
-
   {
     title: "Google: St. John's Terminal",
     imgSrc: "/project-imgs/Synthia.png",
-    code: "https://github.com/cyberpatrolunit",
-    projectLink: "",
-    tech: ["Rust"],
+    code: "",
+    projectLink: "https://github.com/cyberpatrolunit",
+    tech: ["Technical Director", "TouchDesigner", "GLSL", "Vue"],
     description:
       "As the Lead Technical Director and Programmer, I was at the forefront of delivering a wide range of interactive installations for this new state of the art multifaceted office building. My responsibilities encompassed programming and deploying various installations, including all Welcome Walls, the Community Garden, Susan's Garage, Beneath the Trees and Dynamic Lighting, each featuring bespoke generative artworks.",
     modalContent: (
@@ -170,31 +177,45 @@ const projects = [
         Diverse Installations and Technical Expertise
         </p>
         <p>
-        The core of my work involved programming and deploying Welcome Walls across multiple areas, integrating dynamic generative expressions with the informational layer. My role extended to installations like the Community Garden presentation space, LED Dynamic Lighting systems, and theater entry canvases. TouchDesigner was utilized for playback and generative artwork, while VUE was employed for overlaying information layers, showcasing my ability to adapt and implement diverse technologies effectively.
+        The core of my work involved programming and deploying Welcome Walls across multiple areas, integrating dynamic generative 
+        expressions with the informational layer. My role extended to installations like the Community Garden presentation space, 
+        LED Dynamic Lighting systems, and theater entry canvases. TouchDesigner was utilized for playback and generative artwork, 
+        while VUE was employed for overlaying information layers, showcasing my ability to adapt and implement diverse technologies 
+        effectively.
         </p>
         <p style={{ fontWeight: 'bold', fontSize: 'larger' }}>
         Technical Challenges and Innovative Solutions
         </p>
         <p>
-        One of the major technical complexities was ensuring cloud-based synchronization of media servers throughout the building, necessitating a dynamic content loading system relevant to each installation. The evolving network setup, integration with other control interfaces, and physical construction posed additional challenges. A significant achievement was developing a system for projection-mapped surfaces to align seamlessly with LED canvases, demonstrating my expertise in creating cohesive multimedia experiences.
+        One of the major technical complexities was ensuring cloud-based synchronization of media servers throughout the building, 
+        necessitating a dynamic content loading system relevant to each installation. The evolving network setup, integration with 
+        other control interfaces, and physical construction posed additional challenges. A significant achievement was developing a 
+        system for projection-mapped surfaces to align seamlessly with LED canvases, demonstrating my expertise in creating cohesive 
+        multimedia experiences.
         </p>
         <p style={{ fontWeight: 'bold', fontSize: 'larger' }}>
         Team Coordination and Modularity Approach
         </p>
         <p>
-        Effective version control and a focus on modularity were crucial in managing the extensive scope of this project. This approach enabled specific updates without disrupting the overall architecture. Coordination of on-site and off-site teams, along with cloud-based fleet deployment and remote management, was instrumental in achieving this.
+        Effective version control and a focus on modularity were crucial in managing the extensive scope of this project. This 
+        approach enabled specific updates without disrupting the overall architecture. Coordination of on-site and off-site teams, 
+        along with cloud-based fleet deployment and remote management, was instrumental in achieving this.
         </p>
         <p style={{ fontWeight: 'bold', fontSize: 'larger' }}>
         Unique Creative Contributions
         </p>
         <p>
-        Utilizing TouchDesigner, I developed custom tools for mapping and calibrating content on projection and LED surfaces. This allowed me to leverage my experience in creating unique generative artworks for the Welcome Walls, distinct from the work done at Pier 57.
+        Utilizing TouchDesigner, I developed custom tools for mapping and calibrating content on projection and LED surfaces. This 
+        allowed me to leverage my experience in creating unique generative artworks for the Welcome Walls, distinct from the work 
+        done at Pier 57.
         </p>
         <p style={{ fontWeight: 'bold', fontSize: 'larger' }}>
         Project Outcome and Anticipation
         </p>
         <p>
-        The final stages of deployment have been completed, and we are currently in the burn-in phase, with the building set to officially open in February 2024. My team and I eagerly anticipate the reception of our work by the building's visitors and employees, confident that it will enrich their experience in this innovative space.
+        The final stages of deployment have been completed, and we are currently in the burn-in phase, with the building set to 
+        officially open in February 2024. My team and I eagerly anticipate the reception of our work by the building's visitors 
+        and employees, confident that it will enrich their experience in this innovative space.
         </p>
       </>
     ),
