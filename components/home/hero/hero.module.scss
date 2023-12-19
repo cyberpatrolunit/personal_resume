@@ -1,3 +1,5 @@
+@import 'styles/_functions';
+
 .hero {
   margin-bottom: 9.6rem;
 
@@ -22,27 +24,30 @@
 }
 
 .title {
-  font-size: var(--text-2xl);
-  font-weight: 700;
-  line-height: 1.1;
-  padding: 1.5rem;
-  text-shadow: 0 0 4px rgb(255, 255, 255), 0 0 20px rgba(255, 255, 255, 0.5);
- // border: 2px solid #ffffff; // Choose your border color
- // border-radius: 0px; // Optional: if you want rounded corners
+  font-family: 'Slussen', sans-serif; // Fallback to sans-serif
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  line-height: 120%;
+  font-size: mobile-vw(56px);
+  text-shadow: 0 0 4px rgb(255, 255, 255), 0 0 12px rgba(255, 255, 255, 0.5);
+  //border: 2px solid #ffffff;
+  //border-radius: 2px;
 
-  span {
-    color: var(--brand);
+
+  @include desktop {
+    font-size: desktop-vw(60px);
+    line-height: 120%;
   }
 
-  @media (max-width: 768px) {
-    font-size: var(--text-xl);
+  &.vh {
+    font-size: mobile-vh(56px);
+
+    @include desktop {
+      font-size: desktop-vh(160px);
+    }
   }
-  @media (max-width: 950px) {
-    font-size: var(--text-xl);
-  }
-  @media (max-width: 500px) {
-    font-size: var(--text-lg);
-  }
+  
 }
 
 .subTitle {

@@ -1,15 +1,15 @@
 import { Reveal } from "@/components/utils/Reveal";
-// import { DotGrid } from "./DotGrid";
 import Icon from "./Icon";
 import styles from "./hero.module.scss";
 import { OutlineButton } from "../../buttons/OutlineButton";
 import ReactTypingEffect from 'react-typing-effect';
+
 export const Hero = () => {
   return (
     <section className={`section-wrapper ${styles.hero}`}>
       <div className={styles.copyWrapper}>
         <Reveal>
-          <h1 className={styles.title}>
+          <h1 className={`${styles.title}`}>
             Hey, I&apos;m Bryant<span>.</span>
           </h1>
         </Reveal>
