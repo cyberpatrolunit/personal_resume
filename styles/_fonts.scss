@@ -1,13 +1,13 @@
 @font-face {
-  font-family: 'SlussenComp';
-  src: url('/public/fonts/Slussen-Compressed-Black.woff2') format('woff2');
+  font-family: 'Slussen.Comp';
+  src: url('/fonts/Slussen-Compressed-Black.woff2') format('woff2');
   font-display: swap;
   font-weight: 900;
   font-stretch: compressed;
 }
 
 @font-face {
-  font-family: 'SlussenExp';
+  font-family: 'Slussen.Exp';
   src: url('/fonts/Slussen-Expanded-Black.woff2') format('woff2');
   font-display: swap;
   font-weight: 900;
@@ -15,36 +15,36 @@
 }
 
 @font-face {
-  font-family: 'Slussen';
-  src: url('/public/fonts/Slussen-Medium.woff2') format('woff2');
+  font-family: 'Slussen.Med';
+  src: url('/fonts/Slussen-Medium.woff2') format('woff2');
   font-display: swap;
   font-weight: 500;
 }
 
 @font-face {
-  font-family: 'SlussenReg';
-  src: url('/public/fonts/Slussen-Regular.woff2') format('woff2');
+  font-family: 'Slussen.Reg';
+  src: url('/fonts/Slussen-Regular.woff2') format('woff2');
   font-display: swap;
   font-weight: 400;
 }
 
 @font-face {
-  font-family: 'SlussenSemi';
-  src: url('/public/fonts/Slussen-Semibold.woff2') format('woff2');
+  font-family: 'Slussen.Semi';
+  src: url('/fonts/Slussen-Semibold.woff2') format('woff2');
   font-display: swap;
   font-weight: 600;
 }
 
 @font-face {
-  font-family: 'SlussenBold';
-  src: url('/public/fonts/Slussen-Bold.woff2') format('woff2');
+  font-family: 'Slussen.Bold';
+  src: url('/fonts/Slussen-Bold.woff2') format('woff2');
   font-display: swap;
   font-weight: 700;
 }
 
 @font-face {
   font-family: 'Respira';
-  src: url('/public/fonts/Respira-Black.woff2') format('woff2');
+  src: url('/fonts/Respira-Black.woff2') format('woff2');
   font-display: swap;
   font-weight: 900;
 }

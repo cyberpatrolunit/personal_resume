@@ -1,4 +1,7 @@
+@import 'styles/_functions';
+
 .about {
+  font-family: 'Slussen.Reg', sans-serif;
   display: grid;
   grid-template-columns: 1fr 300px;
   gap: 2.4rem;
@@ -9,8 +12,9 @@
 }
 
 .aboutText {
+  font-family: 'Slussen.Reg', sans-serif;
   margin-bottom: 2.4rem;
-  font-weight: 200;
+  font-weight: 100;
 
   span{
     background: var(--background-light);
