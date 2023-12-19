@@ -1,15 +1,26 @@
 import { Reveal } from "@/components/utils/Reveal";
 import Icon from "./Icon";
 import styles from "./hero.module.scss";
-import { OutlineButton } from "../../buttons/OutlineButton";
 import ReactTypingEffect from 'react-typing-effect';
+
+// OutlineButton Component
+const OutlineButton = ({ onClick, children }) => {
+  return (
+    <button 
+      className={`${styles.outlineButton}`} 
+      onClick={onClick}
+    >
+      {children}
+    </button>
+  );
+};
 
 export const Hero = () => {
   return (
     <section className={`section-wrapper ${styles.hero}`}>
       <div className={styles.copyWrapper}>
         <Reveal>
-          <h1 className={`${styles.title}`}>
+          <h1 className={styles.title}>
             Hey, I&apos;m Bryant<span>.</span>
           </h1>
         </Reveal>
@@ -26,10 +37,10 @@ export const Hero = () => {
         </Reveal>
         <Reveal>
           <p className={styles.aboutCopy}>
-          In the realm where art and innovation converge, 
-          I stand as the architect transforming visionary 
-          concepts into interactive tapestries for the 
-          digital age.
+            In the realm where art and innovation converge, 
+            I stand as the architect transforming visionary 
+            concepts into interactive tapestries for the 
+            digital age.
             <br />
           </p>
         </Reveal>
@@ -41,7 +52,9 @@ export const Hero = () => {
           </OutlineButton>
         </Reveal>
       </div>
-    <Icon />
+      <Icon />
     </section>
   );
 };
+
+export default Hero;
