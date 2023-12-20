@@ -19,7 +19,7 @@ export const Projects = () => {
 const projects = [
 
   {
-    title: "Google: St. John's Terminal",
+    title: "Google: SJT NYC",
     imgSrc: "/project-imgs/sjt/sjt-tri-image.png",
     code: "",
     projectLink: "https://github.com/cyberpatrolunit",
@@ -76,7 +76,7 @@ const projects = [
     ),
   },
   {
-    title: "Google: Pier 57",
+    title: "Google: Pier 57 NYC",
     imgSrc: "/project-imgs/p57/p57-tri-image.png",
     code: "",
     projectLink: "https://google.com/",

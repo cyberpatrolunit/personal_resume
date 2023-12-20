@@ -2,7 +2,7 @@
   font-family: 'Slussen.Comp';
   src: url('/fonts/Slussen-Compressed-Black.woff2') format('woff2');
   font-display: swap;
-  font-weight: 900;
+  font-weight: 400;
   font-stretch: compressed;
 }
 
@@ -18,14 +18,14 @@
   font-family: 'Slussen.Med';
   src: url('/fonts/Slussen-Medium.woff2') format('woff2');
   font-display: swap;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 @font-face {
   font-family: 'Slussen.Reg';
   src: url('/fonts/Slussen-Regular.woff2') format('woff2');
   font-display: swap;
-  font-weight: 400;
+  font-weight: 200;
 }
 
 @font-face {

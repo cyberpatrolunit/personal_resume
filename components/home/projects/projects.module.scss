@@ -1,3 +1,5 @@
+@import 'styles/_functions';
+
 .projects {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -24,13 +26,17 @@
 }
 
 .projectCopy {
+  font-family: 'Respira', sans-serif;
   margin: 1.6rem 0;
 }
 
 .projectTitle {
+  font-family: 'Slussen.Bold', sans-serif;
+  letter-spacing: -0.05rem;
+  text-transform: uppercase;
   display: flex;
   align-items: center;
-  gap: 1.2rem;
+  gap: 1rem;
 
   h4 {
     font-weight: bold;
@@ -52,7 +58,7 @@
 
 .projectTitleLine {
   width: 80%;
-  height: 1px;
+  height: 2px;
   background: var(--text);
   opacity: 0.3;
 }
@@ -76,6 +82,7 @@
 }
 
 .projectTech {
+  font-family: 'Slussen.Comp', sans-serif;
   display: flex;
   flex-wrap: wrap;
   gap: 1.2rem;

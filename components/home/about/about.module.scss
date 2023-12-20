@@ -12,9 +12,9 @@
 }
 
 .aboutText {
-  font-family: 'Slussen.Reg', sans-serif;
-  margin-bottom: 2.4rem;
-  font-weight: 100;
+  font-family: 'Respira', sans-serif;
+  margin-bottom: 0.4rem;
+  font-size: smaller;
 
   span{
     background: var(--background-light);
@@ -26,6 +26,11 @@
     float: left;
   }
 }
+
+.aboutText:not(:last-child) {
+  margin-bottom: 1.5rem; // Adjust the value as needed
+}
+
 
 .links {
   display: flex;
