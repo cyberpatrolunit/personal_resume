@@ -73,8 +73,8 @@ export const Contact = () => {
                   Instagram
                 </Link>{" "}
                 or{" "}
-                <Link href="https://www.twitter.com/cyberpatrolunit" target="_blank" rel="nofollow">
-                  Twitter
+                <Link href="https://www.tiktok.com/cyberpatrolunit" target="_blank" rel="nofollow">
+                  TikTok
                 </Link>{" "}
                 if that&apos;s more your jam.
               </p>

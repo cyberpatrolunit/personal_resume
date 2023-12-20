@@ -23,7 +23,7 @@ const projects = [
     imgSrc: "/project-imgs/sjt/sjt-tri-image.png",
     code: "",
     projectLink: "https://github.com/cyberpatrolunit",
-    tech: ["Lead Technical Director", "TouchDesigner", "GLSL", "Vue"],
+    tech: ["Lead Technical Director", "TouchDesigner / GLSL / Vue"],
     description:
       "As the Lead Technical Director and Programmer, I was at the forefront of delivering a wide range of interactive installations for this new state of the art multifaceted office building. My responsibilities encompassed programming and deploying various installations, including all Welcome Walls, the Community Garden, Susan's Garage, Beneath the Trees and Dynamic Lighting, each featuring bespoke generative artworks.",
     modalContent: (
@@ -194,30 +194,13 @@ const projects = [
     imgSrc: "/project-imgs/videoglove/videoglove-thumb.png",
     code: "",
     projectLink: "https://videoglove.com/",
-    tech: ["Personal Project", "NextJs", "GSAP", "Vercel", "ThreeJs"],
+    tech: ["Personal Project", "NextJs / GSAP / Vercel / ThreeJs"],
     description:
       "An ever evloving personal project where I have a platfrom to showcase my work and also a place to experiment with new web technologies.",
     modalContent: (
       <>
         <p>
           An ever evloving personal project where I have a platfrom to showcase my work and also a place to experiment with new web technologies.
-        </p>
-        <p>
-          Users can conveniently batch download their favorite music and enjoy it offline, making it perfect for road trips 
-          or areas with limited internet connectivity. Muxik&apos;s Progressive Web Application (PWA) support ensures seamless 
-          access across devices without the need for separate installations.
-        </p>
-        <p>
-          Enhancing the listening experience, Muxik allows users to adjust volume levels, auto-skip songs, and repeat tracks 
-          with ease. Personalized song recommendations and curated top playlists help users discover new music and diversify 
-          their library. With Muxik, users can enjoy a tailored and immersive audio experience, thanks to its volume change 
-          feature that adapts to individual preferences.
-        </p>
-        <p>
-          In summary, Muxik offers a convenient solution for music lovers. It provides batch downloading and offline streaming 
-          capabilities, along with features like PWA support, volume control, auto-skip, recommended songs, top playlists, and 
-          repeat functionality. With Muxik, users can effortlessly enjoy their favorite music, discover new tracks, and 
-          personalize their listening experience.
         </p>
       </>
     ),

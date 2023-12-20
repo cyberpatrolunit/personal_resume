@@ -1,4 +1,18 @@
 .outlineButton {
+  font-family: 'Slussen.Exp', sans-serif;
+  font-weight: 100;
+  text-transform: uppercase;
+  font-size: var(--text-sm);
+  letter-spacing: 0.1em;
+  padding: 1.2rem 2.4rem;
+  border: 2px solid rgb(34, 150, 212);
+  border-radius: 12px;
+  margin-top: 2rem;
+  margin-left: 0rem;
+  margin-right: 0.5rem;
+  color: rgb(34, 150, 212);
+  background-color: transparent;
+  transition: all 0.2s ease-in-out;
   outline: none;
   border: none;
   cursor: pointer;

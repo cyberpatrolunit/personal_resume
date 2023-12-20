@@ -22,14 +22,16 @@
     height: 100px;
 
     flex-shrink: 0;
-
+    font-family: 'Slussen.Exp', sans-serif;
+    letter-spacing: -0.05rem;
     writing-mode: vertical-lr;
-    font-size: var(--text-sm);
+    font-size: var(--text-xs);
     font-weight: 200;
     display: flex;
     align-items: center;
     justify-content: center;
     opacity: 0.5;
+    margin-bottom: 1.8rem;
 
     border-right: 1px solid transparent;
 
@@ -52,8 +54,8 @@
 
 .logo {
   flex-shrink: 0;
-
-  font-size: var(--text-md);
+  font-family: 'Slussen.Exp', sans-serif;
+  font-size: var(--text-xs);
   font-weight: 900;
   line-height: 1;
 

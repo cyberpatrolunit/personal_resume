@@ -6,10 +6,15 @@
 }
 
 .contactTitle {
+  font-family: 'Slussen.Exp', sans-serif;
+  letter-spacing: -0.2rem;
+  text-transform: uppercase;
   font-size: var(--text-2xl);
   text-align: center;
   font-weight: 900;
   line-height: 1;
+  text-shadow: 0 0 4px rgb(255, 255, 255), 0 0 12px rgba(255, 255, 255, 0.5);
+  font-size: mobile-vw(56px);
 
   span {
     color: var(--brand);
@@ -21,6 +26,7 @@
 }
 
 .contactCopy {
+  font-family: 'Slussen.Bold', sans-serif;
   text-align: center;
   font-weight: 200;
   margin: 2.4rem 0;
@@ -35,6 +41,7 @@
 }
 
 .contactEmail {
+  font-family: 'Slussen.Reg', sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -74,8 +81,9 @@
     input {
       width: 100%;
       padding: 1.5rem;
+      font-family: 'Slussen.Reg', sans-serif;
       font-size: 1.6rem;
-      color: red;
+      color: rgb(34, 150, 212);
       background: var(--background);
       border-radius: .8rem;
       outline: none;
@@ -89,8 +97,9 @@
     width: 100%;
     height: 200px;
     padding: 1.5rem;
+    font-family: 'Slussen.Reg', sans-serif;
     font-size: 1.6rem;
-    color: red;
+    color: rgb(34, 150, 212);
     background: var(--background);
     outline: none;
     border: 1px solid #fff;
