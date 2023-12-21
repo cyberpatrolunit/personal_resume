@@ -6,7 +6,7 @@ export const Photo = () => {
     <section className={`section-wrapper ${styles.imageSection}`}>
       <div className={styles.imageWrapper}>
         <img 
-          src="/profile/profile_photo1.jpg"
+          src="/profile/profile_photo2.jpg"
           alt="Descriptive Alt Text"
           className={styles.image}
         />
