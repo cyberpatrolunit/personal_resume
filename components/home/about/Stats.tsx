@@ -1,9 +1,10 @@
+import React from 'react';
 import styles from "./stats.module.scss";
 import { AiFillCode } from "react-icons/ai";
-import { MdDevicesOther } from "react-icons/md"
+import { MdDevicesOther } from "react-icons/md";
 import { Reveal } from "@/components/utils/Reveal";
 
-export const Stats = () => {
+const Stats = () => {
   return (
     <div className={styles.stats}>
       <Reveal>
@@ -63,3 +64,5 @@ export const Stats = () => {
     </div>
   );
 };
+
+export default Stats;

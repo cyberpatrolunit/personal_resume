@@ -1,49 +1,57 @@
-import React, { useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, Suspense } from "react";
 import { SideBar } from "../nav/SideBar";
-import { Hero } from "./hero/Hero";
-import styles from "./home.module.scss";
 import { Heading } from "../nav/Heading";
-import { Photo } from "./photo/photo";
-import { About } from "./about/About";
-import { Projects } from "./projects/Projects";
-import { Contact } from "./contact/Contact";
 import { ScrollTop } from "../buttons/ScrollTop";
 import { Application } from '@splinetool/runtime'; // Import Splinetool Application
+import styles from "./home.module.scss";
+
+// Lazy load the components
+const Hero = React.lazy(() => import("./hero/Hero"));
+const Photo = React.lazy(() => import("./photo/photo"));
+const About = React.lazy(() => import("./about/About"));
+const Projects = React.lazy(() => import("./projects/Projects"));
+const Contact = React.lazy(() => import("./contact/Contact"));
 
 export const Home = () => {
-  const canvasRef = useRef<HTMLCanvasElement>(null); // Create a ref for the canvas element
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const [componentsLoaded, setComponentsLoaded] = useState(false);
 
   useEffect(() => {
-    // This code will run when the component mounts
-    const canvas = canvasRef.current; // Access the canvas element from the ref
+    // Load Spline canvas
+    const canvas = canvasRef.current;
     if (canvas) {
-      const app = new Application(canvas); // Use the canvas element of type HTMLCanvasElement
+      const app = new Application(canvas);
       app.load('https://prod.spline.design/qQGEiViy9RKI4ueL/scene.splinecode');
     }
-  }, []); // Empty dependency array ensures this runs only once when the component mounts
+
+    // Load other components sequentially
+    setTimeout(() => {
+      setComponentsLoaded(true);
+    }, 3000); // Adjust delay as per requirement
+  }, []);
 
   return (
-    <>
-      <div className={styles.home}>
-        <SideBar />
-        <main>
-          <Heading />
-          <Hero />
-          <Photo />
-          <About />
-          <Projects />
-          <Contact />
-          <ScrollTop />
-          <div
-            style={{
-              height: "100px",
-              background:
-                "linear-gradient(180deg, var(--background), var(--background-dark))",
-            }}
-          >
-          </div>
-        </main>
-      </div>
-    </>
+    <div className={styles.home}>
+      <SideBar />
+      <main>
+        <Heading />
+        <canvas ref={canvasRef} style={{ width: '100%', height: '100vh' }} />
+        <Suspense fallback={<div>Loading...</div>}>
+          {componentsLoaded && (
+            <>
+              <Hero />
+              <Photo />
+              <About />
+              <Projects />
+              <Contact />
+              <ScrollTop />
+              <div style={{ height: "100px", background: "linear-gradient(180deg, var(--background), var(--background-dark))" }}></div>
+            </>
+          )}
+        </Suspense>
+      </main>
+    </div>
   );
 };
+
+export default Home;

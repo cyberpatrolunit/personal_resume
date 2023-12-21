@@ -1,38 +1,32 @@
+import React from 'react';
 import { Reveal } from "@/components/utils/Reveal";
-import Icon from "./Icon";
-import styles from "./hero.module.scss";
 import ReactTypingEffect from 'react-typing-effect';
+import styles from "./hero.module.scss";
 
-// OutlineButton Component
-const OutlineButton = ({ onClick, children }) => {
-  return (
-    <button 
-      className={`${styles.outlineButton}`} 
-      onClick={onClick}
-    >
-      {children}
-    </button>
-  );
-};
+// Lazy load the Icon and OutlineButton components
+const Icon = React.lazy(() => import("./Icon"));
+const OutlineButton = React.lazy(() => import("../../buttons/OutlineButton"));
 
-export const Hero = () => {
+const Hero = () => {
   return (
     <section className={`section-wrapper ${styles.hero}`}>
       <div className={styles.copyWrapper}>
         <Reveal>
           <h1 className={styles.title}>
-          🖤 I&apos;m Bryant<span>.</span>
+            🖤 I&apos;m Bryant<span>.</span>
           </h1>
         </Reveal>
         <Reveal>
           <h2 className={styles.subTitle}>
-            <span><ReactTypingEffect
-              text={["Creative Technologist.", "Creative Director.", "Artist.", "Developer.", "3D Printing Specialist.", "Engineer.", "Drone Specialist."]}
-              speed={40}
-              eraseSpeed={40}
-              eraseDelay={900}
-              typingDelay={300}
-            /></span>
+            <span>
+              <ReactTypingEffect
+                text={["Creative Technologist.", "Creative Director.", "Artist.", "Developer.", "3D Printing Specialist.", "Engineer.", "Drone Specialist."]}
+                speed={40}
+                eraseSpeed={40}
+                eraseDelay={900}
+                typingDelay={300}
+              />
+            </span>
           </h2>
         </Reveal>
         <Reveal>
@@ -45,14 +39,16 @@ export const Hero = () => {
           </p>
         </Reveal>
         <Reveal>
-          <OutlineButton
-            onClick={() => document.getElementById("contact")?.scrollIntoView()}
-          >
-            Let&apos;s Talk!
-          </OutlineButton>
+          <React.Suspense fallback={<div>Loading...</div>}>
+            <OutlineButton onClick={() => document.getElementById("contact")?.scrollIntoView()}>
+              Let&apos;s Talk!
+            </OutlineButton>
+          </React.Suspense>
         </Reveal>
       </div>
-      <Icon />
+      <React.Suspense fallback={<div>Loading Icon...</div>}>
+        <Icon />
+      </React.Suspense>
     </section>
   );
 };

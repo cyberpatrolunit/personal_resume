@@ -1,7 +1,9 @@
+import React, { Suspense } from 'react';
 import { Reveal } from "@/components/utils/Reveal";
 import { SectionHeader } from "@/components/utils/SectionHeader";
 import styles from "./about.module.scss";
-import { Stats } from "./Stats";
+
+const Stats = React.lazy(() => import("./Stats"));
 
 export const About = () => {
   return (
@@ -50,8 +52,12 @@ export const About = () => {
             </div>
           </Reveal>
         </div>
-        <Stats />
+        <Suspense fallback={<div>Loading...</div>}>
+          <Stats />
+        </Suspense>
       </div>
     </section>
   );
 };
+
+export default About;

@@ -1,4 +1,4 @@
-import { MouseEventHandler } from "react";
+import React, { MouseEventHandler } from "react";
 import styles from "./outlinebutton.module.scss";
 
 interface Props {
@@ -6,10 +6,12 @@ interface Props {
   onClick?: MouseEventHandler<HTMLButtonElement>;
 }
 
-export const OutlineButton = ({ children, onClick }: Props) => {
+const OutlineButton = ({ children, onClick }: Props) => {
   return (
     <button onClick={onClick} className={styles.outlineButton}>
       {children}
     </button>
   );
 };
+
+export default OutlineButton;

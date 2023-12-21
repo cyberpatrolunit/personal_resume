@@ -4,8 +4,9 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { AiFillGithub, AiOutlineExport } from "react-icons/ai";
 import { ProjectModal } from "./ProjectModal";
-import styles from "./projects.module.scss";;
+import styles from "./projects.module.scss";
 import Image from "next/image";
+
 interface Props {
   modalContent: JSX.Element;
   description: string;
@@ -16,7 +17,7 @@ interface Props {
   code: string;
 }
 
-export const Project = ({
+const Project = ({
   modalContent,
   projectLink,
   description,
@@ -109,3 +110,5 @@ export const Project = ({
     </>
   );
 };
+
+export default Project;

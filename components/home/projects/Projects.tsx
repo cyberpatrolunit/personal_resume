@@ -1,6 +1,8 @@
+import React, { Suspense } from 'react';
 import { SectionHeader } from "@/components/utils/SectionHeader";
-import { Project } from "./Project";
 import styles from "./projects.module.scss";
+
+const Project = React.lazy(() => import('./Project'));
 
 export const Projects = () => {
   return (
@@ -8,9 +10,11 @@ export const Projects = () => {
       <SectionHeader title="Projects" dir="r" />
 
       <div className={styles.projects}>
-        {projects.map((project) => {
-          return <Project key={project.title} {...project} />;
-        })}
+        <Suspense fallback={<div>Loading Projects...</div>}>
+          {projects.map((project) => {
+            return <Project key={project.title} {...project} />;
+          })}
+        </Suspense>
       </div>
     </section>
   );
@@ -207,3 +211,5 @@ const projects = [
   },
 
 ];
+
+export default Projects;

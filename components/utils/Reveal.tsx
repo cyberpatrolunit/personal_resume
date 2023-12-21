@@ -57,3 +57,5 @@ export const Reveal = ({ children, width = "fit-content" }: Props) => {
     </div>
   );
 };
+
+export default Reveal;
