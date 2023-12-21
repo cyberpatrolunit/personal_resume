@@ -1,0 +1,24 @@
+.imageSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0; // Adjust padding as needed
+  
+    .imageWrapper {
+      max-width: 50%; // Adjust as per design requirement
+      border-radius: 90px; // Rounded edges
+      overflow: hidden; // Ensures the image does not spill out of the border-radius
+      box-shadow: 0 0 4px rgb(255, 255, 255), 0 0 20px rgba(255, 255, 255, 0.5);
+  
+      img {
+        width: 100%;
+        height: auto;
+        transition: transform 0.3s ease-in-out;
+  
+        &:hover {
+          transform: scale(1.05); // Optional hover effect
+        }
+      }
+    }
+  }
+  
