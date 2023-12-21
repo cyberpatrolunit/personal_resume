@@ -26,8 +26,10 @@
   letter-spacing: -0.2rem;
   text-transform: uppercase;
   line-height: 120%;
+  margin-bottom: 0.4rem;
+  margin-right: 1rem;
   font-size: var(--text-xl);
-  text-shadow: 0 0 4px rgb(255, 255, 255), 0 0 12px rgba(255, 255, 255, 0.5);
+  text-shadow: 0 0 4px rgb(255, 255, 255), 0 0 10px rgba(255, 255, 255, 0.5);
   
   @include desktop {
     line-height: 120%;
@@ -37,8 +39,10 @@
 .subTitle {
   font-family: 'Slussen.Exp', sans-serif;
   line-height: 1.1;
-  margin-top: 2rem;
+  margin-top: 3.2rem;
   margin-left: -.1rem;
+  margin-bottom: 1rem;
+  font-size: var(--text-mdS);
   padding: 0rem;
   font-weight: 100;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;

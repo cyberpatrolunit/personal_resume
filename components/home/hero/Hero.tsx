@@ -21,12 +21,12 @@ export const Hero = () => {
       <div className={styles.copyWrapper}>
         <Reveal>
           <h1 className={styles.title}>
-            Hey, I&apos;m Bryant<span>.</span>
+          🖤 I&apos;m Bryant<span>.</span>
           </h1>
         </Reveal>
         <Reveal>
           <h2 className={styles.subTitle}>
-            I&apos;m a <span><ReactTypingEffect
+            <span><ReactTypingEffect
               text={["Creative Technologist.", "Creative Director.", "Artist.", "Developer.", "3D Printing Specialist.", "Engineer.", "Drone Specialist."]}
               speed={40}
               eraseSpeed={40}
