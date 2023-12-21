@@ -6,3 +6,15 @@
     display: block;
   }
 }
+
+.loadingText {
+  font-family: 'Slussen.Exp', sans-serif;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  line-height: 120%;
+  margin-bottom: 0.4rem;
+  margin-right: 1rem;
+  font-size: var(--text-md);
+  color: #fff; // You can change the color as needed
+  text-align: center; // Center the text
+}

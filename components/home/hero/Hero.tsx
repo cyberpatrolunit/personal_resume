@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Reveal } from "@/components/utils/Reveal";
 import ReactTypingEffect from 'react-typing-effect';
 import styles from "./hero.module.scss";
@@ -8,6 +8,16 @@ const Icon = React.lazy(() => import("./Icon"));
 const OutlineButton = React.lazy(() => import("../../buttons/OutlineButton"));
 
 const Hero = () => {
+  const [loadIcon, setLoadIcon] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoadIcon(true);
+    }, 3000); // Delay in milliseconds (3000ms = 3 seconds)
+
+    return () => clearTimeout(timer); // Cleanup the timer
+  }, []);
+
   return (
     <section className={`section-wrapper ${styles.hero}`}>
       <div className={styles.copyWrapper}>
@@ -47,7 +57,7 @@ const Hero = () => {
         </Reveal>
       </div>
       <React.Suspense fallback={<div>Loading Icon...</div>}>
-        <Icon />
+        {loadIcon && <Icon />}
       </React.Suspense>
     </section>
   );
