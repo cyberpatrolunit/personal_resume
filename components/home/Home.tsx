@@ -33,7 +33,7 @@ export const Home = () => {
         <SideBar />
         <main>
           <Heading />
-          <canvas ref={canvasRef} style={{ width: '100%', height: '100vh' }} />
+          <canvas ref={canvasRef} style={{ width: '100%', height: '100vh', position: 'fixed', top: 0, left: 0, zIndex: -1 }} />
           <Suspense fallback={<div className={styles.loadingText}>Loading...</div>}>
             {componentsLoaded && (
               <>
