@@ -194,6 +194,47 @@ const projects = [
     ),
   },
   {
+    title: "Nike NMS Experience Project",
+    imgSrc: "/project-imgs/nms/nms-tri-image.png",
+    code: "https://github.com/cyberpatrolunit",
+    projectLink: "https://cyberpatrolunit.vercel.app/",
+    tech: ["Creative Technologist", "Programming", "Additive Manufacturing"],
+    description:
+      "My role: transform large data models into compelling real-time adjustable visualizations, facilitating strategic discussions around manufacturing efficiencies. I utilized Python scripting and TouchDesigner to craft an interactive data visualization environment. This project allowed me to create a unique interface for stakeholders to manipulate many variables throughout the production process via physical dials I 3D printed with multi-jet fusion technology.",
+    modalContent: (
+      <>
+        <p style={{ fontWeight: 'bold', fontSize: 'larger' }}>
+        Innovative Data Interaction:
+        </p>
+        <p>
+        Leveraging the hands-on aspect of the experience, I integrated USB-to-serial encoders, allowing users to adjust 
+        various metrics of the manufacturing process and observe the resultant changes in labor costs in real-time. This 
+        direct manipulation of data not only engaged stakeholders but also effectively demonstrated the financial impact 
+        of varying skill levels within Nike’s manufacturing process.
+        </p>
+        <p style={{ fontWeight: 'bold', fontSize: 'larger' }}>
+        Expertise and Remote Deployment:
+        </p>
+        <p>
+        As an outside contractor, my mandate was to adhere to the client-provided style sheets, iteratively refining the 
+        visual aesthetics to meet detailed specifications. The project demanded a high level of mathematical precision 
+        and responsiveness, with remote deployment being a distinctive challenge I overcame. Utilizing Parsec for remote 
+        access, I successfully executed the entire deployment off-site, a testament to my adaptability and problem-solving 
+        skills in a fully remote work environment.
+        </p>
+        <p style={{ fontWeight: 'bold', fontSize: 'larger' }}>
+        Outcome and Impact:
+        </p>
+        <p>
+        The project's success was evident in its reception by stakeholders, who gained clear insights into market indicators 
+        from the visualized data. This experience underscores the power of data visualization in conveying complex information 
+        succinctly and the potential of experiential technology to make abstract data tangible. It has reinforced my belief 
+        in the transformative power of data-driven storytelling and its significant role in strategic business decision-making.
+        </p>
+      </>
+    ),
+  },
+  {
     title: "Videoglove.com",
     imgSrc: "/project-imgs/videoglove/videoglove-thumb.png",
     code: "",
