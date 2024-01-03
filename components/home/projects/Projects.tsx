@@ -200,7 +200,7 @@ const projects = [
     projectLink: "https://cyberpatrolunit.vercel.app/",
     tech: ["Creative Technologist", "Programming", "Additive Manufacturing"],
     description:
-      "My role: transform large data models into compelling real-time adjustable visualizations, facilitating strategic discussions around manufacturing efficiencies. I utilized Python scripting and TouchDesigner to craft an interactive data visualization environment. This project allowed me to create a unique interface for stakeholders to manipulate many variables throughout the production process via physical dials I 3D printed with multi-jet fusion technology.",
+      "My role: transform large data models into compelling real-time user-modifiable visualizations, facilitating strategic discussions around Nike's manufacturing efficiencies. I utilized Python and TouchDesigner to craft an interactive data visualization environment. This project allowed me to create a unique interface for stakeholders to engage with variables throughout the shoe production process via physical dials that I manufactured with multi-jet fusion technology.",
     modalContent: (
       <>
         <p style={{ fontWeight: 'bold', fontSize: 'larger' }}>
@@ -230,6 +230,65 @@ const projects = [
         from the visualized data. This experience underscores the power of data visualization in conveying complex information 
         succinctly and the potential of experiential technology to make abstract data tangible. It has reinforced my belief 
         in the transformative power of data-driven storytelling and its significant role in strategic business decision-making.
+        </p>
+      </>
+    ),
+  },
+  {
+    title: "NEWAVE: Flying Art UFO",
+    imgSrc: "/project-imgs/newave/newave-tri-image.png",
+    code: "https://github.com/cyberpatrolunit",
+    projectLink: "https://cyberpatrolunit.vercel.app/",
+    tech: ["Creative Director", "Design", "Engineering"],
+    description:
+      "Conceptualized by the visionary light artist Eric Staller, NEWAVE was born from the idea of a flying carpet, evolving naturally from his repertoire of light painting, sculptures, and Urban UFOs. I embraced the challenge, channeling my expertise in hobby FPV quadcopters to craft this 36.SqFt airborne marvel.",
+    modalContent: (
+      <>
+        <p style={{ fontWeight: 'bold', fontSize: 'larger' }}>
+        Design and Engineering:
+        </p>
+        <p>
+        Crafted with a quadcopter configuration, NEWAVE was a feat of engineering that pushed the boundaries of drone technology 
+        in 2018. Utilizing 30" propellers, the largest available at the time, I designed a completely original drone frame in 
+        Fusion 360 and sourced high-quality carbon fiber materials. Alloy 910 3D-printed connectors joined the intricate array 
+        of rods and plates, forming the robust yet agile structure. Electronics and battery integration followed, with rigorous 
+        load capacity and flight time testing ensuring NEWAVE's performance met the ambitious vision.
+        </p>
+        <p style={{ fontWeight: 'bold', fontSize: 'larger' }}>
+        Technical Integration and Artistic Lighting:
+        </p>
+        <p>
+        The flight controller of choice was a Pixhawk Cube, coupled with Ardupilot for reliable flight control, including position 
+        hold and waypoint missions. The lighting system, a crucial aspect of NEWAVE's awe-inspiring presence, was installed by 
+        Nathan Jenkins, who integrated an LED system with sequences designed in TouchDesigner to animate the drone with pre-recorded 
+        luminosity.
+        </p>
+        <p style={{ fontWeight: 'bold', fontSize: 'larger' }}>
+        Collaborative Spirit and Challenges Overcome:
+        </p>
+        <p>
+        NEWAVE's journey from concept to reality was paved with the contributions of many. Jeremy Allen's flight software expertise, 
+        Dallas Swindle's airflow simulations, William Place's flight testing, Mark Francis's fabrication skills, Tom Sepe's transport 
+        logistics, Colby Curtola's drone operations, and numerous others who contributed to the multi-year project, embodied the 
+        collaborative spirit that underpinned this endeavor.
+        </p>
+        <p style={{ fontWeight: 'bold', fontSize: 'larger' }}>
+        Impact and Reception:
+        </p>
+        <p>
+        Designed to astonish and inspire, NEWAVE succeeded in its mission to be a flying spectacle, captivating audiences with its 
+        urban UFO-like appearance against the night sky. Its debut at Maker Faire and various events across San Francisco and Portland 
+        Oregon marked the culmination of persistence and innovation, leaving an indelible mark on the realm of artistic expression.
+        </p>
+        <p style={{ fontWeight: 'bold', fontSize: 'larger' }}>
+        Reflections and Future Endeavors:
+        </p>
+        <p>
+        In retrospect, considerations for future projects would include a more powerful propulsion system capable of enduring stronger 
+        winds, potentially a hexacopter for increased redundancy, and a more lightweight design. A shift to real-time wireless LED 
+        programming would allow for adaptable, location-specific displays, enhancing the interactive element of the art piece. Despite 
+        the trials and tribulations, the successful flights of NEWAVE represent the tangible triumph of art and technology, a testament 
+        to the relentless pursuit of transforming the skies into a canvas for creativity.
         </p>
       </>
     ),
