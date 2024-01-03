@@ -134,7 +134,7 @@ const projects = [
 
   {
     title: "Adriatique: Projekt X",
-    imgSrc: "/project-imgs/projektx/x-tri-image.png",
+    imgSrc: "/project-imgs/projektx/x-tri-image-v2.png",
     code: "https://github.com/cyberpatrolunit",
     projectLink: "https://cyberpatrolunit.vercel.app/",
     tech: ["Creative Director", "Live Show Implementation"],
