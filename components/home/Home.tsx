@@ -10,25 +10,11 @@ const Hero = React.lazy(() => import("./hero/Hero"));
 const Photo = React.lazy(() => import("./photo/photo"));
 const About = React.lazy(() => import("./about/About"));
 const Projects = React.lazy(() => import("./projects/Projects"));
-const Timeline = React.lazy(() => import("./timeline/Timeline"));
 const Contact = React.lazy(() => import("./contact/Contact"));
 
 export const Home = () => {
   const canvasRef = useRef(null);
   const [componentsLoaded, setComponentsLoaded] = useState(false);
-  const events = [
-    {
-      year: 2020,
-      title: 'Event 1',
-      description: 'Description for Event 1',
-    },
-    {
-      year: 2021,
-      title: 'Event 2',
-      description: 'Description for Event 2',
-    },
-    // Add more events here
-  ];
 
   useEffect(() => {
     if (canvasRef.current) {
@@ -55,7 +41,8 @@ export const Home = () => {
                 <Photo />
                 <About />
                 <Projects />
-                <Timeline events={[]} />
+                <Suspense fallback={<div>Loading Timeline...</div>}>
+                </Suspense>
                 <Contact />
                 <ScrollTop />
                 <div style={{ height: "100px", background: "linear-gradient(180deg, var(--background), var(--background-dark))" }}></div>
