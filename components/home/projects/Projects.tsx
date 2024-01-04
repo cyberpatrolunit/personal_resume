@@ -40,9 +40,13 @@ const projects = [
         for this new state of the art multifaceted office building. My responsibilities encompassed programming and deploying various 
         installations, including all Welcome Walls, the Community Garden, Susan's Garage, Beneath the Trees and Dynamic Lighting, each 
         featuring bespoke generative artworks.
+        </p>
+        <p>
+        </p>
+        <p>
         </p>  
         <p style={{ fontWeight: 'bold', fontSize: 'larger' }}>
-        Diverse Installations and Technical Expertise
+        Diverse Installations and Technical Expertise:
         </p>
         <p>
         The core of my work involved programming and deploying Welcome Walls across multiple areas, integrating dynamic generative 
@@ -51,8 +55,12 @@ const projects = [
         while VUE was employed for overlaying information layers, showcasing my ability to adapt and implement diverse technologies 
         effectively.
         </p>
+        <p>
+        </p>
+        <p>
+        </p>  
         <p style={{ fontWeight: 'bold', fontSize: 'larger' }}>
-        Technical Challenges and Innovative Solutions
+        Technical Challenges and Innovative Solutions:
         </p>
         <p>
         One of the major technical complexities was ensuring cloud-based synchronization of media servers throughout the building, 
@@ -61,29 +69,45 @@ const projects = [
         system for projection-mapped surfaces to align seamlessly with LED canvases, demonstrating my expertise in creating cohesive 
         multimedia experiences.
         </p>
+        <p>
+        </p>
+        <p>
+        </p>  
         <p style={{ fontWeight: 'bold', fontSize: 'larger' }}>
-        Team Coordination and Modularity Approach
+        Team Coordination and Modularity Approach:
         </p>
         <p>
         Effective version control and a focus on modularity were crucial in managing the extensive scope of this project. This 
         approach enabled specific updates without disrupting the overall architecture. Coordination of on-site and off-site teams, 
         along with cloud-based fleet deployment and remote management, was instrumental in achieving this.
         </p>
+        <p>
+        </p>
+        <p>
+        </p>  
         <p style={{ fontWeight: 'bold', fontSize: 'larger' }}>
-        Unique Creative Contributions
+        Unique Creative Contributions:
         </p>
         <p>
         Utilizing TouchDesigner, I developed custom tools for mapping and calibrating content on projection and LED surfaces. This 
         allowed me to leverage my experience in creating unique generative artworks for the Welcome Walls, distinct from the work 
         done at Pier 57.
         </p>
+        <p>
+        </p>
+        <p>
+        </p>  
         <p style={{ fontWeight: 'bold', fontSize: 'larger' }}>
-        Project Outcome and Anticipation
+        Project Outcome and Anticipation:
         </p>
         <p>
         The final stages of deployment have been completed, and we are currently in the burn-in phase, with the building set to 
         officially open in February 2024. My team and I eagerly anticipate the reception of our work by the building's visitors 
         and employees, confident that it will enrich their experience in this innovative space.
+        </p>
+        <p>
+        </p>
+        <p>
         </p>
       </>
     ),
