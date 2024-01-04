@@ -29,7 +29,7 @@ const projects = [
     projectLink: "https://github.com/cyberpatrolunit",
     tech: ["Lead Technical Director", "TouchDesigner / GLSL / Vue"],
     description:
-      "Technical Programming Lead on a digital wayfinding system for the new Google St. John's Terminal Headquarters in NYC.",
+      "Technical Programming Lead on a TouchDesigner digital wayfinding system for the new Google St. John's Terminal.",
     modalContent: (
       <>
         <p style={{ fontWeight: 'bold', fontSize: 'larger' }}>
@@ -119,9 +119,22 @@ const projects = [
     projectLink: "https://google.com/",
     tech: ["Lead Technical Director", "Ventuz / TouchDesigner"],
     description:
-      "As the Lead Technical Director and Ventuz programmer for the Google Pier 57 site, I spearheaded a groundbreaking project to integrate generative visuals across a multitude of LED screens within the building. The primary objective was to create a dynamic, real-time, content-driven wayfinding system, controllable via a web-based CMS, enhancing the visitor experience with both functionality and aesthetic appeal.",
+      "Technical Programming Lead on the Ventuz based digital wayfinding system for the Google Pier 57 Event Center in NYC.",
     modalContent: (
       <>
+        <p style={{ fontWeight: 'bold', fontSize: 'larger' }}>
+        Project Overview:
+        </p>
+        <p>
+        As the Lead Technical Director and Ventuz programmer for the Google Pier 57 site, I spearheaded a 
+        groundbreaking project to integrate generative visuals across a multitude of LED screens within the building. 
+        The primary objective was to create a dynamic, real-time, content-driven wayfinding system, controllable via 
+        a web-based CMS, enhancing the visitor experience with both functionality and aesthetic appeal.
+        </p>
+        <p>
+        </p>
+        <p>
+        </p>  
         <p style={{ fontWeight: 'bold', fontSize: 'larger' }}>
         Innovative Approach and Technical Mastery:
         </p>
@@ -131,6 +144,10 @@ const projects = [
           understanding of real-time systems. The challenge was amplified by the diverse requirements of each 
           space, necessitating a flexible and scalable solution.
         </p>
+        <p>
+        </p>
+        <p>
+        </p>  
         <p style={{ fontWeight: 'bold', fontSize: 'larger' }}>
         Collaboration and Leadership:
         </p>
@@ -140,6 +157,10 @@ const projects = [
         implementation by our development team. My approach fostered a collaborative environment, bridging the 
         gap between technical and design aspects, and ensuring a cohesive execution of the project vision.
         </p>
+        <p>
+        </p>
+        <p>
+        </p>  
         <p style={{ fontWeight: 'bold', fontSize: 'larger' }}>
         Technology Integration:
         </p>
@@ -149,6 +170,10 @@ const projects = [
         This integration showcased my ability to utilize cutting-edge technology to meet complex project 
         requirements.
         </p>
+        <p>
+        </p>
+        <p>
+        </p>  
         <p style={{ fontWeight: 'bold', fontSize: 'larger' }}>
         Outcome and Client Engagement:
         </p>
@@ -160,7 +185,11 @@ const projects = [
         real-time, content-driven wayfinding experience that allows Google to control the entire site. Through 
         our programming, Google can schedule events, set preset generative looks, and upload custom media, 
         thereby creating a cohesive and interactive experience throughout the building.
-        </p>      
+        </p> 
+        <p>
+        </p>
+        <p>
+        </p>     
       </>
     ),
   },
@@ -172,9 +201,21 @@ const projects = [
     projectLink: "https://cyberpatrolunit.vercel.app/",
     tech: ["Creative Director", "Live Show Implementation"],
     description:
-      "A collaborative venture with the renowned DJ duo Adriatique, stands as a testament to my abilities as a Creative Director to transform artistic visions into tangible realities. This project was a harmonious blend of art, technology, and music, culminating in a modular sculpture that evolved visually across various live shows.",
+      "Creative Director for Adriatique's Projekt X modular LED sculpture.",
     modalContent: (
       <>
+        <p style={{ fontWeight: 'bold', fontSize: 'larger' }}>
+        Project Overview:
+        </p>
+        <p>
+        A collaborative venture with the renowned DJ duo Adriatique, stands as a testament to my abilities as a Creative 
+        Director to transform artistic visions into tangible realities. This project was a harmonious blend of art, 
+        technology, and music, culminating in a modular sculpture that evolved visually across various live shows.
+        </p>
+        <p>
+        </p>
+        <p>
+        </p>
         <p style={{ fontWeight: 'bold', fontSize: 'larger' }}>
         Conceptualization and Collaboration:
         </p>
@@ -184,6 +225,10 @@ const projects = [
         modular, allowing for the application of different materials to its outer facets, thereby offering varied 
         aesthetics for different live events. This approach not only enhanced its visual appeal but will continue to 
         extended its relevance and impact over time.
+        </p>
+        <p>
+        </p>
+        <p>
         </p>
         <p style={{ fontWeight: 'bold', fontSize: 'larger' }}>
         Technical Ingenuity and Safety Measures:
@@ -195,6 +240,10 @@ const projects = [
         touring purposes was a significant challenge. The integration of LEDs into the sculpture was carefully planned to 
         align with these safety and design parameters.
         </p>
+        <p>
+        </p>
+        <p>
+        </p>
         <p style={{ fontWeight: 'bold', fontSize: 'larger' }}>
         Dynamic Collaboration Across Borders:
         </p>
@@ -204,6 +253,10 @@ const projects = [
         to overcome time zone challenges and maintain effective communication and coordination throughout the project's 
         timeline.
         </p>
+        <p>
+        </p>
+        <p>
+        </p>
         <p style={{ fontWeight: 'bold', fontSize: 'larger' }}>
         Artistic Vision and Emotional Resonance:
         </p>
@@ -212,6 +265,10 @@ const projects = [
         coating not only adds aesthetic value but also enhances the visual experience with laser mapping and light 
         caustics. We employed various previsualization solutions, allowing us to experiment with the 3D model in virtual 
         stage designs before physical construction.
+        </p>
+        <p>
+        </p>
+        <p>
         </p>
         <p style={{ fontWeight: 'bold', fontSize: 'larger' }}>
         Impact and Reception:
@@ -223,19 +280,36 @@ const projects = [
         art that comes alive in front of large audiences, enhancing the energy and experience of Adriatique's live shows, 
         has been an immensely rewarding and fulfilling experience.
         </p>
+        <p>
+        </p>
+        <p>
+        </p>
       </>
     ),
   },
   {
-    title: "Nike NMS Experience Project",
+    title: "Nike NMS Experience",
     imgSrc: "/project-imgs/nms/nms-tri-image.png",
     code: "https://github.com/cyberpatrolunit",
     projectLink: "https://cyberpatrolunit.vercel.app/",
     tech: ["Creative Technologist", "Programming", "Additive Manufacturing"],
     description:
-      "My role: transform large data models into compelling real-time user-modifiable visualizations, facilitating strategic discussions around Nike's manufacturing efficiencies. I utilized Python and TouchDesigner to craft an interactive data visualization environment. This project allowed me to create a unique interface for stakeholders to engage with variables throughout the shoe production process via physical dials that I manufactured with multi-jet fusion technology.",
+      "Data visualization and experiential technology for Nike's NMS Experience Project.",
     modalContent: (
       <>
+        <p style={{ fontWeight: 'bold', fontSize: 'larger' }}>
+        Project Overview:
+        </p>
+        <p>
+        My role: transform large data models into compelling real-time user-modifiable visualizations, facilitating strategic 
+        discussions around Nike's manufacturing efficiencies. I utilized Python and TouchDesigner to craft an interactive 
+        data visualization environment. This project allowed me to create a unique interface for stakeholders to engage with 
+        variables throughout the shoe production process via physical dials that I manufactured with multi-jet fusion technology.
+        </p>
+        <p>
+        </p>
+        <p>
+        </p>
         <p style={{ fontWeight: 'bold', fontSize: 'larger' }}>
         Innovative Data Interaction:
         </p>
@@ -244,6 +318,10 @@ const projects = [
         various metrics of the manufacturing process and observe the resultant changes in labor costs in real-time. This 
         direct manipulation of data not only engaged stakeholders but also effectively demonstrated the financial impact 
         of varying skill levels within Nike’s manufacturing process.
+        </p>
+        <p>
+        </p>
+        <p>
         </p>
         <p style={{ fontWeight: 'bold', fontSize: 'larger' }}>
         Expertise and Remote Deployment:
@@ -255,6 +333,10 @@ const projects = [
         access, I successfully executed the entire deployment off-site, a testament to my adaptability and problem-solving 
         skills in a fully remote work environment.
         </p>
+        <p>
+        </p>
+        <p>
+        </p>
         <p style={{ fontWeight: 'bold', fontSize: 'larger' }}>
         Outcome and Impact:
         </p>
@@ -264,19 +346,35 @@ const projects = [
         succinctly and the potential of experiential technology to make abstract data tangible. It has reinforced my belief 
         in the transformative power of data-driven storytelling and its significant role in strategic business decision-making.
         </p>
+        <p>
+        </p>
+        <p>
+        </p>
       </>
     ),
   },
   {
-    title: "NEWAVE: Flying Art UFO",
+    title: "NEWAVE: Flying Art UAP",
     imgSrc: "/project-imgs/newave/newave-tri-image.png",
     code: "https://github.com/cyberpatrolunit",
     projectLink: "https://cyberpatrolunit.vercel.app/",
     tech: ["Creative Director", "Design", "Engineering"],
     description:
-      "Conceptualized by the visionary light artist Eric Staller, NEWAVE was born from the idea of a flying carpet, evolving naturally from his repertoire of light painting, sculptures, and Urban UFOs. I embraced the challenge, channeling my expertise in hobby FPV quadcopters to craft this 36.SqFt airborne marvel.",
+      "Engineering and design of a 36SqFt flying art installation for renoun artist Eric Staller.",
     modalContent: (
       <>
+        <p style={{ fontWeight: 'bold', fontSize: 'larger' }}>
+        Project Overview:
+        </p>
+        <p>
+        Conceptualized by the visionary light artist Eric Staller, NEWAVE was born from the idea of a flying carpet, evolving 
+        naturally from his repertoire of light painting, sculptures, and Urban UFOs. I embraced the challenge, channeling my 
+        expertise in hobby FPV quadcopters to craft this 36.SqFt airborne marvel.
+        </p>
+        <p>
+        </p>
+        <p>
+        </p>
         <p style={{ fontWeight: 'bold', fontSize: 'larger' }}>
         Design and Engineering:
         </p>
@@ -287,6 +385,10 @@ const projects = [
         of rods and plates, forming the robust yet agile structure. Electronics and battery integration followed, with rigorous 
         load capacity and flight time testing ensuring NEWAVE's performance met the ambitious vision.
         </p>
+        <p>
+        </p>
+        <p>
+        </p>
         <p style={{ fontWeight: 'bold', fontSize: 'larger' }}>
         Technical Integration and Artistic Lighting:
         </p>
@@ -295,6 +397,10 @@ const projects = [
         hold and waypoint missions. The lighting system, a crucial aspect of NEWAVE's awe-inspiring presence, was installed by 
         Nathan Jenkins, who integrated an LED system with sequences designed in TouchDesigner to animate the drone with pre-recorded 
         luminosity.
+        </p>
+        <p>
+        </p>
+        <p>
         </p>
         <p style={{ fontWeight: 'bold', fontSize: 'larger' }}>
         Collaborative Spirit and Challenges Overcome:
@@ -305,6 +411,10 @@ const projects = [
         logistics, Colby Curtola's drone operations, and numerous others who contributed to the multi-year project, embodied the 
         collaborative spirit that underpinned this endeavor.
         </p>
+        <p>
+        </p>
+        <p>
+        </p>
         <p style={{ fontWeight: 'bold', fontSize: 'larger' }}>
         Impact and Reception:
         </p>
@@ -312,6 +422,10 @@ const projects = [
         Designed to astonish and inspire, NEWAVE succeeded in its mission to be a flying spectacle, captivating audiences with its 
         urban UFO-like appearance against the night sky. Its debut at Maker Faire and various events across San Francisco and Portland 
         Oregon marked the culmination of persistence and innovation, leaving an indelible mark on the realm of artistic expression.
+        </p>
+        <p>
+        </p>
+        <p>
         </p>
         <p style={{ fontWeight: 'bold', fontSize: 'larger' }}>
         Reflections and Future Endeavors:
@@ -322,6 +436,10 @@ const projects = [
         programming would allow for adaptable, location-specific displays, enhancing the interactive element of the art piece. Despite 
         the trials and tribulations, the successful flights of NEWAVE represent the tangible triumph of art and technology, a testament 
         to the relentless pursuit of transforming the skies into a canvas for creativity.
+        </p>
+        <p>
+        </p>
+        <p>
         </p>
       </>
     ),
