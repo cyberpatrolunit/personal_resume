@@ -29,9 +29,18 @@ const projects = [
     projectLink: "https://github.com/cyberpatrolunit",
     tech: ["Lead Technical Director", "TouchDesigner / GLSL / Vue"],
     description:
-      "As the Lead Technical Director and Programmer, I was at the forefront of delivering a wide range of interactive installations for this new state of the art multifaceted office building. My responsibilities encompassed programming and deploying various installations, including all Welcome Walls, the Community Garden, Susan's Garage, Beneath the Trees and Dynamic Lighting, each featuring bespoke generative artworks.",
+      "Technical Programming Lead on a digital wayfinding system for the new Google St. John's Terminal Headquarters in NYC.",
     modalContent: (
       <>
+        <p style={{ fontWeight: 'bold', fontSize: 'larger' }}>
+        Project Overview:
+        </p>
+        <p>
+        As the Lead Technical Director and Programmer, I was at the forefront of delivering a wide range of interactive installations 
+        for this new state of the art multifaceted office building. My responsibilities encompassed programming and deploying various 
+        installations, including all Welcome Walls, the Community Garden, Susan's Garage, Beneath the Trees and Dynamic Lighting, each 
+        featuring bespoke generative artworks.
+        </p>  
         <p style={{ fontWeight: 'bold', fontSize: 'larger' }}>
         Diverse Installations and Technical Expertise
         </p>
