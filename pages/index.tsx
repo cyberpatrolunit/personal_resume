@@ -1,6 +1,7 @@
 import Head from "next/head";
 // import dynamic from 'next/dynamic';
 import { Home } from "@/components/home/Home";
+import { Analytics } from '@vercel/analytics/react';
 
 export default function home() {
   return (
@@ -12,6 +13,7 @@ export default function home() {
         <link rel="icon" href="/bp_logo.ico" />
       </Head>      
       <Home />
+      <Analytics />
     </>
   );
 }
