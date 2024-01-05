@@ -2,10 +2,40 @@ import React, { useState, useEffect } from 'react';
 import { Reveal } from "@/components/utils/Reveal";
 import ReactTypingEffect from 'react-typing-effect';
 import styles from "./hero.module.scss";
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 // Lazy load the Icon and OutlineButton components
 const Icon = React.lazy(() => import("./Icon"));
 const OutlineButton = React.lazy(() => import("../../buttons/OutlineButton"));
+
+const EmojiCycler = ({ emojis, cycleTime }) => {
+  const [currentEmoji, setCurrentEmoji] = useState(0);
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setCurrentEmoji((prevEmoji) => (prevEmoji + 1) % emojis.length);
+    }, cycleTime + 500); // Add transition time to the cycle time
+
+    return () => clearInterval(intervalId); // Cleanup on unmount
+  }, [emojis.length, cycleTime]);
+
+  return (
+    <TransitionGroup component={null}> {/* component={null} renders no extra element */}
+      <CSSTransition
+        key={emojis[currentEmoji]}
+        timeout={500}
+        classNames={{
+          enter: styles.emojiFadeEnter,
+          enterActive: styles.emojiFadeEnterActive,
+          exit: styles.emojiFadeExit,
+          exitActive: styles.emojiFadeExitActive,
+        }}
+      >
+        <span className={styles.emoji}>{emojis[currentEmoji]}</span>
+      </CSSTransition>
+    </TransitionGroup>
+  );
+};
 
 const Hero = () => {
   const [loadIcon, setLoadIcon] = useState(false);
@@ -18,12 +48,20 @@ const Hero = () => {
     return () => clearTimeout(timer); // Cleanup the timer
   }, []);
 
+  // Define your emojis and cycle time here
+  const emojis = ["👾", "🚀", "💡", "🎨", "🤖", "🛸", "⛷️"];
+  const cycleTime = 100; // 2000ms = 2 seconds
+
   return (
     <section className={`section-wrapper ${styles.hero}`}>
       <div className={styles.copyWrapper}>
         <Reveal>
           <h1 className={styles.title}>
-            🖤 I&apos;m Bryant<span>.</span>
+            <div className={styles.emojiContainer}> 
+              <EmojiCycler emojis={emojis} cycleTime={cycleTime} />
+            </div>
+            <div className={styles.hello}>HELLO</div>
+            I&apos;m<span>Bryant</span>
           </h1>
         </Reveal>
         <Reveal>

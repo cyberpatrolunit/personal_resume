@@ -19,37 +19,57 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start; // Align items to start of flex container (left)
+  //border: 1px solid rgb(34, 150, 212);
+
 }
 
 .title {
+  display: flex; // Use flexbox to align items inline
+  align-items: center; // Center items vertically
+  flex-wrap: wrap;
   font-family: 'Slussen.Exp', sans-serif;
   letter-spacing: -0.2rem;
   text-transform: uppercase;
   line-height: 120%;
   margin-bottom: 0.4rem;
-  margin-right: 1rem;
+  margin-right: 0rem;
   font-size: var(--text-xl);
   text-shadow: 0 0 4px rgb(255, 255, 255), 0 0 10px rgba(255, 255, 255, 0.5);
+  //border: 1px solid rgb(34, 150, 212);
   
-  @include desktop {
-    line-height: 120%;
+  .emojiContainer {
+    margin-right: 80px; // Adjust as needed for space between emoji and "HELLO"
+    font-size: 1em; // Adjust emoji size as needed
+    margin-bottom: 7rem;
   }
+
+  span {
+    margin-left: 5px; // Adjust as needed for space between "I'm" and "Bryant"
+  }
+
+  // Style for the "HELLO" text
+  .hello {
+    margin-right: 5px; // Adjust as needed for space between "HELLO" and emoji
+  }
+  
 }
 
 .subTitle {
   font-family: 'Slussen.Exp', sans-serif;
   line-height: 1.1;
   margin-top: 3.2rem;
-  margin-left: -.1rem;
+  margin-left: -1.1rem;
   margin-bottom: 1rem;
   font-size: var(--text-mdS);
   padding: 0rem;
   font-weight: 100;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  //border: 1px solid rgb(34, 150, 212);
 
   span {
     font-weight: bold;
     color: var(--brand);
+    margin-left: 5px;
   }
 }
 
@@ -59,6 +79,8 @@
   padding: 0rem;
   max-width: 460px;
   font-weight: 200;
+  //border: 1px solid rgb(34, 150, 212);
+
 }
 
 .outlineButton {
@@ -89,3 +111,48 @@
     text-shadow: none;
   }
 }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.emojiFadeEnter {
+  opacity: 0;
+  animation: fadeIn 700ms forwards; // adjust time as necessary
+}
+
+.emojiFadeEnterActive {
+  opacity: 1;
+}
+
+.emojiFadeExit {
+  opacity: 1;
+}
+
+.emojiFadeExitActive {
+  animation: fadeOut 700ms forwards; // adjust time as necessary
+}
+
+// Ensure emojis are positioned in the same space
+.emoji {
+  position: absolute;
+  left: 0; // or center it as needed
+
+}
+
+
+
