@@ -14,7 +14,7 @@ const EmojiCycler = ({ emojis, cycleTime }) => {
   useEffect(() => {
     const intervalId = setInterval(() => {
       setCurrentEmoji((prevEmoji) => (prevEmoji + 1) % emojis.length);
-    }, cycleTime + 500); // Add transition time to the cycle time
+    }, cycleTime + 1500); // Add transition time to the cycle time
 
     return () => clearInterval(intervalId); // Cleanup on unmount
   }, [emojis.length, cycleTime]);
@@ -49,7 +49,7 @@ const Hero = () => {
   }, []);
 
   // Define your emojis and cycle time here
-  const emojis = ["👾", "🚀", "💡", "🎨", "🤖", "🛸", "⛷️"];
+  const emojis = ["👾", "🚀", "💡", "🎨", "🤖", "🛸", "⛷️", "👋", "🎛️", "🕹️", "📡"];
   const cycleTime = 100; // 2000ms = 2 seconds
 
   return (

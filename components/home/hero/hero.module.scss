@@ -38,18 +38,19 @@
   //border: 1px solid rgb(34, 150, 212);
   
   .emojiContainer {
-    margin-right: 80px; // Adjust as needed for space between emoji and "HELLO"
+    margin-right: 100px; // Adjust as needed for space between emoji and "HELLO"
     font-size: 1em; // Adjust emoji size as needed
     margin-bottom: 7rem;
+    margin-left: 0rem;
   }
 
   span {
-    margin-left: 5px; // Adjust as needed for space between "I'm" and "Bryant"
+    margin-left: 25px; // Adjust as needed for space between "I'm" and "Bryant"
   }
 
   // Style for the "HELLO" text
   .hello {
-    margin-right: 5px; // Adjust as needed for space between "HELLO" and emoji
+    margin-right: 25px; // Adjust as needed for space between "HELLO" and emoji
   }
   
 }
