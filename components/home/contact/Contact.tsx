@@ -60,24 +60,9 @@ export const Contact = () => {
             <Reveal width="100%">
               <div>
                 <p className={styles.contactCopy}>
-                  Shoot me an email if you want to connect! 
-                </p>
-                <p className={styles.contactCopy}>
-                  You can also find me on{" "}
-                  <Link href="https://www.instagram.com/cyberpatrolunit/" target="_blank" rel="nofollow">Instagram</Link>{" "}
-                  or{" "}
-                  <Link href="https://www.tiktok.com/cyberpatrolunit" target="_blank" rel="nofollow">TikTok</Link>{" "}
-                  if that&apos;s more your jam.
+                Let's collaborate! Drop me a line anytime. 😎
                 </p>
               </div>
-            </Reveal>
-            <Reveal width="100%">
-              <Link href="mailto:bryant@futuretenseindustries.com">
-                <div className={styles.contactEmail}>
-                  <AiFillMail size="2.4rem" />
-                  <span>bryant@futuretenseindustries.com</span>
-                </div>
-              </Link>
             </Reveal>
             <Reveal width="100%">
               <form autoComplete="false" className={styles.contantForm} ref={form} onSubmit={sendEmail}>
