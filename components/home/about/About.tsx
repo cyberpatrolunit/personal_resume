@@ -32,15 +32,15 @@ export const About = () => {
               <h2 className={styles.subHeading}>Notable Projects</h2>
               <p className={styles.aboutText}>
                 <strong>Google Pier 57 and Google St. John’s Terminal in NYC:</strong> Currently at Downstream, I 
-                oversee permanent installations, managing real-time developers and procuring software and hardware.
+                oversee extensive permanent installations, managing real-time developers, Git repositories and procuring software and hardware.
               </p>
               <p className={styles.aboutText}>
-                As an Independent Contractor, I've contributed to projects such as Nike HQ in Portland, OR, and the 
+                As an Independent Contractor, I've contributed to projects such as NMS Experience for Nike HQ in Beaverton, OR, and the 
                 Salesforce Tower in San Francisco.
               </p>
               <p className={styles.aboutText}>
                 At <strong>dotdotdash.io</strong>, I served as Systems Architect for projects like Amazon Prime Video Pop-Bot, Segment's 
-                Synapse tech confrence and TheNorthFace Future Light Product Reveal.
+                Synapse tech confrence and Creative for TheNorthFace Future Light Product Reveal.
               </p>
               <p className={styles.aboutText}>
                 <strong>OBSCURA DIGITAL / MSG Sphere:</strong> Supported over 25 client-facing projects, including the 
