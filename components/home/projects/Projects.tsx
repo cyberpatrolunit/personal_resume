@@ -116,7 +116,7 @@ const projects = [
     title: "Google: Pier 57 NYC",
     imgSrc: "/project-imgs/p57/p57-tri-image.png",
     code: "",
-    projectLink: "https://google.com/",
+    projectLink: "https://www.p57.xyz/",
     tech: ["Lead Technical Director", "Ventuz / TouchDesigner"],
     description:
       "Technical Programming Lead on the Ventuz based digital wayfinding system for the Google Pier 57 Event Center in NYC.",
