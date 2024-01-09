@@ -114,8 +114,8 @@ const projects = [
   },
   {
     title: "Google: Pier 57 NYC",
-    imgSrc: "/project-imgs/p57/p57-tri-image.png",
-    code: "",
+    imgSrc: "/project-imgs/p57/p57-single.png",
+    code: "https://www.p57.xyz/",
     projectLink: "https://www.p57.xyz/",
     tech: ["Lead Technical Director", "Ventuz / TouchDesigner"],
     description:
