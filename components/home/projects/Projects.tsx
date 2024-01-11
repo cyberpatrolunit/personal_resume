@@ -25,8 +25,8 @@ const projects = [
   {
     title: "Google: SJT NYC",
     imgSrc: "/project-imgs/sjt/sjt-tri-image.png",
-    code: "",
-    projectLink: "https://github.com/cyberpatrolunit",
+    code: "https://www.sjt-nyc.xyz/",
+    projectLink: "https://www.sjt-nyc.xyz/",
     tech: ["Lead Technical Director", "TouchDesigner / GLSL / Vue"],
     description:
       "Technical Programming Lead on a TouchDesigner digital wayfinding system for the new Google St. John's Terminal.",
