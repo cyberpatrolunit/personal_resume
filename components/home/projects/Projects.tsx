@@ -197,8 +197,8 @@ const projects = [
   {
     title: "Adriatique: Projekt X",
     imgSrc: "/project-imgs/projektx/x-tri-image-v2.png",
-    code: "https://github.com/cyberpatrolunit",
-    projectLink: "https://cyberpatrolunit.vercel.app/",
+    code: "https://projekt-x-gallery.vercel.app/",
+    projectLink: "https://projekt-x-gallery.vercel.app/",
     tech: ["Creative Director", "Live Show Implementation"],
     description:
       "Creative Director for Adriatique's Projekt X modular LED sculpture.",
