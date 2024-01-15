@@ -55,15 +55,9 @@ const Hero = () => {
   return (
     <section className={`section-wrapper ${styles.hero}`}>
       <div className={styles.copyWrapper}>
-        <Reveal>
-          <h1 className={styles.title}>
-            <div className={styles.emojiContainer}> 
-              <EmojiCycler emojis={emojis} cycleTime={cycleTime} />
-            </div>
-            <div className={styles.hello}>HELLO</div>
-            I&apos;m<span>Bryant</span>
-          </h1>
-        </Reveal>
+      <React.Suspense fallback={<div>Loading Icon...</div>}>
+        {loadIcon && <Icon />}
+      </React.Suspense>
         <Reveal>
           <h2 className={styles.subTitle}>
             <span>
@@ -94,9 +88,6 @@ const Hero = () => {
           </React.Suspense>
         </Reveal>
       </div>
-      <React.Suspense fallback={<div>Loading Icon...</div>}>
-        {loadIcon && <Icon />}
-      </React.Suspense>
     </section>
   );
 };

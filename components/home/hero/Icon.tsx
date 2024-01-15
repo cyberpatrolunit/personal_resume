@@ -8,7 +8,7 @@ const Icon = () => {
     useEffect(() => {
         if (canvasRef.current) {
             const app = new Application(canvasRef.current);
-            app.load('https://prod.spline.design/uTGWplu-Bsv7wSb9/scene.splinecode');
+            app.load('https://prod.spline.design/VWaUX6oAcDMeSa1H/scene.splinecode');
         }
     }, []);
 
