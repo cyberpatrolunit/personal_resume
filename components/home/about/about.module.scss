@@ -3,7 +3,7 @@
 .about {
   font-family: 'Slussen.Reg', sans-serif;
   display: grid;
-  grid-template-columns: 1fr 300px;
+  grid-template-columns: fr 300px;
   gap: 2.4rem;
 
   @media (max-width: 900px) {
@@ -31,7 +31,6 @@
   margin-bottom: 1.5rem; // Adjust the value as needed
 }
 
-
 .links {
   display: flex;
   align-items: center;
@@ -53,8 +52,12 @@
   margin-top: 2rem;
   margin-bottom: 2rem;
   margin-bottom: 1rem;
-  border-bottom: 1px solid rgb(34, 150, 212);
-  // Add any other styles you wish to apply
+  border-bottom: 2px;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;   
+  border-color: var(--brand);
+  border-style: solid;
 }
 
 

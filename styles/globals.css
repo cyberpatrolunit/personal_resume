@@ -7,7 +7,7 @@
   --background-dark: rgb(8, 8, 8);
 
   --text: rgb(235, 236, 243);
-  --brand: rgb(34, 150, 212);
+  --brand: rgb(50, 231, 101);
 
   --text-xs: 1.6rem;
   --text-sm: 2rem;
@@ -87,6 +87,6 @@ input[type=number] {
 .chip {
   font-size: var(--text-xs);
   background: var(--background-light);
-  padding: 0.2rem 0.8rem;
-  border-radius: 999px;
+  padding: 0.8rem 0.85rem;
+  border-radius: 0px;
 }

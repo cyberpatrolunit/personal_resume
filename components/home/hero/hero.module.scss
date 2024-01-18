@@ -1,71 +1,124 @@
 @import 'styles/_functions';
 
 .hero {
-  margin-bottom: 1.6rem;
+  margin-bottom: 0.6rem;
+  margin-left: 0rem;
 
   @media (max-width: 768px) {
-    margin-bottom: 4.8rem;
+    margin-bottom: 0.8rem;
   }
 }
+
 
 .copyWrapper {
   font-family: 'Slussen.Exp', sans-serif;
   font-weight: 100;
   position: relative;
   z-index: 10;
-  margin: 4.8rem 0;
-  text-align: left; // Align text to the left
+  margin: 0.5rem 0.84rem;
+  text-align: left;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
   display: flex;
   flex-direction: column;
-  align-items: flex-start; // Align items to start of flex container (left)
-  //border: 1px solid rgb(34, 150, 212);
+  align-items: flex-start;
+  z-index: 1;
 
+  @media (max-width: 768px) {
+    text-align: center;
+    align-items: center;
+  }
+}
+
+.rockOnSVG {
+  stroke: var(--brand); // Define the stroke color
+  stroke-width: 2px;
+  position: absolute;
+  height: auto;
+  margin-top: 5rem;
+  right: 0;
+  width: 45%; // Adjust the size as needed
+  z-index: -1; // To ensure it's behind the text
+  animation: wiggle 10s ease-in-out infinite;
+
+  @media (max-width: 768px) {
+    letter-spacing: 0rem;
+    justify-content: center;
+    margin-right: 0;
+  }
+}
+
+@keyframes wiggle {
+  0%, 10%, 20%, 30%, 40%, 50%, 60% { transform: rotate(0deg); }
+  71% { transform: rotate(0deg); }
+  70% { transform: rotate(-5deg); }
+  72% { transform: rotate(5deg); }
+  74% { transform: rotate(-5deg); }
+  76% { transform: rotate(5deg); }
+  78% { transform: rotate(-5deg); }
+  80% { transform: rotate(5deg); }
+  82% { transform: rotate(0deg); }
 }
 
 .title {
-  display: flex; // Use flexbox to align items inline
-  align-items: center; // Center items vertically
+  display: flex;
+  align-items: left;
   flex-wrap: wrap;
   font-family: 'Slussen.Exp', sans-serif;
-  letter-spacing: -0.2rem;
-  text-transform: uppercase;
+  letter-spacing: -0rem;
+  text-transform: none;
   line-height: 120%;
+  margin-left: 0rem;
+  margin-right: 1rem;
   margin-bottom: 0.4rem;
-  margin-right: 0rem;
   font-size: var(--text-xl);
   text-shadow: 0 0 4px rgb(255, 255, 255), 0 0 10px rgba(255, 255, 255, 0.5);
-  //border: 1px solid rgb(34, 150, 212);
   
+  @media (max-width: 768px) {
+    letter-spacing: 0rem;
+    justify-content: center;
+    margin-right: 0;
+  }
+
   .emojiContainer {
-    margin-right: 100px; // Adjust as needed for space between emoji and "HELLO"
-    font-size: 1em; // Adjust emoji size as needed
+    margin-right: 100px;
+    font-size: 5rem;
     margin-bottom: 7rem;
-    margin-left: 0rem;
+
+    @media (max-width: 768px) {
+      margin-right: 7rem;
+      margin-left:0rem;
+      margin-bottom: 1;
+      margin-top: 0rem;
+    }
   }
 
   span {
-    margin-left: 25px; // Adjust as needed for space between "I'm" and "Bryant"
+    margin-left: 25px;
+
+    @media (max-width: 768px) {
+      margin-left: 0;
+    }
   }
 
-  // Style for the "HELLO" text
   .hello {
-    margin-right: 25px; // Adjust as needed for space between "HELLO" and emoji
+    margin-right: 25px;
+
+    @media (max-width: 768px) {
+      margin-right: 3rem;
+      margin-left: 3rem;
+    }
   }
-  
 }
 
 .subTitle {
   font-family: 'Slussen.Exp', sans-serif;
   line-height: 1.1;
-  margin-top: 3.2rem;
+  margin-top: 2.5rem;
   margin-left: -1.1rem;
   margin-bottom: 1rem;
   font-size: var(--text-mdS);
-  padding: 0rem;
   font-weight: 100;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-  //border: 1px solid rgb(34, 150, 212);
 
   span {
     font-weight: bold;
@@ -77,11 +130,8 @@
 .aboutCopy {
   font-family: 'Slussen.Exp', sans-serif;
   margin-top: 2rem;
-  padding: 0rem;
   max-width: 460px;
   font-weight: 200;
-  //border: 1px solid rgb(34, 150, 212);
-
 }
 
 .outlineButton {
@@ -94,24 +144,26 @@
   border: 2px solid rgb(34, 150, 212);
   border-radius: 12px;
   margin-top: 2rem;
-  margin-left: 0rem;
-  margin-right: 0.5rem;
-  color: rgb(34, 150, 212);
+  //color: rgb(34, 150, 212);
   background-color: transparent;
   transition: all 0.2s ease-in-out;
   cursor: pointer;
-  text-shadow:
-  -1px -1px 0 #000,  
-  1px -1px 0 #000,
-  -1px 1px 0 #000,
-  1px 1px 0 #000;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 
   &:hover {
-    background-color: rgb(34, 150, 212);
+    //background-color: rgb(34, 150, 212);
     color: #000000;
     text-shadow: none;
   }
+
+  @media (max-width: 768px) {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
 }
+
+// Keyframes and other styles
 
 @keyframes fadeIn {
   from {
@@ -151,9 +203,9 @@
 // Ensure emojis are positioned in the same space
 .emoji {
   position: absolute;
-  left: 0; // or center it as needed
+  left: -1rem; // or center it as needed
 
+  @media (max-width: 768px) {
+    left: 1rem;
+  }
 }
-
-
-

@@ -8,4 +8,17 @@ const nextConfig = {
   },
 };
 
-module.exports = nextConfig;
+module.exports = {
+  webpack: (config, { isServer }) => {
+    // Modify the `config` here
+
+    // To handle SVGs with SVGR
+    config.module.rules.push({
+      test: /\.svg$/,
+      issuer: /\.[jt]sx?$/,
+      use: ['@svgr/webpack', 'url-loader'],
+    });
+
+    return config;
+  },
+};

@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Reveal } from "@/components/utils/Reveal";
 import ReactTypingEffect from 'react-typing-effect';
 import styles from "./hero.module.scss";
-import { CSSTransition, TransitionGroup } from 'react-transition-group';
+import { CSSTransition, TransitionGroup } from 'react-transition-group'
+import { ReactComponent as RockOnSVG } from '/public/rockon.svg';
 
 // Lazy load the Icon and OutlineButton components
 const Icon = React.lazy(() => import("./Icon"));
@@ -54,10 +55,35 @@ const Hero = () => {
 
   return (
     <section className={`section-wrapper ${styles.hero}`}>
+      <RockOnSVG className={styles.rockOnSVG} />
       <div className={styles.copyWrapper}>
-      <React.Suspense fallback={<div>Loading Icon...</div>}>
-        {loadIcon && <Icon />}
-      </React.Suspense>
+      <Reveal>
+        <h1 className={styles.title}>
+          <div className={styles.emojiContainer}> 
+            <EmojiCycler emojis={emojis} cycleTime={cycleTime} />
+          </div>
+        </h1>
+      </Reveal>
+      <Reveal>
+        <h1 className={styles.title}>
+          <div>/\/</div>
+        </h1>
+      </Reveal>
+      <Reveal>
+        <h1 className={styles.title}>
+          <div>/.hello./</div>
+        </h1>
+      </Reveal>
+      <Reveal>
+        <h1 className={styles.title}>
+          <div>/\/\/</div>
+        </h1>
+      </Reveal>
+      <Reveal>
+        <h1 className={styles.title}>
+          <div>/.bonjour./</div>
+        </h1>
+      </Reveal>
         <Reveal>
           <h2 className={styles.subTitle}>
             <span>
