@@ -3,7 +3,7 @@ import { Reveal } from "@/components/utils/Reveal";
 import ReactTypingEffect from 'react-typing-effect';
 import styles from "./hero.module.scss";
 import { CSSTransition, TransitionGroup } from 'react-transition-group'
-import { ReactComponent as RockOnSVG } from '/public/rockon.svg';
+import RockOnSVG from '/public/rockon.svg';
 
 // Lazy load the Icon and OutlineButton components
 const Icon = React.lazy(() => import("./Icon"));
