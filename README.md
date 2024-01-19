@@ -1,23 +1,3 @@
-<p align="center">
-  <a href="https://github.com/ShivaBhattacharjee/vermilion">
-    <img src="https://github.com/ShivaBhattacharjee/Vermilion/assets/95211406/92e59bba-4ace-4a4a-9530-d964aad91cc6" alt="Logo" width="120px" height="100px">
-  </a>
-<br/>
-  <h3 align="center">Vermilion</h3>
-
-  <p align="center">
-    A NextJs portfolio website with stunning animation
-    <br/>
-    <br/>
-    <br/>
-    <a href="https://immashiva.vercel.app/">View Demo</a>
-    .
-    <a href="https://github.com/ShivaBhattacharjee/vermilion/issues">Report Bug</a>
-    .
-    <a href="https://github.com/ShivaBhattacharjee/vermilion/issues">Request Feature</a>
-  </p>
-</p>
-
 
 
 ## Table Of Contents
@@ -77,7 +57,7 @@ NEXT_PUBLIC_PUBLIC_KEY=  Your emailjs PUBLIC_KEY
 <h2>Get api keys from <a href="https://www.emailjs.com/">EmailJs</a></h2>
 
 ```sh
-git clone https://github.com/ShivaBhattacharjee/vermilion
+git clone https://github.com/cyberpatrolunit
  ```
  ```
   cd vermilion
@@ -93,41 +73,6 @@ git clone https://github.com/ShivaBhattacharjee/vermilion
 
 ## Hosting 
 (get enviroment variables from emailjs)
-* ## Vercel
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FShivaBhattacharjee%2Fvermilion)
-<br/>
-<br/>
-* ## Render
-
-[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/ShivaBhattacharjee/vermilion)
-
-## Contributing
-
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-* If you have suggestions for adding or removing projects, feel free to [open an issue](https://github.com/ShivaBhattacharjee/vermilion/issues) to discuss it
-
-* Please make sure you check your spelling and grammar.
-
-### Creating A Pull Request
-
-Wanna contribute to Vermilion ?
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/FeatureName`)
-3. Commit your Changes (`git commit -m 'Add some FeatureName'`)
-4. Push to the Branch (`git push origin feature/FeatureName`)
-5. Open a Pull Request
-
-
-## Raising an issue
-
-If you're experiencing any problems with  Vermilion, please be sure to review our [issue template](https://github.com/ShivaBhattacharjee/vermilion/tree/main/.github/ISSUE_TEMPLATE) before opening a new issue. The template includes a list of questions and prompts that will help us better understand the issue you're experiencing, and it will ensure that we have all of the necessary information to investigate the problem.
-
-We kindly ask that you provide as much detail as possible when submitting an issue, including steps to reproduce the problem, any error messages that you have seen, and any other relevant information. This will help us to identify and fix the issue more quickly.
-
-Thank you for your cooperation, and we look forward to hearing from you!
-
 
 ## License
 
@@ -135,5 +80,5 @@ Distributed under the MIT License . See [LICENSE](https://github.com/ShivaBhatta
 
 ## Authors
 
-* **Shiva Bhattacharjee** - [Shiva Bhattacharjee](https://github.com/ShivaBhattacharjee) - *Vermilion*
+* **Bryant Place** - [Bryant Place](https://github.com/cyberpatrolunit) - *CPU*
 
