@@ -86,7 +86,7 @@ const Hero = () => {
           <h2 className={styles.subTitle}>
             <span>
               <ReactTypingEffect
-                text={["Creative Technologist.", "Creative Director.", "Artist.", "Developer.", "3D Printing Specialist.", "Engineer.", "Drone Specialist."]}
+                text={["Hello!", "My name is Bryant Place.", "Welcome to my Portfolio site!", "I specialize in the following:", "Creative Technologist.", "Creative Director.", "Artist.", "Developer.", "3D Printing.", "Engineer.", "Drone Specialist."]}
                 speed={40}
                 eraseSpeed={40}
                 eraseDelay={900}
