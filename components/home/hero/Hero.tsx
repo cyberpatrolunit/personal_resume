@@ -3,7 +3,6 @@ import { Reveal } from "@/components/utils/Reveal";
 import ReactTypingEffect from 'react-typing-effect';
 import styles from "./hero.module.scss";
 import { CSSTransition, TransitionGroup } from 'react-transition-group'
-import RockOnSVG from '/public/rockon.svg';
 
 // Lazy load the Icon and OutlineButton components
 const Icon = React.lazy(() => import("./Icon"));
@@ -55,7 +54,6 @@ const Hero = () => {
 
   return (
     <section className={`section-wrapper ${styles.hero}`}>
-      <RockOnSVG className={styles.rockOnSVG} />
       <div className={styles.copyWrapper}>
       <Reveal>
         <h1 className={styles.title}>
@@ -71,7 +69,7 @@ const Hero = () => {
       </Reveal>
       <Reveal>
         <h1 className={styles.title}>
-          <div>/.hello./</div>
+          <div>/.hola./</div>
         </h1>
       </Reveal>
       <Reveal>
