@@ -37,12 +37,12 @@ export const Home = () => {
           <Suspense fallback={<div className={styles.loadingText}>Loading...</div>}>
             {componentsLoaded && (
               <>
-                <Hero />
-                <Photo />
-                <About />
                 <Projects />
                 <Suspense fallback={<div>Loading Timeline...</div>}>
                 </Suspense>
+                <Hero />
+                <Photo />
+                <About />
                 <Contact />
                 <ScrollTop />
                 <div style={{ height: "100px", background: "linear-gradient(180deg, var(--background), var(--background-dark))" }}></div>
