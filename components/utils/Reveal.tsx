@@ -1,5 +1,8 @@
-import React, { useEffect, useRef } from "react";
-import { motion, useInView, useAnimation } from "framer-motion";
+import React, { useRef, useEffect } from 'react';
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 interface Props {
   children: JSX.Element;
@@ -7,43 +10,53 @@ interface Props {
 }
 
 export const Reveal = ({ children, width = "fit-content" }: Props) => {
-  const mainControls = useAnimation();
-  const slideControls = useAnimation();
-
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
+  const ref = useRef<HTMLDivElement>(null);
+  const boxRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (isInView) {
-      slideControls.start("visible");
-      mainControls.start("visible");
-    } else {
-      slideControls.start("hidden");
-      mainControls.start("hidden");
+    if (ref.current && boxRef.current) {
+      const element = ref.current;
+      const boxElement = boxRef.current;
+
+      gsap.fromTo(element,
+        { opacity: 0, y: 75 },
+        {
+          scrollTrigger: {
+            trigger: element,
+            start: "top bottom",
+            end: "center center",
+            toggleActions: "play none none reverse",
+          },
+          opacity: 1,
+          y: 0,
+          duration: 0.5,
+          delay: 0.25,
+          ease: "power3.out"
+        }
+      );
+
+      gsap.fromTo(boxElement,
+        { left: 0 },
+        {
+          scrollTrigger: {
+            trigger: element,
+            start: "top bottom",
+            end: "center center",
+            toggleActions: "play none none reverse",
+          },
+          left: "100%",
+          duration: 0.95,
+          ease: "easeIn"
+        }
+      );
     }
-  }, [isInView, mainControls, slideControls]);
+  }, []);
 
   return (
     <div ref={ref} style={{ position: "relative", width, overflow: "hidden" }}>
-      <motion.div
-        variants={{
-          hidden: { opacity: 0, y: 75 },
-          visible: { opacity: 1, y: 0 },
-        }}
-        initial="hidden"
-        animate={mainControls}
-        transition={{ duration: 0.5, delay: 0.25 }}
-      >
-        {children}
-      </motion.div>
-      <motion.div
-        variants={{
-          hidden: { left: 0 },
-          visible: { left: "100%" },
-        }}
-        initial="hidden"
-        animate={slideControls}
-        transition={{ duration: 0.95, ease: "easeIn" }}
+      {children}
+      <div 
+        ref={boxRef}
         style={{
           position: "absolute",
           top: 4,

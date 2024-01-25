@@ -9,6 +9,18 @@ const Wow = () => {
 
     const textElements = gsap.utils.toArray(`.${styles.text}`) as HTMLElement[];
 
+    // Animation for fade in and slide up effect
+    const tl = gsap.timeline();
+    textElements.forEach((text, index) => {
+      tl.from(text, {
+        duration: 0.7, // Duration of the fade-in and slide-up effect
+        opacity: 0,    // Start from transparent
+        y: 30,         // Start 30 pixels down from the original position
+        ease: 'power3.out',
+        delay: index * 0.05 // Delay each subsequent animation
+      }, '-=0.5'); // Overlap between animations
+    });
+
     textElements.forEach((text) => {
       gsap.to(text, {
         backgroundSize: '100%',

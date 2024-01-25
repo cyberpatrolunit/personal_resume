@@ -14,7 +14,11 @@ const Contact = React.lazy(() => import("./contact/Contact"));
 
 export const Home = () => {
   const canvasRef = useRef(null);
-  const [componentsLoaded, setComponentsLoaded] = useState(false);
+  const [showWow, setShowWow] = useState(false);
+  const [showPhoto, setShowPhoto] = useState(false);
+  const [showAbout, setShowAbout] = useState(false);
+  const [showProjects, setShowProjects] = useState(false);
+  const [showContact, setShowContact] = useState(false);
 
   useEffect(() => {
     if (canvasRef.current) {
@@ -22,9 +26,15 @@ export const Home = () => {
       app.load('https://prod.spline.design/qQGEiViy9RKI4ueL/scene.splinecode');
     }
 
-    setTimeout(() => {
-      setComponentsLoaded(true);
-    }, 3000); // Adjust delay as per requirement
+    const loadComponentsSequentially = () => {
+      setTimeout(() => setShowWow(true), 1000); // Load Wow after 1 second
+      setTimeout(() => setShowProjects(true), 2000); // Then load Projects after another 1 second
+      setTimeout(() => setShowPhoto(true), 3000); // And so on...
+      setTimeout(() => setShowAbout(true), 4000);
+      setTimeout(() => setShowContact(true), 5000);
+    };
+
+    loadComponentsSequentially();
   }, []);
 
   return (
@@ -35,19 +45,13 @@ export const Home = () => {
           <Heading />
           <canvas ref={canvasRef} style={{ width: '100%', height: '100vh', position: 'fixed', top: 0, left: 0, zIndex: -1 }} />
           <Suspense fallback={<div className={styles.loadingText}>Loading...</div>}>
-            {componentsLoaded && (
-              <>
-                <Wow />
-                <Projects />
-                <Suspense fallback={<div>Loading Timeline...</div>}>
-                </Suspense>
-                <Photo />
-                <About />
-                <Contact />
-                <ScrollTop />
-                <div style={{ height: "100px", background: "linear-gradient(180deg, var(--background), var(--background-dark))" }}></div>
-              </>
-            )}
+            {showWow && <Wow />}
+            {showProjects && <Projects />}
+            {showPhoto && <Photo />}
+            {showAbout && <About />}
+            {showContact && <Contact />}
+            <ScrollTop />
+            <div style={{ height: "100px", background: "linear-gradient(180deg, var(--background), var(--background-dark))" }}></div>
           </Suspense>
         </main>
       </div>
