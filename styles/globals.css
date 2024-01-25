@@ -6,8 +6,8 @@
   --background-light: rgb(35, 35, 35);
   --background-dark: rgb(8, 8, 8);
 
-  --text: rgb(235, 236, 243);
-  --brand: rgb(50, 231, 101);
+  --text: #b6b6b6;
+  --brand: rgb(70, 212, 110);
 
   --text-xs: 1.6rem;
   --text-sm: 2rem;

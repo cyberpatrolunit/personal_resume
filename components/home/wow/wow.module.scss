@@ -1,0 +1,75 @@
+// wow.module.scss
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: auto;
+  margin-top: 5rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
+
+  @media (max-width: 768px) {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+    @media (max-width: 400px) {
+      margin-left: 0rem;
+      margin-right: 0rem;
+  }
+}
+
+.text {
+  display: flex; // Use flexbox to align items inline
+  align-items: center; // Center items vertically
+  flex-wrap: wrap;
+  font-family: 'Slussen.Exp', sans-serif;
+  letter-spacing: -0.3rem;
+  text-transform: uppercase;
+  font-size: var(--text-xl);
+  line-height: 100%;
+  margin: 0;
+  width: 100%;
+  color: rgba(182, 182, 182, 0.2);
+  background: linear-gradient(to right, #b6b6b6, #b6b6b6) no-repeat;
+  background-clip: text;
+  background-size: 0%;
+  transition: background-size cubic-bezier(.1,.5,.5,1) 1s;
+  border-bottom: 1px solid #2F2B28;
+  position: relative;
+
+  @media (max-width: 768px) {
+    //font-size: var(--text-lg);
+    letter-spacing: 0rem;
+  }
+
+    @media (max-width: 400px) {
+      font-size: var(--text-md);
+      letter-spacing: 0rem;
+  }
+
+  &:hover {
+    .textSpan {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+  }
+}
+
+.textSpan { // This replaces the 'span' selector
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--brand);
+  color: #0D0D0D;
+  clip-path: polygon(0 50%, 100% 50%, 100% 50%, 0 50%);
+  transform-origin: center;
+  transition: all cubic-bezier(.1,.5,.5,1) 0.4s;
+}
+
+.link { // Use this class for 'a' tags if needed
+  text-decoration: none;
+  color: inherit;
+}

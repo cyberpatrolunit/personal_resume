@@ -6,7 +6,7 @@ import { Application } from '@splinetool/runtime';
 import styles from "./home.module.scss";
 
 // Lazy load the components
-const Hero = React.lazy(() => import("./hero/Hero"));
+const Wow = React.lazy(() => import("./wow/Wow"));
 const Photo = React.lazy(() => import("./photo/photo"));
 const About = React.lazy(() => import("./about/About"));
 const Projects = React.lazy(() => import("./projects/Projects"));
@@ -37,10 +37,10 @@ export const Home = () => {
           <Suspense fallback={<div className={styles.loadingText}>Loading...</div>}>
             {componentsLoaded && (
               <>
+                <Wow />
                 <Projects />
                 <Suspense fallback={<div>Loading Timeline...</div>}>
                 </Suspense>
-                <Hero />
                 <Photo />
                 <About />
                 <Contact />
