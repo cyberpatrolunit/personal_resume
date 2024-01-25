@@ -7,7 +7,7 @@ const Wow = () => {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
-    const textElements = gsap.utils.toArray(`.${styles.text}`);
+    const textElements = gsap.utils.toArray(`.${styles.text}`) as HTMLElement[];
 
     textElements.forEach((text) => {
       gsap.to(text, {
@@ -18,7 +18,6 @@ const Wow = () => {
           start: 'center 15%',
           end: 'center 80%',
           scrub: true,
-          markers: false,
         },
       });
     });
