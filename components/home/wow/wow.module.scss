@@ -16,7 +16,7 @@
     margin-right: 2rem;
   }
 
-    @media (max-width: 400px) {
+    @media (max-width: 500px) {
       margin-left: 0rem;
       margin-right: 0rem;
   }
@@ -29,7 +29,7 @@
   font-family: 'Slussen.Exp', sans-serif;
   letter-spacing: -0.3rem;
   text-transform: uppercase;
-  font-size: var(--text-xl);
+  //font-size: var(--text-xl);
   line-height: 100%;
   margin: 0;
   width: 100%;
@@ -41,15 +41,6 @@
   border-bottom: 1px solid #2F2B28;
   position: relative;
 
-  @media (max-width: 768px) {
-    //font-size: var(--text-lg);
-    letter-spacing: 0rem;
-  }
-
-    @media (max-width: 400px) {
-      font-size: var(--text-md);
-      letter-spacing: 0rem;
-  }
 
   &:hover {
     .textSpan {
