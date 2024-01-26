@@ -22,13 +22,17 @@ const Wow = () => {
     });
 
     textElements.forEach((text) => {
+      // Determine start and end points based on window width
+      const start = window.innerWidth <= 400 ? 'top 20%' : 'center 15%';
+      const end = window.innerWidth <= 400 ? 'bottom 80%' : 'center 80%';
+
       gsap.to(text, {
         backgroundSize: '100%',
         ease: 'none',
         scrollTrigger: {
           trigger: text,
-          start: 'center 15%',
-          end: 'center 80%',
+          start: start,
+          end: end,
           scrub: true,
         },
       });

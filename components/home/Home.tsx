@@ -4,6 +4,7 @@ import { Heading } from "../nav/Heading";
 import { ScrollTop } from "../buttons/ScrollTop";
 import { Application } from '@splinetool/runtime';
 import styles from "./home.module.scss";
+import Loader from '../utils/Loader'; // Assume you have a Loader component
 
 // Lazy load the components
 const Wow = React.lazy(() => import("./wow/Wow"));
@@ -14,27 +15,18 @@ const Contact = React.lazy(() => import("./contact/Contact"));
 
 export const Home = () => {
   const canvasRef = useRef(null);
-  const [showWow, setShowWow] = useState(false);
-  const [showPhoto, setShowPhoto] = useState(false);
-  const [showAbout, setShowAbout] = useState(false);
-  const [showProjects, setShowProjects] = useState(false);
-  const [showContact, setShowContact] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [showContent, setShowContent] = useState(false);
 
   useEffect(() => {
     if (canvasRef.current) {
       const app = new Application(canvasRef.current);
-      app.load('https://prod.spline.design/qQGEiViy9RKI4ueL/scene.splinecode');
+      app.load('https://prod.spline.design/qQGEiViy9RKI4ueL/scene.splinecode').then(() => {
+        setIsLoaded(true); // Set isLoaded to true when the Spline model is loaded
+        // Ensure content is shown after a minimum of 2 seconds
+        setTimeout(() => setShowContent(true), 2000);
+      });
     }
-
-    const loadComponentsSequentially = () => {
-      setTimeout(() => setShowWow(true), 1000); // Load Wow after 1 second
-      setTimeout(() => setShowProjects(true), 2000); // Then load Projects after another 1 second
-      setTimeout(() => setShowPhoto(true), 3000); // And so on...
-      setTimeout(() => setShowAbout(true), 4000);
-      setTimeout(() => setShowContact(true), 5000);
-    };
-
-    loadComponentsSequentially();
   }, []);
 
   return (
@@ -44,15 +36,19 @@ export const Home = () => {
         <main>
           <Heading />
           <canvas ref={canvasRef} style={{ width: '100%', height: '100vh', position: 'fixed', top: 0, left: 0, zIndex: -1 }} />
-          <Suspense fallback={<div className={styles.loadingText}>Loading...</div>}>
-            {showWow && <Wow />}
-            {showProjects && <Projects />}
-            {showPhoto && <Photo />}
-            {showAbout && <About />}
-            {showContact && <Contact />}
-            <ScrollTop />
-            <div style={{ height: "100px", background: "linear-gradient(180deg, var(--background), var(--background-dark))" }}></div>
-          </Suspense>
+          {showContent ? (
+            <Suspense fallback={<Loader />}>
+              <Wow />
+              <Projects />
+              <Photo />
+              <About />
+              <Contact />
+              <ScrollTop />
+              <div style={{ height: "100px", background: "linear-gradient(180deg, var(--background), var(--background-dark))" }}></div>
+            </Suspense>
+          ) : (
+            <Loader /> // Display loader for at least 2 seconds
+          )}
         </main>
       </div>
     </>
