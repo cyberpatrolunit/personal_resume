@@ -1,0 +1,74 @@
+.slides {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: 100%;
+    place-items: center;
+  }
+  
+  .slide {
+    width: 100%;
+    height: 100%;
+    grid-area: 1 / 1 / -1 / -1;
+    pointer-events: none;
+    opacity: 0;
+    overflow: hidden;
+    position: relative;
+    display: grid;
+    place-items: center;
+    will-change: transform, opacity;
+  
+    &--current {
+      pointer-events: auto;
+      opacity: 1;
+    }
+  
+    &__img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      will-change: transform, opacity;
+    }
+  }
+  
+  .deco {
+    width: 100%;
+    height: 100%;
+    grid-area: 1 / 1 / -1 / -1;
+    pointer-events: none;
+    position: relative;
+    opacity: 0;
+    will-change: transform, opacity;
+  
+    // Example variations for deco elements
+    &--1 { background: #d4503e; }
+    &--2 { background: #1c1a1a; }
+    // Add more variations as needed
+  }
+  
+  // Navigation controls, adjust as needed for your component
+  .slides-nav {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+  
+    &__item {
+      background: #fff;
+      color: #000;
+      width: 60px;
+      height: 60px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: background-color 0.3s;
+  
+      &:hover {
+        background-color: #ccc;
+      }
+    }
+  }
+  
