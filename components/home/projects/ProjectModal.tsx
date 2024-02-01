@@ -11,7 +11,7 @@ interface Props {
   isOpen: boolean;
   setIsOpen: Function;
   title: string;
-  imgSrc: string[]; // imgSrc is now an array of strings
+  imgSrc: string[];
   code: string;
   projectLink: string;
   tech: string[];
@@ -32,61 +32,47 @@ export const ProjectModal = ({
 
   useEffect(() => {
     const body = document.querySelector("body");
-
-    if (isOpen) {
-      body!.style.overflowY = "hidden";
-    } else {
-      body!.style.overflowY = "scroll";
-    }
+    body!.style.overflowY = isOpen ? "hidden" : "scroll";
   }, [isOpen]);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImage((prevImage) => (prevImage + 1) % imgSrc.length);
-    }, 3000); // Change image every 3 seconds
-
-    return () => clearInterval(interval);
-  }, [imgSrc.length]);
+    if (imgSrc.length > 1 && isOpen) {
+      const interval = setInterval(() => {
+        setCurrentImage(prevImage => (prevImage + 1) % imgSrc.length);
+      }, 3000);
+      return () => clearInterval(interval);
+    }
+  }, [imgSrc.length, isOpen]);
 
   const content = (
     <div className={styles.modal} onClick={() => setIsOpen(false)}>
-      <button className={styles.closeModalBtn}>
-        <MdClose />
-      </button>
-
+      <button className={styles.closeModalBtn}><MdClose /></button>
       <motion.div
         initial={{ y: 100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        onClick={(e) => e.stopPropagation()}
+        onClick={e => e.stopPropagation()}
         className={styles.modalCard}
       >
-        <Image
-          className={styles.modalImage}
-          src={imgSrc[currentImage]} // Using currentImage to show the image from the array
-          height={300}
-          width={660}
-          style={{ maxWidth: '100%', height: 'auto' }}
-          alt={`An image of the ${title} project.`}
-        />
+        <div className={styles.imageSlideshowContainer}>
+          {imgSrc.map((src, index) => (
+            <div
+              key={index}
+              className={`${styles.modalImage} ${index === currentImage ? "active" : ""}`}
+              style={{ opacity: index === currentImage ? 1 : 0 }}
+            >
+              <Image src={src} alt={`An image of the ${title} project`} layout="fill" objectFit="cover" />
+            </div>
+          ))}
+        </div>
         <div className={styles.modalContent}>
           <h4>{title}</h4>
           <div className={styles.modalTech}>{tech.join(" - ")}</div>
-
           <div className={styles.suppliedContent}>{modalContent}</div>
-
           <div className={styles.modalFooter}>
-            <p className={styles.linksText}>
-              Project Links<span>.</span>
-            </p>
+            <p className={styles.linksText}>Project Links<span>.</span></p>
             <div className={styles.links}>
-              <Link target="_blank" rel="nofollow" href={code}>
-                <AiFillGithub /> source code
-              </Link>
-              {projectLink !== "" && (
-                <Link target="_blank" rel="nofollow" href={projectLink}>
-                  <AiOutlineExport /> live project
-                </Link>
-              )}
+              {code && <Link target="_blank" rel="nofollow" href={code}><AiFillGithub /> source code</Link>}
+              {projectLink && <Link target="_blank" rel="nofollow" href={projectLink}><AiOutlineExport /> live project</Link>}
             </div>
           </div>
         </div>
@@ -94,8 +80,5 @@ export const ProjectModal = ({
     </div>
   );
 
-  if (!isOpen) return <></>;
-
-  // @ts-ignore
-  return ReactDOM.createPortal(content, document.getElementById("root"));
+  return isOpen ? ReactDOM.createPortal(content, document.body) : null;
 };

@@ -26,14 +26,12 @@ const Project = ({
   code,
   tech,
 }: Props) => {
-
   const [isOpen, setIsOpen] = useState(false);
-
+  const [visibleImageIndex, setVisibleImageIndex] = useState(0);
+  
   const controls = useAnimation();
-
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
-  const previewImage = imgSrc[0];
 
   useEffect(() => {
     if (isInView) {
@@ -43,61 +41,74 @@ const Project = ({
     }
   }, [isInView, controls]);
 
+  useEffect(() => {
+    if (imgSrc.length > 1) {
+      const interval = setInterval(() => {
+        setVisibleImageIndex(prevIndex => (prevIndex + 1) % imgSrc.length);
+      }, 4000); // Time in milliseconds before the next image fades in
+      return () => clearInterval(interval);
+    }
+  }, [imgSrc.length]);
+
   return (
     <>
-      <motion.div
-        ref={ref}
-        variants={{
-          hidden: { opacity: 0, y: 100 },
-          visible: { opacity: 1, y: 0 },
-        }}
-        initial="hidden"
-        animate={controls}
-        transition={{ duration: 0.75 }}
-      >
-        <div
-          onClick={() => setIsOpen(true)}
-          className={styles.projectImage}
+      {imgSrc && imgSrc.length >= 1 ? (
+        <motion.div
+          ref={ref}
+          variants={{
+            hidden: { opacity: 0, y: 100 },
+            visible: { opacity: 1, y: 0 },
+          }}
+          initial="hidden"
+          animate={controls}
+          transition={{ duration: 0.75 }}
         >
-          <Image
-            src={previewImage}
-            quality={60}
-            height={200}
-            style={{ maxWidth: '100%', height: 'auto' }}
-            width={630}
-            alt={`An image of the ${title} project.`}
-          />
-        </div>
-        <div className={styles.projectCopy}>
-          <Reveal width="100%">
-            <div className={styles.projectTitle}>
-              <h4>{title}</h4>
-              <div className={styles.projectTitleLine} />
-
-              <Link href={code} target="_blank" rel="nofollow">
-                <AiFillGithub size="2.8rem" />
-              </Link>
-
-              {
-                projectLink != "" && (
+          <div onClick={() => setIsOpen(true)} className={styles.projectImage}>
+            {imgSrc.map((src, index) => (
+              <div
+                key={index}
+                className={styles.imageContainer}
+                style={{ opacity: visibleImageIndex === index ? 1 : 0 }}
+              >
+                <Image
+                  src={src}
+                  quality={60}
+                  layout="fill"
+                  objectFit="cover"
+                  alt={`An image of the ${title} project`}
+                />
+              </div>
+            ))}
+          </div>
+          <div className={styles.projectCopy}>
+            <Reveal width="100%">
+              <div className={styles.projectTitle}>
+                <h4>{title}</h4>
+                <div className={styles.projectTitleLine} />
+                <Link href={code} target="_blank" rel="nofollow">
+                  <AiFillGithub size="2.8rem" />
+                </Link>
+                {projectLink && (
                   <Link href={projectLink} target="_blank" rel="nofollow">
                     <AiOutlineExport size="2.8rem" />
                   </Link>
-                )
-              }
-            </div>
-          </Reveal>
-          <Reveal>
-            <div className={styles.projectTech}>{tech.join(" - ")}</div>
-          </Reveal>
-          <Reveal>
-            <p className={styles.projectDescription}>
-              {description}{" "}
-              <span onClick={() => setIsOpen(true)}>Learn more {">"}</span>
-            </p>
-          </Reveal>
-        </div>
-      </motion.div>
+                )}
+              </div>
+            </Reveal>
+            <Reveal>
+              <div className={styles.projectTech}>{tech.join(" - ")}</div>
+            </Reveal>
+            <Reveal>
+              <p className={styles.projectDescription}>
+                {description}
+                <span onClick={() => setIsOpen(true)}> Learn more {">"}</span>
+              </p>
+            </Reveal>
+          </div>
+        </motion.div>
+      ) : (
+        <div>No valid images to display.</div>
+      )}
       <ProjectModal
         modalContent={modalContent}
         projectLink={projectLink}
