@@ -3,27 +3,36 @@
   top: 0;
   left: 0;
   right: 0;
-  z-index: 100;
+  z-index: 1000;
   display: flex;
   justify-content: center;
   align-items: center; // Center modal vertically within the viewport
   height: 100vh;
-  padding: 20px; // Adjusted for consistency
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 120px;
+  padding-top: 20px; // Adjusted for consistency
   overflow-y: auto; // Allows scrolling if modal content exceeds viewport height
   background: rgba(0, 0, 0, 0.75); // Darker background for better focus on modal
 }
 
 .modalCard {
-  max-width: 85%; // Allows the card to adapt up to 90% of the viewport width
+  max-width: 70%; // Default max-width for larger screens
   min-width: 300px; // Minimum width to maintain usability
   margin: auto;
   background: var(--background-light);
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
-  border-radius: 1.2rem; // Rounded edges for the entire card
+  border-radius: 2.2rem; // Rounded edges for the entire card
   overflow: hidden;
   display: flex;
   flex-direction: column;
+
+  
+  @media (max-width: 768px) { // Adjust this breakpoint as needed
+    max-width: 100%; // Increase max-width for smaller screens
+  }
 }
+
 
 .imageSlideshowContainer {
   width: 100%;
@@ -143,20 +152,21 @@
 }
 
 .closeModalBtn {
+  font-family: 'Slussen.Exp', sans-serif;
+  position: fixed; // Makes the button fixed relative to the viewport
+  top: 1rem; // Adjust the distance from the top as needed
+  right: 1rem; // Adjust the distance from the right as needed
   background: none;
   border: none;
   color: var(--brand);
-  z-index: 1000;
+  z-index: 105; // Ensure it's above the modal overlay
   font-size: var(--text-xl);
-
-  position: absolute;
-  top: 3.2rem;
-  right: 1.9rem;
-
   cursor: pointer;
-  @media(max-width:790px){
-    font-size: var(--text-lg);
+
+  @media (max-width: 790px) {
+    font-size: var(--text-xl);
     top: 1rem;
     right: 1.2rem;
   }
 }
+
