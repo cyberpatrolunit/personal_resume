@@ -11,7 +11,7 @@ interface Props {
   modalContent: JSX.Element;
   description: string;
   projectLink: string;
-  imgSrc: string;
+  imgSrc: string[];
   tech: string[];
   title: string;
   code: string;
@@ -33,6 +33,7 @@ const Project = ({
 
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
+  const previewImage = imgSrc[0];
 
   useEffect(() => {
     if (isInView) {
@@ -59,7 +60,7 @@ const Project = ({
           className={styles.projectImage}
         >
           <Image
-            src={imgSrc}
+            src={previewImage}
             quality={60}
             height={200}
             style={{ maxWidth: '100%', height: 'auto' }}

@@ -24,7 +24,7 @@ const projects = [
 
   {
     title: "Google: SJT NYC",
-    imgSrc: "/project-imgs/sjt/sjt-tri-image.png",
+    imgSrc: ["/project-imgs/sjt/sjt-tri-image.png"],
     code: "https://www.sjt-nyc.xyz/",
     projectLink: "https://www.sjt-nyc.xyz/",
     tech: ["Lead Technical Director", "TouchDesigner / GLSL / Vue"],
@@ -114,7 +114,11 @@ const projects = [
   },
   {
     title: "Google: Pier 57 NYC",
-    imgSrc: "/project-imgs/p57/p57-single.png",
+    imgSrc: [ "/project-imgs/p57/p57-00.png",
+              "/project-imgs/p57/p57-01.png",
+              "/project-imgs/p57/p57-02.png",
+              "/project-imgs/p57/p57-03.png",
+              "/project-imgs/p57/p57-04.png"],
     code: "https://www.p57.xyz/",
     projectLink: "https://www.p57.xyz/",
     tech: ["Lead Technical Director", "Ventuz / TouchDesigner"],
@@ -196,7 +200,7 @@ const projects = [
 
   {
     title: "Adriatique: Projekt X",
-    imgSrc: "/project-imgs/projektx/x-tri-image-v2.png",
+    imgSrc: ["/project-imgs/projektx/x-tri-image-v2.png"],
     code: "https://www.projekt-x.xyz/",
     projectLink: "https://www.projekt-x.xyz/",
     tech: ["Creative Director", "Live Show Implementation"],
@@ -289,7 +293,7 @@ const projects = [
   },
   {
     title: "Nike NMS Experience",
-    imgSrc: "/project-imgs/nms/nms-tri-image.png",
+    imgSrc: ["/project-imgs/nms/nms-tri-image.png"],
     code: "https://github.com/cyberpatrolunit",
     projectLink: "https://cyberpatrolunit.vercel.app/",
     tech: ["Creative Technologist", "Programming", "Additive Manufacturing"],
@@ -355,7 +359,7 @@ const projects = [
   },
   {
     title: "NEWAVE: Flying Art UAP",
-    imgSrc: "/project-imgs/newave/newave-tri-image.png",
+    imgSrc: ["/project-imgs/newave/newave-tri-image.png"],
     code: "https://github.com/cyberpatrolunit",
     projectLink: "https://cyberpatrolunit.vercel.app/",
     tech: ["Creative Director", "Design", "Engineering"],
@@ -446,7 +450,7 @@ const projects = [
   },
   {
     title: "Videoglove.com",
-    imgSrc: "/project-imgs/videoglove/videoglove-thumb.png",
+    imgSrc: ["/project-imgs/videoglove/videoglove-thumb.png"],
     code: "",
     projectLink: "https://videoglove.com/",
     tech: ["Personal Project", "NextJs / GSAP / Vercel / ThreeJs"],

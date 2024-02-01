@@ -1,16 +1,17 @@
 import styles from "./projectmodal.module.scss";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import ReactDOM from "react-dom";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { AiFillGithub, AiOutlineExport } from "react-icons/ai";
 import { MdClose } from "react-icons/md";
 import Image from "next/image";
+
 interface Props {
   isOpen: boolean;
   setIsOpen: Function;
   title: string;
-  imgSrc: string;
+  imgSrc: string[]; // imgSrc is now an array of strings
   code: string;
   projectLink: string;
   tech: string[];
@@ -27,6 +28,8 @@ export const ProjectModal = ({
   code,
   tech,
 }: Props) => {
+  const [currentImage, setCurrentImage] = useState(0);
+
   useEffect(() => {
     const body = document.querySelector("body");
 
@@ -36,6 +39,14 @@ export const ProjectModal = ({
       body!.style.overflowY = "scroll";
     }
   }, [isOpen]);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImage((prevImage) => (prevImage + 1) % imgSrc.length);
+    }, 3000); // Change image every 3 seconds
+
+    return () => clearInterval(interval);
+  }, [imgSrc.length]);
 
   const content = (
     <div className={styles.modal} onClick={() => setIsOpen(false)}>
@@ -51,7 +62,7 @@ export const ProjectModal = ({
       >
         <Image
           className={styles.modalImage}
-          src={imgSrc}
+          src={imgSrc[currentImage]} // Using currentImage to show the image from the array
           height={300}
           width={660}
           style={{ maxWidth: '100%', height: 'auto' }}
@@ -71,13 +82,11 @@ export const ProjectModal = ({
               <Link target="_blank" rel="nofollow" href={code}>
                 <AiFillGithub /> source code
               </Link>
-              {
-                projectLink != "" && (
-                  <Link target="_blank" rel="nofollow" href={projectLink}>
+              {projectLink !== "" && (
+                <Link target="_blank" rel="nofollow" href={projectLink}>
                   <AiOutlineExport /> live project
                 </Link>
-                )
-              }
+              )}
             </div>
           </div>
         </div>
