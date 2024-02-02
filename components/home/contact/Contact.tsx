@@ -60,7 +60,7 @@ export const Contact = () => {
             <Reveal width="100%">
               <div>
                 <p className={styles.contactCopy}>
-                Let's collaborate! Drop me a line anytime. 😎
+                Let's Collaborate 😎
                 </p>
               </div>
             </Reveal>

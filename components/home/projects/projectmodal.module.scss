@@ -1,4 +1,5 @@
 .modal {
+  //transform: translateX(150px);
   position: fixed;
   top: 0;
   left: 0;
@@ -13,7 +14,8 @@
   padding-bottom: 120px;
   padding-top: 20px; // Adjusted for consistency
   overflow-y: auto; // Allows scrolling if modal content exceeds viewport height
-  background: rgba(0, 0, 0, 0.75); // Darker background for better focus on modal
+  background: var(--bg-opaque);
+  backdrop-filter: blur(12px);
 }
 
 .modalCard {

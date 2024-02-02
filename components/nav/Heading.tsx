@@ -46,29 +46,10 @@ export const Heading = () => {
           ref={toggleref}
         >
           <nav>
-            <a
-              href="#"
-              onClick={() => {
-                setSelected("");
-              }}
-            >
-              Home
-            </a>
-            <a
-              href="#about"
-              onClick={() => {
-                setSelected("about");
-              }}
-            >
-              About
-            </a>
+            <a href="#" onClick={() => {setSelected("");}}>Home</a>
             <a href="#projects" onClick={() => setSelected("projects")}>Projects</a>
-            <a
-              href="#contact"
-              onClick={() => setSelected("contact")}
-            >
-              Contact
-            </a>
+            <a href="#about" onClick={() => {setSelected("about");}}>About</a>
+            <a href="#contact" onClick={() => setSelected("contact")}>Contact</a>
           </nav>
         </div>
       </div >
