@@ -200,7 +200,12 @@ const projects = [
 
   {
     title: "Adriatique: Projekt X",
-    imgSrc: ["/project-imgs/projektx/x-tri-image-v2.png"],
+    imgSrc: ["/project-imgs/projektx/x-00.jpg",
+             "/project-imgs/projektx/x-01.jpg",
+             "/project-imgs/projektx/x-02.jpg",
+             "/project-imgs/projektx/x-03.jpg",
+             "/project-imgs/projektx/x-04.jpg",
+             "/project-imgs/projektx/x-05.jpg",],
     code: "https://www.projekt-x.xyz/",
     projectLink: "https://www.projekt-x.xyz/",
     tech: ["Creative Director", "Live Show Implementation"],
