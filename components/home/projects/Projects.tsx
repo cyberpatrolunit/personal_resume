@@ -370,7 +370,12 @@ const projects = [
   },
   {
     title: "NEWAVE: Flying Art UAP",
-    imgSrc: ["/project-imgs/newave/newave-tri-image.png"],
+    imgSrc: ["/project-imgs/newave/newave-00.gif",
+             "/project-imgs/newave/newave-01.gif",
+             "/project-imgs/newave/newave-02.gif",
+             "/project-imgs/newave/newave-03.gif",
+             "/project-imgs/newave/newave-04.gif",
+             "/project-imgs/newave/newave-05.gif",],
     code: "https://github.com/cyberpatrolunit",
     projectLink: "https://cyberpatrolunit.vercel.app/",
     tech: ["Creative Director", "Design", "Engineering"],
