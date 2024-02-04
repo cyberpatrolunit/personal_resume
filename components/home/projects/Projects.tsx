@@ -24,7 +24,11 @@ const projects = [
 
   {
     title: "Google: SJT NYC",
-    imgSrc: ["/project-imgs/sjt/sjt-tri-image.png"],
+    imgSrc: ["/project-imgs/sjt/sjt-tri-image.png",
+            "/project-imgs/sjt/sjt-03.jpg",
+            "/project-imgs/sjt/sjt-04.jpg",        
+            "/project-imgs/sjt/sjt-05.jpg",    
+            ],
     code: "https://www.sjt-nyc.xyz/",
     projectLink: "https://www.sjt-nyc.xyz/",
     tech: ["Lead Technical Director", "TouchDesigner / GLSL / Vue"],
@@ -449,6 +453,28 @@ const projects = [
         <p>
         </p>
         <p>
+        </p>
+      </>
+    ),
+  },
+  {
+    title: "The Coachella Gateway",
+    imgSrc: ["/project-imgs/gateway/gateway-01.gif",
+             "/project-imgs/gateway/gateway-02.gif",
+             "/project-imgs/gateway/gateway-03.gif",
+             "/project-imgs/gateway/gateway-04.gif",
+             "/project-imgs/gateway/gateway-05.gif",
+             "/project-imgs/gateway/gateway-06.gif",
+            ],
+    code: "",
+    projectLink: "https://bryantplace.com/",
+    tech: ["Project Director", "TouchDesigner / StereoBot / Interactive Installation"],
+    description:
+      "The Coachella Gateway was a 3D projection-mapped interactive installation for the 2012 Coachella Music Festival.",
+    modalContent: (
+      <>
+        <p>
+          The Coachella Gateway was a 3D projection-mapped interactive installation for the 2012 Coachella Music Festival.
         </p>
       </>
     ),
