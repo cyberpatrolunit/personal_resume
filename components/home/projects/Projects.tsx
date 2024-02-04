@@ -489,8 +489,9 @@ const projects = [
   },
   {
     title: "Videoglove.com",
-    imgSrc: ["/project-imgs/videoglove/videoglove-thumb.png",
-             "/project-imgs/videoglove/videoglove-thumb2.jpg",],
+    imgSrc: ["/project-imgs/videoglove/videoglove-00.jpg",
+             "/project-imgs/videoglove/videoglove-01.jpg",
+             "/project-imgs/videoglove/videoglove-02.jpg",],
     code: "",
     projectLink: "https://videoglove.com/",
     tech: ["Personal Project", "NextJs / GSAP / Vercel / ThreeJs"],
