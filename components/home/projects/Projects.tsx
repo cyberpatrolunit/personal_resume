@@ -24,7 +24,9 @@ const projects = [
 
   {
     title: "Google: SJT NYC",
-    imgSrc: ["/project-imgs/sjt/sjt-tri-image.png",
+    imgSrc: ["/project-imgs/sjt/sjt-00.jpg",
+            "/project-imgs/sjt/sjt-01.jpg",
+            "/project-imgs/sjt/sjt-02.jpg",
             "/project-imgs/sjt/sjt-03.jpg",
             "/project-imgs/sjt/sjt-04.jpg",        
             "/project-imgs/sjt/sjt-05.jpg",    
@@ -461,6 +463,7 @@ const projects = [
     title: "The Coachella Gateway",
     imgSrc: ["/project-imgs/gateway/gateway-01.gif",
              "/project-imgs/gateway/gateway-02.gif",
+             "/project-imgs/gateway/gateway-02.jpg",
              "/project-imgs/gateway/gateway-03.gif",
              "/project-imgs/gateway/gateway-04.gif",
              "/project-imgs/gateway/gateway-05.gif",
