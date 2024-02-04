@@ -20,6 +20,7 @@
       margin-left: 0rem;
       margin-right: 0rem;
   }
+
 }
 
 .text {
@@ -40,6 +41,11 @@
   transition: background-size cubic-bezier(.1,.5,.5,1) 1s;
   border-bottom: 1px solid #2F2B28;
   position: relative;
+
+  @media (max-width: 768px) {
+    font-size: var(--text-lg);
+    letter-spacing: -0.23rem;
+  }
 
 
   &:hover {
