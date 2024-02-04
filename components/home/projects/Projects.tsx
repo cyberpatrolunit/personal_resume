@@ -33,7 +33,7 @@ const projects = [
             ],
     code: "https://www.sjt-nyc.xyz/",
     projectLink: "https://www.sjt-nyc.xyz/",
-    tech: ["Lead Technical Director", "TouchDesigner / GLSL / Vue"],
+    tech: ["Lead Technical Director @ Downstream", "TouchDesigner / GLSL / Vue"],
     description:
       "Technical Programming Lead on a TouchDesigner digital wayfinding system for the new Google St. John's Terminal.",
     modalContent: (
@@ -127,7 +127,7 @@ const projects = [
               "/project-imgs/p57/p57-04.png"],
     code: "https://www.p57.xyz/",
     projectLink: "https://www.p57.xyz/",
-    tech: ["Lead Technical Director", "Ventuz / TouchDesigner"],
+    tech: ["Lead Technical Director @ Downstream", "Ventuz / TouchDesigner"],
     description:
       "Technical Programming Lead on the Ventuz based digital wayfinding system for the Google Pier 57 Event Center in NYC.",
     modalContent: (
