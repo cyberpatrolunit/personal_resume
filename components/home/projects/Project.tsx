@@ -101,7 +101,7 @@ const Project = ({
             <Reveal>
               <p className={styles.projectDescription}>
                 {description}
-                <span onClick={() => setIsOpen(true)}> Learn more {">"}</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span onClick={() => setIsOpen(true)}> Learn more {">"}</span>
               </p>
             </Reveal>
           </div>
