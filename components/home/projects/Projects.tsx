@@ -488,10 +488,39 @@ const projects = [
     ),
   },
   {
+    title: "The Coachella Lightweaver",
+    imgSrc: ["/project-imgs/lightweaver/lightweaver-00.jpg",
+             "/project-imgs/lightweaver/lightweaver-00.1.jpg",
+             "/project-imgs/lightweaver/lightweaver-00.2.jpg",
+             "/project-imgs/lightweaver/lightweaver-01.jpg",
+             "/project-imgs/lightweaver/lightweaver-02.1.gif",
+             "/project-imgs/lightweaver/lightweaver-03.1.gif",
+             "/project-imgs/lightweaver/lightweaver-04.1.gif",
+            ],
+    code: "",
+    projectLink: "https://vimeo.com/94600058",
+    tech: ["Lighting Director", "TouchDesigner / WYSIWYG / StereoBot / Interactive Installation"],
+    description:
+      "The Coachella Lightweaver was a 3D lighting mapped interactive installation for the 2014 Coachella Music Festival.",
+    modalContent: (
+      <>
+        <p>
+        The #LIGHTWEAVER is the next generation of fusion between architectural study, interactive multimedia and dynamic lighting. 
+        #LIGHTWEAVER is a 24 hour kinetic sculpture interplaying natural and artificial light against a curvilinear knotted frame. 
+        Towering 45 feet tall with a diameter of 75 feet, this massively spatial structure is sure to be witnessed from across the 
+        festival grounds. During the day, its bold coloration is contrasted by complex shadow lines wrapping the structure and 
+        silhouetting intricate shade patterns in the ground. At night, #LIGHTWEAVER becomes a spatial canvas brought to life by 
+        OBSCURA’s light and sound score, a multimedia experience challenging the comprehension of temporal and spatial dimensions.
+        </p>
+      </>
+    ),
+  },
+  {
     title: "Videoglove.com",
     imgSrc: ["/project-imgs/videoglove/videoglove-00.jpg",
              "/project-imgs/videoglove/videoglove-01.jpg",
-             "/project-imgs/videoglove/videoglove-02.jpg",],
+             "/project-imgs/videoglove/videoglove-02.jpg",
+            ],
     code: "",
     projectLink: "https://videoglove.com/",
     tech: ["Personal Project", "NextJs / GSAP / Vercel / ThreeJs"],
