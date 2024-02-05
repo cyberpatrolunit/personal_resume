@@ -475,7 +475,7 @@ const projects = [
              "/project-imgs/gateway/gateway-06.gif",
             ],
     code: "",
-    projectLink: "https://bryantplace.com/",
+    projectLink: "https://youtu.be/c1FQj9VPuZg?si=QZeApOPCZ5xEcNic",
     tech: ["Project Director", "TouchDesigner / StereoBot / Interactive Installation"],
     description:
       "The Coachella Gateway was a 3D projection-mapped interactive installation for the 2012 Coachella Music Festival.",
