@@ -19,7 +19,7 @@ export const Reveal = ({ children, width = "fit-content" }: Props) => {
       const boxElement = boxRef.current;
 
       gsap.fromTo(element,
-        { opacity: 0, y: 75 },
+        { opacity: 0, y: 100 },
         {
           scrollTrigger: {
             trigger: element,
