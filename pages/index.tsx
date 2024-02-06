@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { Home } from "@/components/home/Home";
 import { Analytics } from '@vercel/analytics/react';
-import { MyLinks } from "components/nav/components/MyLinks"; // Ensure the path matches your project structure
+import { MyLinks } from "components/nav/components/MyLinks";
 
 export default function HomePage() {
   return (
@@ -11,6 +11,8 @@ export default function HomePage() {
         <meta name="description" content="I am a creative technologist with 13 years of delivering exceptional installations." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/bp_logo.ico" />
+        <meta property="og:image" content="https://www.bryantplace.com/project-imgs/thumbnail.jpg" />
+        <meta property="og:url" content="https://www.bryantplace.com" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "http://schema.org",
