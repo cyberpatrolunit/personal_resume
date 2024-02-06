@@ -41,9 +41,9 @@ const Wow = () => {
 
   return (
     <div className={styles.container}>
+        <h1 className={styles.text}>EXTENDED REALITY<span className={styles.textSpan}>REAL-WORLD INTEGRATION</span></h1>
         <h1 className={styles.text}>CREATIVE VISION<span className={styles.textSpan}>TECHNICAL EXECUTION</span></h1>
         <h1 className={styles.text}>INTERACTIVE ART<span className={styles.textSpan}>SYSTEMS ARCHITECTURE</span></h1>
-        <h1 className={styles.text}>VIRTUAL REALITY<span className={styles.textSpan}>REAL-WORLD INTEGRATION</span></h1>
         <h1 className={styles.text}>DESIGN INNOVATION<span className={styles.textSpan}>ENGINEERING PRECISION</span></h1>
         <h1 className={styles.text}>SOFTWARE DEVELOPMENT<span className={styles.textSpan}>HARDWARE SOLUTIONS</span></h1>
         <h1 className={styles.text}>DIGITAL STORYTELLING<span className={styles.textSpan}>LOGICAL ALGORITHMS</span></h1>
