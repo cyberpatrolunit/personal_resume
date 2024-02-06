@@ -534,6 +534,166 @@ const projects = [
       </>
     ),
   },
+  {
+    title: "Fiat Lux: Illuminating our Common Home",
+    imgSrc: ["/project-imgs/ops-vatican/ops-vatican-00.jpg",
+             "/project-imgs/ops-vatican/ops-vatican-01.jpg",
+             "/project-imgs/ops-vatican/ops-vatican-02.jpg",
+             "/project-imgs/ops-vatican/ops-vatican-03.jpg",
+             "/project-imgs/ops-vatican/ops-vatican-04.jpg",
+             "/project-imgs/ops-vatican/ops-vatican-05.jpg",
+             "/project-imgs/ops-vatican/ops-vatican-06.jpg",
+             "/project-imgs/ops-vatican/ops-vatican-07.jpg",
+            ],
+    code: "",
+    projectLink: "https://vimeo.com/152015806",
+    tech: ["OBSCURA DIGITAL", "Lead Interactive Engineer / TouchDesigner"],
+    description:
+      "Obscura was chosen by the Vatican’s Pontifical Council to create a contemporary artistic interpretation of Pope Francis’ Encyclical, “Laudato Si.”",
+    modalContent: (
+      <>
+        <p>
+        Obscura was chosen by the Vatican’s Pontifical Council to create a contemporary artistic interpretation of Pope Francis’ Encyclical, “Laudato Si.” 
+        The large-scale architectural projection show entitled: “Fiat Lux: Illuminating Our Common Home” was presented as a gift to Pope Francis to celebrate 
+        the opening of the Extraordinary Jubilee of Mercy. It was the first time that art has ever been projected onto St. Peter’s Basilica.
+        </p>
+        <p>
+        “Laudato Si,” means “Praise be to you,” a phrase commonly used by Saint Francis, the patron saint of animals and ecology and Pope Francis’ namesake. 
+        In writing his impassioned plea for greater focus on the environment, Pope Francis cited areas of particular concern: pollution and climate change, 
+        the lack of clean water for much of the world’s population, and loss of biodiversity.
+        </p>
+        <p>
+        To bring the pope’s message to life, Obscura created an unprecedented 60-minute show featuring powerful images of humanity diversity and natural beauty 
+        from world-renowned photographers and curated by Travis Threlkel and Academy Award-winning filmmaker Louie Psyhoyos (The Cove). Using 21st century art 
+        and 50 high lumen projectors, the show was presented as a visual symphony in seven movements.
+        </p>
+        <p>
+        A crowd of over 200,000 people gathered to watch the show live in the Piazza San Pietro, while 4 million watched via live stream video. Media coverage 
+        generated another billion global impressions.
+        </p>
+        <p>
+        Fiat Lux: Illuminating our Common Home featured the work of some of the world’s most noted humanistic and nature photographers and filmmakers including 
+        Sebastiao Salgado and Amazonas Images, Joel Sartore and his Photo Ark series, Yann Arthus Bertrand, David Doubilet, Ron Fricke, Howard Hall, Shawn Heinrichs, 
+        Greg Huglin, Chris Jordan, Mark Magidson, Steve McCurry, Louie Schwartzberg and Paul Nicklen. Funding provide by the Li Ka Shing Foundation and Vulcan 
+        Productions. Natural sound effects provided by Macaulay Library at the Cornell Lab of Ornithology.
+        </p>
+        <p>
+        Projection and Design: obscuradigital.com
+        </p>
+        <p>
+        Music: Arvo Pärt: Fratres
+        </p>
+        <p>
+        OBSCURA TEAM
+        </p>
+        <p>
+        Travis Threlkel - Chief Creative Officer
+        </p>
+        <p>
+        Chris Lejeune - Chief Executive Officer / Account Executive
+        </p>
+        <p>
+        Matty Dowlen - Chief of Production
+        </p>
+        <p>
+        Andrew Plourde - Senior Technical Director
+        </p>
+        <p>
+        Marc Melzer - Director of Media Arts
+        </p>
+        <p>
+        Barry Threw - Director of Interactive
+        </p>
+        <p>
+        Sean Holt - Director of IT
+        </p>
+        <p>
+        Emmett Feldman - Senior Art Director
+        </p>
+        <p>
+        Jennifer Williams - Producer
+        </p>
+        <p>
+        Ari Ali - Senior Media Producer
+        </p>
+        <p>
+        Anna Le Breton - Production Coordinator
+        </p>
+        <p>
+        Doni Dennis - Marketing Director
+        </p>
+        <p>
+        Tim Digulla - Art Director
+        </p>
+        <p>
+        Ron Robinson - Art Director
+        </p>
+        <p>
+        Tony Grisey - Senior Animator
+        </p>
+        <p>
+        Jim Ellis - Technical Director/3D Animation
+        </p>
+        <p>
+        Eddy Katt - 3D Animator
+        </p>
+        <p>
+        Alexi Alexaieff - Technical Artist
+        </p>
+        <p>
+        Brittnie Diamant - Production Artist
+        </p>
+        <p>
+        Bryant Place - Interactive Engineer
+        </p>
+        <p>
+        Harvey Moon - Interactive Engineer
+        </p>
+        <p>
+        Anton Heestand - Interactive Engineer
+        </p>
+        <p>
+        Christopher Houchin - Technical Director
+        </p>
+        <p>
+        Nick Lynch - Technical Director
+        </p>
+        <p>
+        Diego Novoa - Technical Director
+        </p>
+        <p>
+        Nathan Houchin - Technical Director
+        </p>
+        <p>
+        Michelle Grenier - Associate Creative Director
+        </p>
+        <p>
+        Joshua Brott - Director of Photography
+        </p>
+        <p>
+        Brandon Moore - Assistant Photographer
+        </p>
+        <p>
+        Eric Schneider - Purchasing
+        </p>
+        <p>
+        Ethan Indorf - Editor
+        </p>
+        <p>
+        Tim McMahon - Editor
+        </p>
+        <p>
+        Alex Oropeza - Music Director
+        </p>
+        <p>
+        Harald Boyesen - Sound Design
+        </p>
+        <p>
+        Lucy Sheils - Sound Design
+        </p>
+      </>
+    ),
+  },
 
 ];
 
