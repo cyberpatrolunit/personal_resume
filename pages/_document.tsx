@@ -29,7 +29,7 @@ class MyDocument extends Document {
           <link rel="preload" href="/fonts/Slussen-Semibold.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
           <link rel="preload" href="/fonts/Slussen-Bold.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
           <link rel="preload" href="/project-imgs/sjt/sjt-00.jpg" as="image" />
-          <link rel="preload" href="/project-imgs/p57/p57-00.jpg" as="image" />
+          <link rel="preload" href="/project-imgs/p57/p57-00.png" as="image" />
         </Head>
         <body>
           <Main />

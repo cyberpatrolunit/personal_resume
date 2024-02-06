@@ -81,20 +81,22 @@ const Project = ({
             ))}
           </div>
           <div className={styles.projectCopy}>
-            <Reveal width="100%">
-              <div className={styles.projectTitle}>
-                <h4>{title}</h4>
-                <div className={styles.projectTitleLine} />
+          <Reveal width="100%">
+            <div className={styles.projectTitle}>
+              <h4>{title}</h4>
+              <div className={styles.projectTitleLine} />
+              {code && (
                 <Link href={code} target="_blank" rel="nofollow">
                   <AiFillGithub size="2.8rem" />
                 </Link>
-                {projectLink && (
-                  <Link href={projectLink} target="_blank" rel="nofollow">
-                    <AiOutlineExport size="2.8rem" />
-                  </Link>
-                )}
-              </div>
-            </Reveal>
+              )}
+              {projectLink && (
+                <Link href={projectLink} target="_blank" rel="nofollow">
+                  <AiOutlineExport size="2.8rem" />
+                </Link>
+              )}
+            </div>
+          </Reveal>
             <Reveal>
               <div className={styles.projectTech}>{tech.join(" - ")}</div>
             </Reveal>

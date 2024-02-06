@@ -69,12 +69,20 @@ export const ProjectModal = ({
           <div className={styles.modalTech}>{tech.join(" - ")}</div>
           <div className={styles.suppliedContent}>{modalContent}</div>
           <div className={styles.modalFooter}>
-            <p className={styles.linksText}>Project Links<span>.</span></p>
-            <div className={styles.links}>
-              {code && <Link target="_blank" rel="nofollow" href={code}><AiFillGithub /> source code</Link>}
-              {projectLink && <Link target="_blank" rel="nofollow" href={projectLink}><AiOutlineExport /> live project</Link>}
-            </div>
+          <p className={styles.linksText}>Project Links<span>.</span></p>
+          <div className={styles.links}>
+            {code && (
+              <Link href={code} target="_blank" rel="noopener noreferrer" className={styles.link}>
+                <AiFillGithub /> source code
+              </Link>
+            )}
+            {projectLink && (
+              <Link href={projectLink} target="_blank" rel="noopener noreferrer" className={styles.link}>
+                <AiOutlineExport /> live project
+              </Link>
+            )}
           </div>
+        </div>
         </div>
       </motion.div>
     </div>

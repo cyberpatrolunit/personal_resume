@@ -31,7 +31,7 @@ const projects = [
             "/project-imgs/sjt/sjt-04.jpg",        
             "/project-imgs/sjt/sjt-05.jpg",    
             ],
-    code: "https://www.sjt-nyc.xyz/",
+    code: "",
     projectLink: "https://www.sjt-nyc.xyz/",
     tech: ["Lead Technical Director @ Downstream", "TouchDesigner / GLSL / Vue"],
     description:
@@ -125,7 +125,7 @@ const projects = [
               "/project-imgs/p57/p57-02.png",
               "/project-imgs/p57/p57-03.png",
               "/project-imgs/p57/p57-04.png"],
-    code: "https://www.p57.xyz/",
+    code: "",
     projectLink: "https://www.p57.xyz/",
     tech: ["Lead Technical Director @ Downstream", "Ventuz / TouchDesigner"],
     description:
@@ -212,7 +212,7 @@ const projects = [
              "/project-imgs/projektx/x-03.jpg",
              "/project-imgs/projektx/x-04.jpg",
              "/project-imgs/projektx/x-05.jpg",],
-    code: "https://www.projekt-x.xyz/",
+    code: "",
     projectLink: "https://www.projekt-x.xyz/",
     tech: ["Creative Director", "Live Show Implementation"],
     description:
@@ -305,8 +305,8 @@ const projects = [
   {
     title: "Nike NMS Experience",
     imgSrc: ["/project-imgs/nms/nms-tri-image.png"],
-    code: "https://github.com/cyberpatrolunit",
-    projectLink: "https://cyberpatrolunit.vercel.app/",
+    code: "",
+    projectLink: "",
     tech: ["Creative Technologist", "Programming", "Additive Manufacturing"],
     description:
       "Data visualization and experiential technology for Nike's NMS Experience Project.",
@@ -376,11 +376,11 @@ const projects = [
              "/project-imgs/newave/newave-03.gif",
              "/project-imgs/newave/newave-04.gif",
              "/project-imgs/newave/newave-05.gif",],
-    code: "https://github.com/cyberpatrolunit",
-    projectLink: "https://cyberpatrolunit.vercel.app/",
+    code: "",
+    projectLink: "https://ericstaller.com/",
     tech: ["Creative Director", "Design", "Engineering"],
     description:
-      "Engineering and design of a 36SqFt flying art installation for renoun artist Eric Staller.",
+      "Engineering and design of a 36SqFt flying art installation for renowned artist Eric Staller.",
     modalContent: (
       <>
         <p style={{ fontWeight: 'bold', fontSize: 'larger' }}>
