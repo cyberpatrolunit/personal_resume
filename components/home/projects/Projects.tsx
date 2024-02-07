@@ -516,25 +516,6 @@ const projects = [
     ),
   },
   {
-    title: "Videoglove.com",
-    imgSrc: ["/project-imgs/videoglove/videoglove-00.jpg",
-             "/project-imgs/videoglove/videoglove-01.jpg",
-             "/project-imgs/videoglove/videoglove-02.jpg",
-            ],
-    code: "",
-    projectLink: "https://videoglove.com/",
-    tech: ["Personal Project", "NextJs / GSAP / Vercel / ThreeJs"],
-    description:
-      "An ever evloving personal project where I have a platfrom to showcase my work and also a place to experiment with new web technologies.",
-    modalContent: (
-      <>
-        <p>
-          An ever evloving personal project where I have a platfrom to showcase my work and also a place to experiment with new web technologies.
-        </p>
-      </>
-    ),
-  },
-  {
     title: "Fiat Lux: Illuminating our Common Home",
     imgSrc: ["/project-imgs/ops-vatican/ops-vatican-00.jpg",
              "/project-imgs/ops-vatican/ops-vatican-01.jpg",
@@ -707,7 +688,7 @@ const projects = [
             ],
     code: "",
     projectLink: "https://www.washingtonpost.com/news/arts-and-entertainment/wp/2016/11/08/the-empire-state-building-has-transformed-into-a-giant-glowing-election-tracker-tonight/",
-    tech: ["OBSCURA DIGITAL", "Lead Interactive Engineer / TouchDesigner"],
+    tech: ["OBSCURA DIGITAL", "Interactive Engineer / Show Control / TouchDesigner"],
     description:
       "Live election results projected onto the Empire State Building. The Empire State Building has transformed into a giant glowing election tracker tonight.",
     modalContent: (
@@ -721,16 +702,16 @@ const projects = [
   {
     title: "Dubai 360: Spherical Projection Theater",
     imgSrc: ["/project-imgs/dubai-sphere/dubai-sphere-00.jpg",
-              "/project-imgs/dubai-sphere/dubai-sphere-01.jpg",
-              "/project-imgs/dubai-sphere/dubai-sphere-02.jpg",
-              "/project-imgs/dubai-sphere/dubai-sphere-03.jpg",
-              "/project-imgs/dubai-sphere/dubai-sphere-04.jpg",
-              "/project-imgs/dubai-sphere/dubai-sphere-05.jpg",
-              "/project-imgs/dubai-sphere/dubai-sphere-06.jpg",
+             "/project-imgs/dubai-sphere/dubai-sphere-01.jpg",
+             "/project-imgs/dubai-sphere/dubai-sphere-02.jpg",
+             "/project-imgs/dubai-sphere/dubai-sphere-03.jpg",
+             "/project-imgs/dubai-sphere/dubai-sphere-04.jpg",
+             "/project-imgs/dubai-sphere/dubai-sphere-05.jpg",
+             "/project-imgs/dubai-sphere/dubai-sphere-06.jpg",
             ],
     code: "",
     projectLink: "https://vimeo.com/123011724",
-    tech: ["OBSCURA DIGITAL", "Lead Interactive Engineer / TouchDesigner"],
+    tech: ["OBSCURA DIGITAL", "Lead Interactive Engineer / Playback System / Mapping / TouchDesigner"],
     description:
       "When the team behind the Dubai 360 website wanted to create a life-size interactive experience for their content, they partnered with Obscura for creative innovation.",
     modalContent: (
@@ -749,7 +730,59 @@ const projects = [
       </>
     ),
   },
-
+  {
+    title: "illUmiNations: Protecting Our Planet",
+    imgSrc: ["/project-imgs/ops-un-nyc/ops-un-nyc-00.jpg",
+             "/project-imgs/ops-un-nyc/ops-un-nyc-01.jpg",
+             "/project-imgs/ops-un-nyc/ops-un-nyc-02.jpg",
+             "/project-imgs/ops-un-nyc/ops-un-nyc-03.jpg",
+             "/project-imgs/ops-un-nyc/ops-un-nyc-04.jpg",
+             "/project-imgs/ops-un-nyc/ops-un-nyc-05.jpg",
+            ],
+    code: "",
+    projectLink: "https://vimeo.com/106991647",
+    tech: ["OBSCURA DIGITAL", "Interactive Engineer / Show Control / TouchDesigner"],
+    description:
+      "When the team behind the Dubai 360 website wanted to create a life-size interactive experience for their content, they partnered with Obscura for creative innovation.",
+    modalContent: (
+      <>
+        <p>
+        On Saturday, September 20, 2014, the United Nations Department of Public Information presented a spectacular 30-story architectural projection in partnership with the 
+        Oceanic Preservation Society, Obscura Digital, and Insurgent Media. The General Assembly and Secretariat buildings were lit up with massive projections as part of a 
+        revolutionary call for action on global climate change.
+        </p>
+        <p>
+        The event took place in connection with the UN Secretary-General’s Climate Summit. “Now is the time to take decisive action on climate change. Protecting our planet is 
+        the responsibility of each and every one of us. We must make our voices heard. These exceptional projections shown at the United Nations will help draw attention to the 
+        need to make climate action a reality in every community and every society,” said UN Secretary-General General Ban Ki-moon.
+        </p>
+        <p>
+        The visual showcase was made possible with the support of TheDodo.com and the Lehrer Family Foundation and produced in conjunction with Okeanos – Foundation for the Sea, 
+        Vulcan Productions, and Millennium ART. illUmiNations was a collaborative effort between Academy Award-winning director Louie Psihoyos, Academy Award-winning producer 
+        Fisher Stevens, and Obscura Digital. The musical score for the video was composed by Academy Award-nominated composer J. Ralph.
+        </p>
+      </>
+    ),
+  },
+  {
+    title: "Videoglove.com",
+    imgSrc: ["/project-imgs/videoglove/videoglove-00.jpg",
+             "/project-imgs/videoglove/videoglove-01.jpg",
+             "/project-imgs/videoglove/videoglove-02.jpg",
+            ],
+    code: "",
+    projectLink: "https://videoglove.com/",
+    tech: ["Personal Project", "NextJs / GSAP / Vercel / ThreeJs"],
+    description:
+      "An ever evloving personal project where I have a platfrom to showcase my work and also a place to experiment with new web technologies.",
+    modalContent: (
+      <>
+        <p>
+          An ever evloving personal project where I have a platfrom to showcase my work and also a place to experiment with new web technologies.
+        </p>
+      </>
+    ),
+  }
 ];
 
 export default Projects;
