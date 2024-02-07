@@ -694,6 +694,61 @@ const projects = [
       </>
     ),
   },
+  {
+    title: "CNN: Road to 270",
+    imgSrc: ["/project-imgs/cnn-debates/cnn-debates-00.jpg",
+             "/project-imgs/cnn-debates/cnn-debates-01.jpg",
+             "/project-imgs/cnn-debates/cnn-debates-02.jpg",
+             "/project-imgs/cnn-debates/cnn-debates-03.jpg",
+             "/project-imgs/cnn-debates/cnn-debates-04.jpg",
+             "/project-imgs/cnn-debates/cnn-debates-05.jpg",
+             "/project-imgs/cnn-debates/cnn-debates-06.jpg",
+             "/project-imgs/cnn-debates/cnn-debates-07.jpg",
+            ],
+    code: "",
+    projectLink: "https://www.washingtonpost.com/news/arts-and-entertainment/wp/2016/11/08/the-empire-state-building-has-transformed-into-a-giant-glowing-election-tracker-tonight/",
+    tech: ["OBSCURA DIGITAL", "Lead Interactive Engineer / TouchDesigner"],
+    description:
+      "Live election results projected onto the Empire State Building. The Empire State Building has transformed into a giant glowing election tracker tonight.",
+    modalContent: (
+      <>
+        <p>
+        Live election results projected onto the Empire State Building. The Empire State Building has transformed into a giant glowing election tracker tonight.
+        </p>
+      </>
+    ),
+  },
+  {
+    title: "Dubai 360: Spherical Projection Theater",
+    imgSrc: ["/project-imgs/dubai-sphere/dubai-sphere-00.jpg",
+              "/project-imgs/dubai-sphere/dubai-sphere-01.jpg",
+              "/project-imgs/dubai-sphere/dubai-sphere-02.jpg",
+              "/project-imgs/dubai-sphere/dubai-sphere-03.jpg",
+              "/project-imgs/dubai-sphere/dubai-sphere-04.jpg",
+              "/project-imgs/dubai-sphere/dubai-sphere-05.jpg",
+              "/project-imgs/dubai-sphere/dubai-sphere-06.jpg",
+            ],
+    code: "",
+    projectLink: "https://vimeo.com/123011724",
+    tech: ["OBSCURA DIGITAL", "Lead Interactive Engineer / TouchDesigner"],
+    description:
+      "When the team behind the Dubai 360 website wanted to create a life-size interactive experience for their content, they partnered with Obscura for creative innovation.",
+    modalContent: (
+      <>
+        <p>
+        When the team behind the Dubai 360 website wanted to create a life-size interactive experience for their content, they partnered with Obscura for creative 
+        innovation. The goal was to design a physical space where high-quality panoramic content from the Dubai 360 website could be presented in a unique, fully 
+        immersive way. Located in the The Dubai Mall, “The Sphere” is the result of a collaboration between the teams. Visitors step inside The Sphere and walk along 
+        a suspended footbridge to the center, where they experience a fast-paced, six-minute film of Dubai shot in 360 degrees. Powered by 18 synchronized projectors, 
+        the show includes iconic locations such as Burj Khalifa and The Palm Jumeirah from perspectives never seen before. The Sphere is the world’s largest interactive 
+        city tour in the world’s biggest mall—and the first of its kind in the Middle East. The Sphere showcases Dubai’s pioneering spirit by integrating innovative 
+        ideas with technology to promote the wonders of the city. Dubai 360 project manager Ismaeil Al Hashmi said, “The launch of Dubai 360 has established new standards 
+        for how people experience a city. The Sphere is another extension of that experience.” Consultant Tommy Wakefield-Smith, who lives in Dubai, observed, “Obscura 
+        Digital has demonstrated the incredible possibilities of immersive entertainment and education.”
+        </p>
+      </>
+    ),
+  },
 
 ];
 
