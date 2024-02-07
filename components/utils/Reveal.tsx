@@ -23,7 +23,7 @@ export const Reveal = ({ children, width = "fit-content" }: Props) => {
         {
           scrollTrigger: {
             trigger: element,
-            start: "top bottom",
+            start: "top 100%",
             end: "center center",
             toggleActions: "play none none reverse",
           },

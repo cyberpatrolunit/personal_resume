@@ -25,17 +25,17 @@ const projects = [
   {
     title: "Google: SJT NYC",
     imgSrc: ["/project-imgs/sjt/sjt-00.jpg",
-            "/project-imgs/sjt/sjt-01.jpg",
+            "/project-imgs/sjt/sjt-01-lock.jpg",
             "/project-imgs/sjt/sjt-02.jpg",
-            "/project-imgs/sjt/sjt-03.jpg",
-            "/project-imgs/sjt/sjt-04.jpg",        
-            "/project-imgs/sjt/sjt-05.jpg",    
+            "/project-imgs/sjt/sjt-03-lock.jpg",
+            "/project-imgs/sjt/sjt-04-lock.jpg",        
+            "/project-imgs/sjt/sjt-05-lock.jpg",    
             ],
     code: "",
     projectLink: "https://www.sjt-nyc.xyz/",
     tech: ["Lead Technical Director @ Downstream", "TouchDesigner / GLSL / Vue"],
     description:
-      "Technical Programming Lead on a TouchDesigner digital wayfinding system for the new Google St. John's Terminal.",
+      "Technical Programming Lead on a TouchDesigner digital wayfinding system for the new 2024 Google St. John's Terminal.",
     modalContent: (
       <>
         <p style={{ fontWeight: 'bold', fontSize: 'larger' }}>
@@ -120,11 +120,13 @@ const projects = [
   },
   {
     title: "Google: Pier 57 NYC",
-    imgSrc: [ "/project-imgs/p57/p57-00.png",
-              "/project-imgs/p57/p57-01.png",
-              "/project-imgs/p57/p57-02.png",
-              "/project-imgs/p57/p57-03.png",
-              "/project-imgs/p57/p57-04.png"],
+    imgSrc: [ "/project-imgs/p57/p57-00.jpg",
+              "/project-imgs/p57/p57-01.jpg",
+              "/project-imgs/p57/p57-02.jpg",
+              "/project-imgs/p57/p57-03.jpg",
+              "/project-imgs/p57/p57-04.jpg",
+              "/project-imgs/p57/p57-05.jpg",
+              "/project-imgs/p57/p57-06.jpg",],
     code: "",
     projectLink: "https://www.p57.xyz/",
     tech: ["Lead Technical Director @ Downstream", "Ventuz / TouchDesigner"],
