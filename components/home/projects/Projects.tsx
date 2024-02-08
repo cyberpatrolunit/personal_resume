@@ -22,28 +22,7 @@ export const Projects = () => {
 
 const projects = [
 
-  {
-    title: "Google: SJT NYC",
-    imgSrc: ["/project-imgs/sjt/sjt-00.jpg",
-    
-            ],
-    code: "",
-    projectLink: "https://www.sjt-nyc.xyz/",
-    tech: ["Lead Technical Director @ Downstream", ""],
-    description:
-      "Technical Programming Lead on a digital system for the new 2024 Google St. John's Terminal.",
-    modalContent: (
-      <>
-        <p style={{ fontWeight: 'bold', fontSize: 'larger' }}>
-        Project Overview:
-        </p>
-        <p>
-        As the Lead Technical Director and Programmer, I was at the forefront of delivering a wide range of installations 
-        for this new state of the art multifaceted office building.
-        </p>
-      </>
-    ),
-  },
+
   {
     title: "Google: Pier 57 NYC",
     imgSrc: [ "/project-imgs/p57/p57-00.jpg",
