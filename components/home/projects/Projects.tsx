@@ -25,15 +25,11 @@ const projects = [
   {
     title: "Google: SJT NYC",
     imgSrc: ["/project-imgs/sjt/sjt-00.jpg",
-            "/project-imgs/sjt/sjt-01-lock.jpg",
-            "/project-imgs/sjt/sjt-02.jpg",
-            "/project-imgs/sjt/sjt-03-lock.jpg",
-            "/project-imgs/sjt/sjt-04-lock.jpg",        
-            "/project-imgs/sjt/sjt-05-lock.jpg",    
+    
             ],
     code: "",
     projectLink: "https://www.sjt-nyc.xyz/",
-    tech: ["Lead Technical Director @ Downstream", "TouchDesigner / GLSL / Vue"],
+    tech: ["Lead Technical Director @ Downstream", ""],
     description:
       "Technical Programming Lead on a TouchDesigner digital wayfinding system for the new 2024 Google St. John's Terminal.",
     modalContent: (
@@ -42,78 +38,8 @@ const projects = [
         Project Overview:
         </p>
         <p>
-        As the Lead Technical Director and Programmer, I was at the forefront of delivering a wide range of interactive installations 
-        for this new state of the art multifaceted office building. My responsibilities encompassed programming and deploying various 
-        installations, including all Welcome Walls, the Community Garden, Susan's Garage, Beneath the Trees and Dynamic Lighting, each 
-        featuring bespoke generative artworks.
-        </p>
-        <p>
-        </p>
-        <p>
-        </p>  
-        <p style={{ fontWeight: 'bold', fontSize: 'larger' }}>
-        Diverse Installations and Technical Expertise:
-        </p>
-        <p>
-        The core of my work involved programming and deploying Welcome Walls across multiple areas, integrating dynamic generative 
-        expressions with the informational layer. My role extended to installations like the Community Garden presentation space, 
-        LED Dynamic Lighting systems, and theater entry canvases. TouchDesigner was utilized for playback and generative artwork, 
-        while VUE was employed for overlaying information layers, showcasing my ability to adapt and implement diverse technologies 
-        effectively.
-        </p>
-        <p>
-        </p>
-        <p>
-        </p>  
-        <p style={{ fontWeight: 'bold', fontSize: 'larger' }}>
-        Technical Challenges and Innovative Solutions:
-        </p>
-        <p>
-        One of the major technical complexities was ensuring cloud-based synchronization of media servers throughout the building, 
-        necessitating a dynamic content loading system relevant to each installation. The evolving network setup, integration with 
-        other control interfaces, and physical construction posed additional challenges. A significant achievement was developing a 
-        system for projection-mapped surfaces to align seamlessly with LED canvases, demonstrating my expertise in creating cohesive 
-        multimedia experiences.
-        </p>
-        <p>
-        </p>
-        <p>
-        </p>  
-        <p style={{ fontWeight: 'bold', fontSize: 'larger' }}>
-        Team Coordination and Modularity Approach:
-        </p>
-        <p>
-        Effective version control and a focus on modularity were crucial in managing the extensive scope of this project. This 
-        approach enabled specific updates without disrupting the overall architecture. Coordination of on-site and off-site teams, 
-        along with cloud-based fleet deployment and remote management, was instrumental in achieving this.
-        </p>
-        <p>
-        </p>
-        <p>
-        </p>  
-        <p style={{ fontWeight: 'bold', fontSize: 'larger' }}>
-        Unique Creative Contributions:
-        </p>
-        <p>
-        Utilizing TouchDesigner, I developed custom tools for mapping and calibrating content on projection and LED surfaces. This 
-        allowed me to leverage my experience in creating unique generative artworks for the Welcome Walls, distinct from the work 
-        done at Pier 57.
-        </p>
-        <p>
-        </p>
-        <p>
-        </p>  
-        <p style={{ fontWeight: 'bold', fontSize: 'larger' }}>
-        Project Outcome and Anticipation:
-        </p>
-        <p>
-        The final stages of deployment have been completed, and we are currently in the burn-in phase, with the building set to 
-        officially open in February 2024. My team and I eagerly anticipate the reception of our work by the building's visitors 
-        and employees, confident that it will enrich their experience in this innovative space.
-        </p>
-        <p>
-        </p>
-        <p>
+        As the Lead Technical Director and Programmer, I was at the forefront of delivering a wide range of installations 
+        for this new state of the art multifaceted office building.
         </p>
       </>
     ),
@@ -121,15 +47,10 @@ const projects = [
   {
     title: "Google: Pier 57 NYC",
     imgSrc: [ "/project-imgs/p57/p57-00.jpg",
-              "/project-imgs/p57/p57-01.jpg",
-              "/project-imgs/p57/p57-02.jpg",
-              "/project-imgs/p57/p57-03.jpg",
-              "/project-imgs/p57/p57-04.jpg",
-              "/project-imgs/p57/p57-05.jpg",
-              "/project-imgs/p57/p57-06.jpg",],
+],
     code: "",
     projectLink: "https://www.p57.xyz/",
-    tech: ["Lead Technical Director @ Downstream", "Ventuz / TouchDesigner"],
+    tech: ["Lead Technical Director @ Downstream", ""],
     description:
       "Technical Programming Lead on the Ventuz based digital wayfinding system for the Google Pier 57 Event Center in NYC.",
     modalContent: (
@@ -138,70 +59,9 @@ const projects = [
         Project Overview:
         </p>
         <p>
-        As the Lead Technical Director and Ventuz programmer for the Google Pier 57 site, I spearheaded a 
-        groundbreaking project to integrate generative visuals across a multitude of LED screens within the building. 
-        The primary objective was to create a dynamic, real-time, content-driven wayfinding system, controllable via 
-        a web-based CMS, enhancing the visitor experience with both functionality and aesthetic appeal.
+        As the Lead Technical Director for the Google Pier 57 site, I spearheaded a 
+        groundbreaking project to integrate visuals across a multitude of screens within the building.
         </p>
-        <p>
-        </p>
-        <p>
-        </p>  
-        <p style={{ fontWeight: 'bold', fontSize: 'larger' }}>
-        Innovative Approach and Technical Mastery:
-        </p>
-        <p>
-          I navigated the complexity of managing and tracking multiple code repositories and configurations, 
-          tailored to various spaces and screen sizes. This required meticulous organization and a deep 
-          understanding of real-time systems. The challenge was amplified by the diverse requirements of each 
-          space, necessitating a flexible and scalable solution.
-        </p>
-        <p>
-        </p>
-        <p>
-        </p>  
-        <p style={{ fontWeight: 'bold', fontSize: 'larger' }}>
-        Collaboration and Leadership:
-        </p>
-        <p>
-        My role involved close collaboration with the design team, where I played a pivotal role in setting 
-        up templates and repositories. This ensured a streamlined workflow, facilitating seamless access and 
-        implementation by our development team. My approach fostered a collaborative environment, bridging the 
-        gap between technical and design aspects, and ensuring a cohesive execution of the project vision.
-        </p>
-        <p>
-        </p>
-        <p>
-        </p>  
-        <p style={{ fontWeight: 'bold', fontSize: 'larger' }}>
-        Technology Integration:
-        </p>
-        <p>
-        Leveraging the capabilities of Google Cloud Platform and unified endpoint management utilities, I 
-        delivered a solution that was not only technically advanced but also highly integrated and user-friendly. 
-        This integration showcased my ability to utilize cutting-edge technology to meet complex project 
-        requirements.
-        </p>
-        <p>
-        </p>
-        <p>
-        </p>  
-        <p style={{ fontWeight: 'bold', fontSize: 'larger' }}>
-        Outcome and Client Engagement:
-        </p>
-        <p>
-        Working directly with the client, I was instrumental in incorporating design changes and revisions, 
-        ensuring that the final product aligned perfectly with Google's vision. The project culminated in 
-        extensive documentation and training for the operations team, facilitating a smooth transition and 
-        ongoing management. The final outcome is a testament to our team's ability to deliver a dynamic, 
-        real-time, content-driven wayfinding experience that allows Google to control the entire site. Through 
-        our programming, Google can schedule events, set preset generative looks, and upload custom media, 
-        thereby creating a cohesive and interactive experience throughout the building.
-        </p> 
-        <p>
-        </p>
-        <p>
-        </p>     
       </>
     ),
   },
