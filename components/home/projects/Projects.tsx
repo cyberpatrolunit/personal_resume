@@ -24,28 +24,6 @@ const projects = [
 
 
   {
-    title: "Google: Pier 57 NYC",
-    imgSrc: [ "/project-imgs/p57/p57-00.jpg",
-],
-    code: "",
-    projectLink: "https://www.p57.xyz/",
-    tech: ["Lead Technical Director @ Downstream", ""],
-    description:
-      "Technical Programming Lead on the digital system for the Google Pier 57 Event Center in NYC.",
-    modalContent: (
-      <>
-        <p style={{ fontWeight: 'bold', fontSize: 'larger' }}>
-        Project Overview:
-        </p>
-        <p>
-        As the Lead Technical Director for the Google Pier 57 site, I spearheaded a 
-        groundbreaking project to integrate visuals across a multitude of screens within the building.
-        </p>
-      </>
-    ),
-  },
-
-  {
     title: "Adriatique: Projekt X",
     imgSrc: ["/project-imgs/projektx/x-00.jpg",
              "/project-imgs/projektx/x-01.jpg",
