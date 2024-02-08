@@ -52,7 +52,7 @@ const projects = [
     projectLink: "https://www.p57.xyz/",
     tech: ["Lead Technical Director @ Downstream", ""],
     description:
-      "Technical Programming Lead on the Ventuz based digital wayfinding system for the Google Pier 57 Event Center in NYC.",
+      "Technical Programming Lead on the digital system for the Google Pier 57 Event Center in NYC.",
     modalContent: (
       <>
         <p style={{ fontWeight: 'bold', fontSize: 'larger' }}>
