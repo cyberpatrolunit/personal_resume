@@ -31,7 +31,7 @@ const projects = [
     projectLink: "https://www.sjt-nyc.xyz/",
     tech: ["Lead Technical Director @ Downstream", ""],
     description:
-      "Technical Programming Lead on a TouchDesigner digital wayfinding system for the new 2024 Google St. John's Terminal.",
+      "Technical Programming Lead on a [digital system] for the new 2024 Google St. John's Terminal.",
     modalContent: (
       <>
         <p style={{ fontWeight: 'bold', fontSize: 'larger' }}>
