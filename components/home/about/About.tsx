@@ -31,8 +31,9 @@ export const About = () => {
 
               <h2 className={styles.subHeading}>Notable Projects</h2>
               <p className={styles.aboutText}>
-                <strong>Google Pier 57 and Google St. John’s Terminal in NYC:</strong> Currently at Downstream, I 
+                <strong>Currently at Downstream, I 
                 oversee extensive permanent installations, managing real-time developers, Git repositories and procuring software and hardware.
+                </strong>
               </p>
               <p className={styles.aboutText}>
                 As an Independent Contractor, I've contributed to projects such as NMS Experience for Nike HQ in Beaverton, OR, and the 
