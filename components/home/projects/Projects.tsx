@@ -601,6 +601,34 @@ const projects = [
         </p>
       </>
     ),
+  },
+  {
+    title: "Amon Tobin: ISAM Live",
+    imgSrc: ["/project-imgs/isam/isam-00-web.jpg",
+             "/project-imgs/isam/isam-01-web.jpg",
+             "/project-imgs/isam/isam-02-web.jpg",
+             "/project-imgs/isam/isam-03-web.jpg",
+             "/project-imgs/isam/isam-04-web.jpg",
+             "/project-imgs/isam/isam-05-web.jpg",
+             "/project-imgs/isam/isam-06-web.jpg",
+            ],
+    code: "",
+    projectLink: "https://xitelabs.com/portfolio/amon-tobin/",
+    tech: ["Playback System, TouchDesigner, Content Creation"],
+    description:
+      "Amon Tobin ISAM was an immersive audio visual show that made a huge imprint on the world of electronic music and visual arts.",
+    modalContent: (
+      <>
+        <p>
+        Amon Tobin ISAM was an immersive audio visual show that made a huge imprint on the world of electronic music and visual arts. The groundbreaking 3D animation, real time 
+        computer graphics using Touch Designer and 3D projection mapping pushed the 4D medium to new levels. The experience was directed by Vello Virkhaus and the team at Xite 
+        formerly (V Squared Labs) in collaboration with Amon Tobin, Leviathan and set designer Vita Motus. The stage design and visual narrative structure took the audience on a 
+        journey through Tobin’s avant-garde IDM soundscapes. The show started with an mysterious mechanical structure coming to life. This stage then turned into a ship and launched 
+        into space. We then saw Tobin in a hyper-sleep space pod on a futuristic cockpit of the ship. He later wakes up after a series of wild hallucinatory dream like pieces, and 
+        comes out at the end of the show in the same space suit used in the 3D animations. This was a striking reveal.
+        </p>
+      </>
+    ),
   }
 ];
 
