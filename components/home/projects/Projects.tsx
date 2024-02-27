@@ -584,25 +584,6 @@ const projects = [
     ),
   },
   {
-    title: "Videoglove.com",
-    imgSrc: ["/project-imgs/videoglove/videoglove-00.jpg",
-             "/project-imgs/videoglove/videoglove-01.jpg",
-             "/project-imgs/videoglove/videoglove-02.jpg",
-            ],
-    code: "",
-    projectLink: "https://videoglove.com/",
-    tech: ["Personal Project", "NextJs / GSAP / Vercel / ThreeJs"],
-    description:
-      "An ever evloving personal project where I have a platfrom to showcase my work and also a place to experiment with new web technologies.",
-    modalContent: (
-      <>
-        <p>
-          An ever evloving personal project where I have a platfrom to showcase my work and also a place to experiment with new web technologies.
-        </p>
-      </>
-    ),
-  },
-  {
     title: "Amon Tobin: ISAM Live",
     imgSrc: ["/project-imgs/isam/isam-00-web.jpg",
              "/project-imgs/isam/isam-01-web.jpg",
