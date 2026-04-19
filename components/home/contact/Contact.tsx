@@ -76,7 +76,6 @@ export const Contact = () => {
                   name="message"
                   value={message}
                   onChange={handleMessageChange}></textarea>
-                  <br /><br />
                 <Suspense fallback={<div>Loading Button...</div>}>
                   <OutlineButton>Send Message</OutlineButton>
                 </Suspense>

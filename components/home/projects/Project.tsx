@@ -63,7 +63,18 @@ const Project = ({
           animate={controls}
           transition={{ duration: 0.75 }}
         >
-          <div onClick={() => setIsOpen(true)} className={styles.projectImage}>
+          <div
+            onClick={() => setIsOpen(true)}
+            className={styles.projectImage}
+            role="button"
+            tabIndex={0}
+            onKeyDown={(event) => {
+              if (event.key === "Enter" || event.key === " ") {
+                event.preventDefault();
+                setIsOpen(true);
+              }
+            }}
+          >
             {imgSrc.map((src, index) => (
               <div
                 key={index}
@@ -84,26 +95,31 @@ const Project = ({
           <Reveal width="100%">
             <div className={styles.projectTitle}>
               <h4>{title}</h4>
-              <div className={styles.projectTitleLine} />
-              {code && (
-                <Link href={code} target="_blank" rel="nofollow">
-                  <AiFillGithub size="2.8rem" />
-                </Link>
-              )}
-              {projectLink && (
-                <Link href={projectLink} target="_blank" rel="nofollow">
-                  <AiOutlineExport size="2.8rem" />
-                </Link>
-              )}
+              <div className={styles.projectActions}>
+                {code && (
+                  <Link href={code} target="_blank" rel="nofollow" aria-label={`${title} source code`}>
+                    <AiFillGithub size="2.4rem" />
+                  </Link>
+                )}
+                {projectLink && (
+                  <Link href={projectLink} target="_blank" rel="nofollow" aria-label={`${title} external link`}>
+                    <AiOutlineExport size="2.4rem" />
+                  </Link>
+                )}
+              </div>
             </div>
           </Reveal>
             <Reveal>
-              <div className={styles.projectTech}>{tech.join(" - ")}</div>
+              <div className={styles.projectTech}>
+                {tech.map((item) => (
+                  <span key={item}>{item}</span>
+                ))}
+              </div>
             </Reveal>
             <Reveal>
               <p className={styles.projectDescription}>
-                {description}
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span onClick={() => setIsOpen(true)}> Learn more {">"}</span>
+                <span className={styles.descriptionText}>{description}</span>
+                <button type="button" onClick={() => setIsOpen(true)}>Learn more</button>
               </p>
             </Reveal>
           </div>

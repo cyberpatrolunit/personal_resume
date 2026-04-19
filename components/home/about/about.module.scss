@@ -4,7 +4,7 @@
   font-family: 'Slussen.Reg', sans-serif;
   display: grid;
   grid-template-columns: 1fr 300px;
-  gap: 2.4rem;
+  gap: clamp(2.4rem, 5vw, 5.6rem);
 
   @media (max-width: 900px) {
     grid-template-columns: 1fr;
@@ -15,11 +15,14 @@
   font-family: 'Slussen.Reg', sans-serif;
   margin-bottom: 0.4rem;
   font-size: smaller;
+  color: var(--text-muted);
+  line-height: 1.52;
 
   span{
-    background: var(--background-light);
+    background: rgba(var(--brand-rgb), 0.1);
+    border: 1px solid var(--line);
     padding: 1rem;
-    border-radius: 0.6rem;
+    border-radius: 0.5rem;
     font-size: var(--text-md);
     font-weight: bold;
     margin-right: 0.6rem;
@@ -52,13 +55,13 @@
   margin-top: 2rem;
   margin-bottom: 2rem;
   margin-bottom: 1rem;
-  border-bottom: 2px;
+  color: var(--text);
+  border-bottom: 1px;
   border-top: 0px;
   border-left: 0px;
   border-right: 0px;   
   border-color: var(--brand);
   border-style: solid;
 }
-
 
 

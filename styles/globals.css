@@ -1,17 +1,24 @@
 :root {
   font-size: 62.5%;
 
-  --background: rgb(0, 0, 0);
-  --bg-opaque: rgba(17, 17, 17, 0.25);
-  --background-light: rgb(35, 35, 35);
-  --background-dark: rgb(8, 8, 8);
+  --background: #030604;
+  --bg-opaque: rgba(3, 6, 4, 0.68);
+  --background-light: #151a17;
+  --background-dark: #070a08;
+  --surface: rgba(18, 23, 20, 0.76);
+  --surface-strong: #1d241f;
+  --line: rgba(187, 229, 201, 0.18);
 
-  --text: #b6b6b6;
-  --brand: rgb(70, 212, 110);
+  --text: #c7cec8;
+  --text-muted: #8d988f;
+  --brand: #58e286;
+  --brand-hot: #d7ff63;
+  --brand-rgb: 88, 226, 134;
 
   --text-xs: 1.6rem;
   --text-sm: 2rem;
   --text-md: 2.2rem;
+  --text-mdS: 2.8rem;
   --text-lg: 3.6rem;
   --text-xl: 5.6rem;
   --text-2xl: 9.6rem;
@@ -27,7 +34,7 @@
 
 *::selection {
   background: var(--brand);
-  color: #fff;
+  color: var(--background-dark);
 }
 
 html,
@@ -39,7 +46,25 @@ body {
 
 body {
   color: var(--text);
-  background: var(--background);
+  background:
+    radial-gradient(circle at 84% 8%, rgba(var(--brand-rgb), 0.14), transparent 28rem),
+    radial-gradient(circle at 6% 28%, rgba(215, 255, 99, 0.09), transparent 24rem),
+    linear-gradient(180deg, #020503 0%, var(--background) 42%, #050805 100%);
+  background-attachment: fixed;
+  text-rendering: geometricPrecision;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.024) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.018) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.72), transparent 78%);
 }
 
 canvas {
@@ -57,7 +82,8 @@ a {
   width: 10px;
 }
 ::-webkit-scrollbar-thumb{
-  background-color: var(--brand);
+  background: linear-gradient(180deg, var(--brand), var(--brand-hot));
+  border-radius: 999px;
 }
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -74,7 +100,7 @@ input[type=number] {
   z-index: 10;
   max-width: 1448px;
   margin: auto;
-  padding: 9.6rem;
+  padding: clamp(7.2rem, 8vw, 11.2rem) clamp(2.4rem, 7vw, 9.6rem);
   overflow: hidden;
 }
 
@@ -86,7 +112,8 @@ input[type=number] {
 
 .chip {
   font-size: var(--text-xs);
-  background: var(--background-light);
+  background: rgba(var(--brand-rgb), 0.1);
   padding: 0.8rem 0.85rem;
-  border-radius: 0px;
+  border: 1px solid var(--line);
+  border-radius: 0.4rem;
 }

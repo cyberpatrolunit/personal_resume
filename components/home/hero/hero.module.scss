@@ -13,9 +13,9 @@
   font-weight: 100;
   position: relative;
   z-index: 10;
-  margin: 4.8rem 0;
+  margin: clamp(3.2rem, 6vw, 6.4rem) 0;
   text-align: left; // Align text to the left
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  text-shadow: 0 0.4rem 2.8rem rgba(0, 0, 0, 0.78);
   display: flex;
   flex-direction: column;
   align-items: flex-start; // Align items to start of flex container (left)
@@ -34,13 +34,16 @@
   align-items: center; // Center items vertically
   flex-wrap: wrap;
   font-family: 'Slussen.Exp', sans-serif;
-  letter-spacing: -0.2rem;
+  letter-spacing: 0;
   text-transform: uppercase;
   line-height: 120%;
   margin-bottom: 0.4rem;
   margin-right: 0rem;
   font-size: var(--text-xl);
-  text-shadow: 0 0 4px rgb(255, 255, 255), 0 0 10px rgba(255, 255, 255, 0.5);
+  color: #f0f5ef;
+  text-shadow:
+    0 0 1.8rem rgba(255, 255, 255, 0.14),
+    0 0 4.8rem rgba(var(--brand-rgb), 0.16);
   //border: 1px solid rgb(34, 150, 212);
   
   
@@ -98,12 +101,13 @@
 .subTitle {
   font-family: 'Slussen.Exp', sans-serif;
   line-height: 1.1;
-  margin-top: 2.5rem;
-  margin-left: -1.1rem;
+  margin-top: 3rem;
+  margin-left: 0;
   margin-bottom: 1rem;
   font-size: var(--text-mdS);
   font-weight: 100;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  color: var(--text);
+  text-shadow: 0 0.8rem 2.4rem rgba(0, 0, 0, 0.8);
 
   span {
     font-weight: bold;
@@ -124,6 +128,11 @@
   margin-top: 2rem;
   max-width: 460px;
   font-weight: 200;
+  color: var(--text);
+  background: rgba(3, 6, 4, 0.48);
+  border-left: 2px solid var(--brand);
+  padding: 1.4rem 1.6rem;
+  backdrop-filter: blur(10px);
 
   @media (max-width: 400px) {
     font-size: var(--text-xs);

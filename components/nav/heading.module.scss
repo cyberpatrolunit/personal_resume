@@ -10,7 +10,9 @@
   top: 0;
   z-index: 20;
   background: var(--bg-opaque);
-  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--line);
+  box-shadow: 0 1.8rem 5rem rgba(0, 0, 0, 0.18);
+  backdrop-filter: blur(18px) saturate(130%);
 
   font-size: var(--text-md);
   font-weight: bold;
@@ -34,9 +36,12 @@
       display: none;
       padding: 20px;
       position: absolute;
-      background-color: var(--background-light);
+      right: 0;
+      background: var(--surface-strong);
       top: 50px;
-      border-radius: 9px;
+      border: 1px solid var(--line);
+      border-radius: 0.8rem;
+      box-shadow: 0 2.4rem 6rem rgba(0, 0, 0, 0.45);
       nav{
         font-family: 'Slussen.Exp', sans-serif;
         display: flex;

@@ -1,176 +1,303 @@
-// projectmodal.module.scss
-
 .modal {
-  //transform: translateX(150px);
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  inset: 0;
   z-index: 1000;
   display: flex;
   justify-content: center;
-  align-items: center; // Center modal vertically within the viewport
-  height: 100vh;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-bottom: 120px;
-  padding-top: 20px; // Adjusted for consistency
-  overflow-y: auto; // Allows scrolling if modal content exceeds viewport height
-  background: var(--bg-opaque);
-  backdrop-filter: blur(12px);
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: clamp(1.2rem, 3vw, 4rem);
+  overflow-y: auto;
+  background:
+    radial-gradient(circle at 78% 14%, rgba(var(--brand-rgb), 0.14), transparent 34rem),
+    rgba(3, 6, 4, 0.86);
+  backdrop-filter: blur(20px) saturate(130%);
 }
 
 .modalCard {
-  width: calc(100% - 20px); // Subtract the total margin space from the width
-  max-width: 70%; // Default max-width for larger screens
-  min-width: 300px; // Minimum width to maintain usability
+  width: min(100%, 108rem);
+  min-width: 30rem;
+  max-height: calc(100dvh - clamp(2.4rem, 6vw, 8rem));
   margin: auto;
-  background: var(--background-light);
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
-  border-radius: 2.2rem; // Rounded edges for the entire card
-  overflow: hidden;
   display: flex;
   flex-direction: column;
+  overflow-y: auto;
+  background:
+    linear-gradient(135deg, rgba(29, 36, 31, 0.97), rgba(8, 12, 9, 0.97)),
+    var(--surface-strong);
+  border: 1px solid rgba(var(--brand-rgb), 0.26);
+  border-radius: 0.8rem;
+  box-shadow:
+    0 3.2rem 12rem rgba(0, 0, 0, 0.72),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  scrollbar-width: thin;
+  scrollbar-color: var(--brand) transparent;
 
-  @media (max-width: 768px) {
-    max-width: calc(100% - 20px); // Ensure the modal respects the margin on small screens
+  &::-webkit-scrollbar {
+    width: 0.8rem;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, var(--brand), var(--brand-hot));
+    border-radius: 999px;
   }
 }
 
-
+.mediaPanel {
+  flex: 0 0 auto;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(var(--brand-rgb), 0.08), transparent 28rem),
+    #030604;
+  border-bottom: 1px solid var(--line);
+}
 
 .imageSlideshowContainer {
   width: 100%;
-  /* Height is controlled by padding-top to maintain a 16:9 aspect ratio */
-  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  height: clamp(24rem, 48vh, 56rem);
   position: relative;
   overflow: hidden;
 
-  /* Ensuring the image fills the container */
-  > .modalImage {
+  &::after {
+    content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
+    inset: 0;
+    z-index: 5;
+    pointer-events: none;
+    background:
+      linear-gradient(180deg, transparent 64%, rgba(0, 0, 0, 0.46)),
+      linear-gradient(90deg, rgba(var(--brand-rgb), 0.08), transparent 32%);
+  }
 
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover; /* Adjust as needed to cover or contain based on your preference */
-    }
+  @media (max-width: 640px) {
+    height: clamp(20rem, 38vh, 34rem);
   }
 }
 
-
 .modalImage {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  transition: opacity 1s ease-in-out;
+  inset: 0;
+  padding: clamp(0.8rem, 1.6vw, 1.8rem);
+  transition: opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+
   &.active {
     opacity: 1;
     z-index: 2;
   }
+
   &:not(.active) {
     opacity: 0;
     z-index: 1;
-    object-fit: cover;
   }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+.imageOverlay {
+  position: absolute;
+  left: 1.8rem;
+  bottom: 1.8rem;
+  z-index: 6;
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.75rem 0.9rem;
+  font-family: 'Slussen.Comp', sans-serif;
+  font-size: var(--text-xs);
+  color: var(--text);
+  background: rgba(3, 6, 4, 0.7);
+  border: 1px solid var(--line);
+  border-radius: 0.4rem;
+  backdrop-filter: blur(12px);
+
+  span:first-child {
+    color: var(--brand-hot);
+  }
+}
+
+.imageDots {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+  padding: 1.4rem 1.8rem;
+  background: rgba(0, 0, 0, 0.22);
+}
+
+.imageDots span {
+  width: 100%;
+  height: 2px;
+  background: rgba(199, 206, 200, 0.2);
+  border-radius: 999px;
+}
+
+.imageDots .activeDot {
+  background: linear-gradient(90deg, var(--brand), var(--brand-hot));
+  box-shadow: 0 0 1.2rem rgba(var(--brand-rgb), 0.34);
 }
 
 .modalContent {
-  padding: 2.4rem;
-  overflow-y: auto; // Scrollable content
-  flex-grow: 1;
+  padding: clamp(2.4rem, 4.8vw, 5.6rem);
   position: relative;
-  // Apply your specific font, size, and color stylings here
-  font-family: 'Slussen.Exp', sans-serif;
+  font-family: 'Slussen.Reg', sans-serif;
+}
+
+.modalHeader {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(24rem, 0.62fr);
+  gap: clamp(2rem, 4vw, 4.8rem);
+  align-items: start;
+  padding-bottom: clamp(2rem, 4vw, 3.2rem);
+  margin-bottom: clamp(2rem, 4vw, 3.2rem);
+  border-bottom: 1px solid var(--line);
 
   h4 {
     font-family: 'Slussen.Exp', sans-serif;
-    font-size: var(--text-lg);
+    font-size: clamp(3.6rem, 5.5vw, 7.2rem);
+    line-height: 0.95;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    color: #f0f5ef;
+    text-wrap: balance;
+  }
+
+  @media (max-width: 760px) {
+    grid-template-columns: 1fr;
   }
 }
 
-.modalTech {
+.eyebrow {
   font-family: 'Slussen.Comp', sans-serif;
   text-transform: uppercase;
+  font-size: var(--text-xs);
+  color: var(--brand-hot);
+  margin-bottom: 1.2rem;
+}
+
+.modalTech {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.2rem;
+  gap: 0.8rem;
 
-  font-size: var(--text-sm);
-  color: var(--brand);
-
-  margin: 0.2rem 0 2.4rem;
+  span {
+    font-family: 'Slussen.Comp', sans-serif;
+    text-transform: uppercase;
+    font-size: var(--text-xs);
+    color: var(--brand);
+    background: rgba(var(--brand-rgb), 0.08);
+    border: 1px solid var(--line);
+    border-radius: 0.4rem;
+    padding: 0.55rem 0.75rem;
+  }
 }
 
 .suppliedContent {
-  font-family: 'Slussen.Reg', sans-serif;
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
-  font-size: var(--text-xs);
-  list-style-type: decimal;
+  gap: 1.4rem;
+  max-width: 76ch;
+  font-size: clamp(1.6rem, 1.35vw, 1.85rem);
+  line-height: 1.64;
+  color: var(--text-muted);
+
+  p {
+    max-width: 76ch;
+  }
+
+  p[style*="bold"] {
+    font-family: 'Slussen.Exp', sans-serif;
+    text-transform: uppercase;
+    color: var(--text);
+    font-size: clamp(2rem, 2vw, 2.6rem) !important;
+    line-height: 1.12;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--line);
+  }
+
+  p:first-child {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: 0;
+  }
 }
 
 .modalFooter {
   font-family: 'Slussen.Bold', sans-serif;
   text-transform: uppercase;
-  margin-top: 2.4rem;
+  margin-top: 3.2rem;
+  padding-top: 2.4rem;
+  border-top: 1px solid var(--line);
 }
 
 .linksText {
   font-weight: bold;
   font-size: var(--text-md);
-  margin-bottom: 0.8rem;
+  margin-bottom: 1.2rem;
 
   span {
-    color: var(--brand);
+    color: var(--brand-hot);
   }
 }
 
 .links {
   display: flex;
   align-items: center;
-  gap: 1.2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
 
   a {
     display: flex;
     align-items: center;
-    gap: 0.4rem;
-
+    gap: 0.55rem;
+    min-height: 4.2rem;
+    padding: 0.95rem 1.2rem;
     font-size: var(--text-xs);
     color: var(--brand);
+    background: rgba(var(--brand-rgb), 0.07);
+    border: 1px solid rgba(var(--brand-rgb), 0.28);
+    border-radius: 0.5rem;
+    transition: color 0.2s ease, background 0.2s ease, transform 0.2s ease;
   }
 
   a:hover {
-    text-decoration: underline;
+    color: var(--background-dark);
+    background: linear-gradient(90deg, var(--brand), var(--brand-hot));
+    transform: translateY(-1px);
+    text-decoration: none;
   }
 }
 
 .closeModalBtn {
-  font-family: 'Slussen.Exp', sans-serif;
-  position: fixed; // Makes the button fixed relative to the viewport
-  top: 1rem; // Adjust the distance from the top as needed
-  right: 1rem; // Adjust the distance from the right as needed
-  background: none;
-  border: none;
+  position: fixed;
+  top: clamp(1.4rem, 2vw, 2.4rem);
+  right: clamp(1.4rem, 2vw, 2.4rem);
+  width: 4.8rem;
+  height: 4.8rem;
+  display: grid;
+  place-items: center;
+  background: rgba(3, 6, 4, 0.72);
+  border: 1px solid rgba(var(--brand-rgb), 0.34);
+  border-radius: 999px;
   color: var(--brand);
-  z-index: 105; // Ensure it's above the modal overlay
-  font-size: var(--text-xl);
+  z-index: 1002;
+  font-size: var(--text-lg);
   cursor: pointer;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 1.2rem 4rem rgba(0, 0, 0, 0.35);
+  transition: color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+
+  &:hover {
+    color: var(--brand-hot);
+    border-color: rgba(215, 255, 99, 0.55);
+    transform: rotate(90deg);
+  }
 
   @media (max-width: 790px) {
-    font-size: var(--text-xl);
-    top: 1rem;
-    right: 1.2rem;
+    width: 4.4rem;
+    height: 4.4rem;
+    font-size: var(--text-md);
   }
 }

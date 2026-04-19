@@ -8,9 +8,11 @@
   padding-right: 4%;
 
   a {
-    opacity: 0.5;
+    color: var(--text-muted);
+    opacity: 0.82;
     position: relative;
     z-index: 20;
+    transition: color 0.2s ease, opacity 0.2s ease;
   }
 
   a:hover {
@@ -18,4 +20,3 @@
     opacity: 1;
   }
 }
-

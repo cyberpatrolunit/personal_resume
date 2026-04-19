@@ -19,6 +19,7 @@ const Stats = () => {
             <span className="chip">Python</span>
             <span className="chip">Docker</span>
             <span className="chip">ThreeJS</span>
+            <span className="chip">WebGL</span>
             <span className="chip">GLSL</span>
             <span className="chip">p5js</span>
             <span className="chip">HTML</span>
@@ -38,6 +39,8 @@ const Stats = () => {
             <span className="chip">TouchDesigner</span>
             <span className="chip">Blender</span>
             <span className="chip">MAX/MSP</span>
+            <span className="chip">Real-time Data Systems</span>
+            <span className="chip">AI Integration</span>
             <span className="chip">Fleet Deployment</span>
           </div>
         </div>
@@ -51,7 +54,10 @@ const Stats = () => {
           <div className={styles.statGrid}>
             <span className="chip">PreVisualization</span>
             <span className="chip">Lighting Design</span>
+            <span className="chip">Projection Mapping</span>
             <span className="chip">CAD</span>
+            <span className="chip">LIDAR Systems</span>
+            <span className="chip">Spatial Computing</span>
             <span className="chip">Additive Manufacturing</span>
             <span className="chip">Rapid Prototyping</span>
             <span className="chip">Skiing</span>

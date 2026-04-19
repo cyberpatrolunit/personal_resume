@@ -23,30 +23,30 @@ export const Reveal = ({ children, width = "fit-content" }: Props) => {
         {
           scrollTrigger: {
             trigger: element,
-            start: "top 100%",
-            end: "center center",
+            start: "top 112%",
+            end: "top 76%",
             toggleActions: "play none none reverse",
           },
           opacity: 1,
           y: 0,
-          duration: 0.5,
-          delay: 0.25,
+          duration: 0.42,
+          delay: 0.04,
           ease: "power3.out"
         }
       );
 
       gsap.fromTo(boxElement,
-        { left: 0 },
+        { xPercent: 0 },
         {
           scrollTrigger: {
             trigger: element,
-            start: "top bottom",
-            end: "center center",
+            start: "top 112%",
+            end: "top 76%",
             toggleActions: "play none none reverse",
           },
-          left: "100%",
-          duration: 0.95,
-          ease: "easeIn"
+          xPercent: 100,
+          duration: 0.62,
+          ease: "power3.inOut"
         }
       );
     }

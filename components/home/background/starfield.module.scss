@@ -1,0 +1,78 @@
+.starfield {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+  background:
+    radial-gradient(900px 620px at 78% 12%, rgba(var(--brand-rgb), 0.18), transparent 62%),
+    radial-gradient(760px 560px at 12% 82%, rgba(215, 255, 99, 0.11), transparent 58%),
+    linear-gradient(180deg, #020503 0%, var(--background) 48%, #050805 100%);
+}
+
+.starfield::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.022) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.014) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.62), transparent 82%);
+}
+
+.nebula {
+  position: absolute;
+  inset: -18%;
+  background:
+    radial-gradient(circle at 50% 45%, rgba(255, 255, 255, 0.055), transparent 3%),
+    radial-gradient(circle at 42% 58%, rgba(var(--brand-rgb), 0.09), transparent 18%),
+    radial-gradient(circle at 66% 34%, rgba(215, 255, 99, 0.07), transparent 16%);
+  filter: blur(18px);
+  opacity: 0.72;
+  transform: rotate(-8deg);
+}
+
+.star {
+  position: absolute;
+  display: block;
+  border-radius: 999px;
+  opacity: 0.78;
+  transform-origin: center;
+  animation-name: twinkle;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  will-change: transform, opacity;
+}
+
+.white {
+  background: #f5fff6;
+  box-shadow: 0 0 10px rgba(245, 255, 246, 0.42);
+}
+
+.brand {
+  background: var(--brand);
+  box-shadow: 0 0 14px rgba(var(--brand-rgb), 0.58);
+}
+
+.hot {
+  background: var(--brand-hot);
+  box-shadow: 0 0 14px rgba(215, 255, 99, 0.48);
+}
+
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0.28;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .star {
+    animation: none;
+  }
+}

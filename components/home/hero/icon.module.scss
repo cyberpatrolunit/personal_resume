@@ -1,40 +1,38 @@
 .iconWrapper {
-  position: center;
-  width: 700px; // Fixed width
-  height: 300px; // Fixed height
-  max-width: 100%; // You might want to adjust or remove this
+  position: relative;
+  width: min(70rem, 100%);
+  height: 18rem;
   z-index: 0;
-  // Optional styles
-  // border: 2px solid #ffffff; // Choose your border color
-  // border-radius: 28px; // Optional: if you want rounded corners
+  overflow: hidden;
 
-  canvas {
-    width: 100%;
-    height: 100%;
-    object-fit: contain; // Ensure the content is scaled correctly
+  span {
+    position: absolute;
+    inset: auto;
+    width: 42%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--brand), var(--brand-hot), transparent);
+    box-shadow: 0 0 1.8rem rgba(var(--brand-rgb), 0.42);
+    transform: rotate(-12deg);
   }
 
-  // Adjusting for medium-sized screens
+  span:nth-child(1) {
+    top: 34%;
+    left: 8%;
+  }
+
+  span:nth-child(2) {
+    top: 52%;
+    left: 28%;
+    opacity: 0.74;
+  }
+
+  span:nth-child(3) {
+    top: 70%;
+    left: 48%;
+    opacity: 0.52;
+  }
+
   @media (max-width: 950px) {
-    top: 6px;
-    right: 2rem;
-    width: 500px;
-    height: 300px;
-  }
-
-  // Adjusting for smaller screens
-  @media (max-width: 768px) {
-    top: 10px;
-    right: 1rem;
-    width: 700px;
-    height: 350px;
-  }
-
-  // Adjusting for very small screens
-  @media (max-width: 500px) {
-    position: static; // To allow natural flow in the document
-    margin: 0 auto; // To center it horizontally
-    width: 300px;
-    height: 100px;
+    height: 12rem;
   }
 }

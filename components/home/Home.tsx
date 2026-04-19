@@ -1,8 +1,8 @@
-import React, { useState, useEffect, useRef, Suspense } from "react";
+import React, { useState, useEffect, Suspense } from "react";
 import { SideBar } from "../nav/SideBar";
 import { Heading } from "../nav/Heading";
 import { ScrollTop } from "../buttons/ScrollTop";
-import { Application } from '@splinetool/runtime';
+import Starfield from "./background/Starfield";
 import styles from "./home.module.scss";
 import Loader from '../utils/Loader'; // Assume you have a Loader component
 
@@ -14,28 +14,21 @@ const Projects = React.lazy(() => import("./projects/Projects"));
 const Contact = React.lazy(() => import("./contact/Contact"));
 
 export const Home = () => {
-  const canvasRef = useRef(null);
-  const [isLoaded, setIsLoaded] = useState(false);
   const [showContent, setShowContent] = useState(false);
 
   useEffect(() => {
-    if (canvasRef.current) {
-      const app = new Application(canvasRef.current);
-      app.load('https://prod.spline.design/qQGEiViy9RKI4ueL/scene.splinecode').then(() => {
-        setIsLoaded(true); // Set isLoaded to true when the Spline model is loaded
-        // Ensure content is shown after a minimum of 2 seconds
-        setTimeout(() => setShowContent(true), 2000);
-      });
-    }
+    const timer = setTimeout(() => setShowContent(true), 450);
+
+    return () => clearTimeout(timer);
   }, []);
 
   return (
     <>
       <div className={styles.home}>
+        <Starfield />
         <SideBar />
         <main>
           <Heading />
-          <canvas ref={canvasRef} style={{ width: '100%', height: '100vh', position: 'fixed', top: 0, left: 0, zIndex: -1 }} />
           {showContent ? (
             <Suspense fallback={<Loader />}>
               <Wow />

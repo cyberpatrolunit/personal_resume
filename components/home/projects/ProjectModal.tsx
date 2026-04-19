@@ -33,6 +33,10 @@ export const ProjectModal = ({
   useEffect(() => {
     const body = document.querySelector("body");
     body!.style.overflowY = isOpen ? "hidden" : "scroll";
+
+    return () => {
+      body!.style.overflowY = "scroll";
+    };
   }, [isOpen]);
 
   useEffect(() => {
@@ -45,44 +49,84 @@ export const ProjectModal = ({
   }, [imgSrc.length, isOpen]);
 
   const content = (
-    <div className={styles.modal} onClick={() => setIsOpen(false)}>
-      <button className={styles.closeModalBtn}><MdClose /></button>
+    <div
+      className={styles.modal}
+      onClick={() => setIsOpen(false)}
+      role="presentation"
+    >
+      <button
+        className={styles.closeModalBtn}
+        onClick={() => setIsOpen(false)}
+        aria-label="Close project details"
+      >
+        <MdClose />
+      </button>
       <motion.div
-        initial={{ y: 100, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
+        initial={{ y: 48, opacity: 0, scale: 0.98 }}
+        animate={{ y: 0, opacity: 1, scale: 1 }}
+        transition={{ duration: 0.34, ease: [0.22, 1, 0.36, 1] }}
         onClick={e => e.stopPropagation()}
         className={styles.modalCard}
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="project-modal-title"
       >
-        <div className={styles.imageSlideshowContainer}>
-          {imgSrc.map((src, index) => (
-            <div
-              key={index}
-              className={`${styles.modalImage} ${index === currentImage ? "active" : ""}`}
-              style={{ opacity: index === currentImage ? 1 : 0 }}
-            >
-              <Image src={src} alt={`An image of the ${title} project`} layout="fill" objectFit="cover" />
+        <div className={styles.mediaPanel}>
+          <div className={styles.imageSlideshowContainer}>
+            {imgSrc.map((src, index) => (
+              <div
+                key={index}
+                className={`${styles.modalImage} ${index === currentImage ? "active" : ""}`}
+                style={{ opacity: index === currentImage ? 1 : 0 }}
+              >
+                <Image src={src} alt={`An image of the ${title} project`} layout="fill" objectFit="contain" />
+              </div>
+            ))}
+            <div className={styles.imageOverlay}>
+              <span>{String(currentImage + 1).padStart(2, "0")}</span>
+              <span>/</span>
+              <span>{String(imgSrc.length).padStart(2, "0")}</span>
             </div>
-          ))}
+          </div>
+          {imgSrc.length > 1 && (
+            <div className={styles.imageDots} aria-hidden="true">
+              {imgSrc.map((_, index) => (
+                <span
+                  key={index}
+                  className={index === currentImage ? styles.activeDot : ""}
+                />
+              ))}
+            </div>
+          )}
         </div>
         <div className={styles.modalContent}>
-          <h4>{title}</h4>
-          <div className={styles.modalTech}>{tech.join(" - ")}</div>
+          <div className={styles.modalHeader}>
+            <div>
+              <p className={styles.eyebrow}>Project Detail</p>
+              <h4 id="project-modal-title">{title}</h4>
+            </div>
+            <div className={styles.modalTech}>
+              {tech.map((item) => (
+                <span key={item}>{item}</span>
+              ))}
+            </div>
+          </div>
           <div className={styles.suppliedContent}>{modalContent}</div>
           <div className={styles.modalFooter}>
-          <p className={styles.linksText}>Project Links<span>.</span></p>
-          <div className={styles.links}>
-            {code && (
-              <Link href={code} target="_blank" rel="noopener noreferrer" className={styles.link}>
-                <AiFillGithub /> source code
-              </Link>
-            )}
-            {projectLink && (
-              <Link href={projectLink} target="_blank" rel="noopener noreferrer" className={styles.link}>
-                <AiOutlineExport /> live project
-              </Link>
-            )}
+            <p className={styles.linksText}>Project Links<span>.</span></p>
+            <div className={styles.links}>
+              {code && (
+                <Link href={code} target="_blank" rel="noopener noreferrer" className={styles.link}>
+                  <AiFillGithub /> source code
+                </Link>
+              )}
+              {projectLink && (
+                <Link href={projectLink} target="_blank" rel="noopener noreferrer" className={styles.link}>
+                  <AiOutlineExport /> live project
+                </Link>
+              )}
+            </div>
           </div>
-        </div>
         </div>
       </motion.div>
     </div>

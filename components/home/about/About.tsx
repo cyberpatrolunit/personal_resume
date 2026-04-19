@@ -15,37 +15,49 @@ export const About = () => {
             <div>
               <h2 className={styles.subHeading}>Introduction</h2>
               <p className={styles.aboutText}>
-                <span>👋</span>My name is Bryant Place, a creative technologist with 13+ years of global experience 
-                in the live entertainment and permanent installation industries. My 40+ successful interactive 
-                installations and live event shows for leading brands showcase my ability to navigate and solve 
-                complex design problems.
+                <span>👋</span>My name is Bryant Place, a creative technologist, innovation strategist, and 
+                experiential systems architect with 13+ years of leadership at the intersection of immersive 
+                technology, digital innovation, and brand storytelling. I translate ambitious creative concepts 
+                into real-time systems, interactive installations, and digital experiences that connect audiences 
+                to meaningful moments.
               </p>
 
               <h2 className={styles.subHeading}>Career Overview</h2>
               <p className={styles.aboutText}>
-                Throughout my career, I've held various positions of increasing responsibility and team management, 
-                including Technical Director of Real-Time Systems, Lead Technical Director and Creative Director, 
-                and Senior Interactive Art Engineer. I've played a pivotal role in managing teams and executing a 
-                diverse array of projects.
+                My work combines technical execution with strategic creative leadership: AI-driven workflows, 
+                generative art systems, LIDAR sensing, real-time data architecture, projection mapping, spatial 
+                computing, and custom software/hardware ecosystems. I have led cross-functional teams across 
+                architecture, AV integration, creative direction, development, and production to deliver complex 
+                experiences for global brands and cultural institutions.
               </p>
 
-              <h2 className={styles.subHeading}>Notable Projects</h2>
+              <h2 className={styles.subHeading}>Recent Leadership</h2>
               <p className={styles.aboutText}>
-                <strong>Currently at Downstream, I 
-                oversee extensive permanent installations, managing real-time developers, Git repositories and procuring software and hardware.
-                </strong>
+                <strong>Google Gradient Canopy / Artists and Machine Intelligence:</strong> Technical Producer 
+                for a $15M AI-focused exhibition, leading integration across generative art, LIDAR sensors, 
+                real-time CMS architecture, AV teams, architects, and creative stakeholders.
               </p>
               <p className={styles.aboutText}>
-                As an Independent Contractor, I've contributed to projects such as NMS Experience for Nike HQ in Beaverton, OR, and the 
-                Salesforce Tower in San Francisco.
+                <strong>Downstream:</strong> Technical Director of Real-Time Systems and Innovation, architecting 
+                digital wayfinding and scheduling display systems for Google Pier 57 and St. John&apos;s Terminal while 
+                managing real-time developers, Git workflows, hardware procurement, and client-facing deployments.
               </p>
               <p className={styles.aboutText}>
-                At <strong>dotdotdash.io</strong>, I served as Systems Architect for projects like Amazon Prime Video Pop-Bot, Segment's 
-                Synapse tech confrence and Creative for TheNorthFace Future Light Product Reveal.
+                <strong>CPU Productions LLC:</strong> Founder and Experience Innovation Director, delivering 
+                experiential activations for Nike, Salesforce, Adriatique, and other global partners through 
+                rapid prototyping, creative direction, immersive software, and custom hardware systems.
+              </p>
+
+              <h2 className={styles.subHeading}>Project Highlights</h2>
+              <p className={styles.aboutText}>
+                At <strong>dotdotdash.io</strong>, I served as Lead Technical Director and Project Architect for 
+                Amazon, Hyundai, Segment, and The North Face, aligning technology strategy with brand storytelling 
+                and audience engagement goals.
               </p>
               <p className={styles.aboutText}>
-                <strong>OBSCURA DIGITAL / MSG Sphere:</strong> Supported over 25 client-facing projects, including the 
-                Dubai Expo 2020 and Lux Prima Live Show 2019.
+                <strong>Obscura Digital / MSG Sphere:</strong> Senior Interactive Art Engineer for 20+ major 
+                events and R&D initiatives, including MSG Sphere technology showcases, Dubai Expo 2020, Google I/O, 
+                YouTube, and Fiat Lux at the Vatican, which reached 200,000 in-person viewers and millions online.
               </p>
             </div>
           </Reveal>
