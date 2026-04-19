@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { CSSProperties, useEffect, useMemo, useRef, useState } from "react";
 import styles from "./starfield.module.scss";
 
 type Star = {
@@ -12,7 +12,20 @@ type Star = {
   tint: "white" | "brand" | "hot";
 };
 
+type Meteor = {
+  id: number;
+  x: number;
+  y: number;
+  duration: number;
+  delay: number;
+  opacity: number;
+  travel: number;
+  length: number;
+  shine: number;
+};
+
 const STAR_COUNT = 96;
+const METEOR_COUNT = 14;
 
 const Starfield = () => {
   const [scrollState, setScrollState] = useState({ scroll: 0, velocity: 0 });
@@ -35,6 +48,20 @@ const Starfield = () => {
         tint: accentRoll > 0.92 ? "hot" : accentRoll > 0.76 ? "brand" : "white",
       };
     });
+  }, []);
+
+  const meteors = useMemo<Meteor[]>(() => {
+    return Array.from({ length: METEOR_COUNT }, (_, id) => ({
+      id,
+      x: 18 + Math.random() * 56,
+      y: 16 + Math.random() * 58,
+      duration: 2.8 + Math.random() * 0.9,
+      delay: 2 + id * 3.8 + Math.random() * 4.5,
+      opacity: 0.48 + Math.random() * 0.3,
+      travel: 22 + Math.random() * 18,
+      length: 7.5 + Math.random() * 5.5,
+      shine: 1.8 + Math.random() * 1.4,
+    }));
   }, []);
 
   useEffect(() => {
@@ -71,6 +98,24 @@ const Starfield = () => {
   return (
     <div className={styles.starfield} aria-hidden="true">
       <div className={styles.nebula} />
+      <div className={styles.meteorLayer}>
+        {meteors.map((meteor) => (
+          <span
+            key={meteor.id}
+            className={styles.meteor}
+            style={{
+              left: `${meteor.x}%`,
+              top: `${meteor.y}%`,
+              "--travel": `${meteor.travel}rem`,
+              "--tail": `${meteor.length}rem`,
+              "--shine": `${meteor.shine}rem`,
+              animationDuration: `${meteor.duration}s`,
+              animationDelay: `${meteor.delay}s`,
+              opacity: meteor.opacity,
+            } as CSSProperties}
+          />
+        ))}
+      </div>
       {stars.map((star) => {
         const y = star.speed === 0
           ? star.y

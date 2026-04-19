@@ -33,6 +33,56 @@
   transform: rotate(-8deg);
 }
 
+.meteorLayer {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  overflow: hidden;
+  transform: rotate(45deg);
+  transform-origin: center;
+}
+
+.meteor {
+  position: absolute;
+  height: 2px;
+  width: 0;
+  border-radius: 999px;
+  background: linear-gradient(-45deg, var(--brand-hot), rgba(var(--brand-rgb), 0.74), rgba(var(--brand-rgb), 0));
+  filter:
+    drop-shadow(0 0 0.5rem rgba(var(--brand-rgb), 0.62))
+    drop-shadow(0 0 1.2rem rgba(215, 255, 99, 0.2));
+  transform: translate3d(0, 0, 0);
+  animation-name: meteor-tail, meteor-shooting;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1), linear;
+  will-change: width, transform, opacity;
+}
+
+.meteor::before,
+.meteor::after {
+  content: "";
+  position: absolute;
+  top: calc(50% - 1px);
+  right: 0;
+  width: 0;
+  height: 2px;
+  border-radius: 100%;
+  background: linear-gradient(-45deg, rgba(var(--brand-rgb), 0), #f5fff6, var(--brand-hot), rgba(var(--brand-rgb), 0));
+  animation-name: meteor-shining;
+  animation-duration: inherit;
+  animation-delay: inherit;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.meteor::before {
+  transform: translateX(50%) rotate(45deg);
+}
+
+.meteor::after {
+  transform: translateX(50%) rotate(-45deg);
+}
+
 .star {
   position: absolute;
   display: block;
@@ -60,6 +110,59 @@
   box-shadow: 0 0 14px rgba(215, 255, 99, 0.48);
 }
 
+@keyframes meteor-tail {
+  0% {
+    opacity: 0;
+    width: 0;
+  }
+
+  8% {
+    opacity: 0;
+    width: 0;
+  }
+
+  30% {
+    opacity: 1;
+    width: var(--tail);
+  }
+
+  68% {
+    opacity: 1;
+    width: var(--tail);
+  }
+
+  100% {
+    opacity: 0;
+    width: var(--tail);
+  }
+}
+
+@keyframes meteor-shining {
+  0%,
+  12% {
+    width: 0;
+  }
+
+  42% {
+    width: var(--shine);
+  }
+
+  72%,
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes meteor-shooting {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(var(--travel), 0, 0);
+  }
+}
+
 @keyframes twinkle {
   0%,
   100% {
@@ -72,7 +175,12 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .star {
+  .star,
+  .meteor {
     animation: none;
+  }
+
+  .meteor {
+    display: none;
   }
 }
