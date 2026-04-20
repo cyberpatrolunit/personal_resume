@@ -159,7 +159,10 @@
     line-height: 0.95;
     letter-spacing: 0;
     text-transform: uppercase;
-    color: #f0f5ef;
+    color: transparent;
+    background: linear-gradient(90deg, #eef6ee 0%, #c8ff88 92%);
+    background-clip: text;
+    -webkit-background-clip: text;
     text-wrap: balance;
   }
 

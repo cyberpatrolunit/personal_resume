@@ -20,14 +20,17 @@
 .title {
   font-size: var(--text-xl);
   margin-right: 0.5rem;
-
   font-weight: 900;
   text-align: end;
-  color: var(--text);
+  color: transparent;
+  background: linear-gradient(90deg, #eef6ee 0%, #cbff8a 92%);
+  background-clip: text;
+  -webkit-background-clip: text;
   text-shadow: 0 0 2.2rem rgba(var(--brand-rgb), 0.18);
+  text-wrap: balance;
 
   span {
-    color: var(--brand);
+    color: transparent;
   }
 
   @media (max-width: 768px) {

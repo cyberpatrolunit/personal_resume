@@ -8,6 +8,7 @@ import Loader from '../utils/Loader'; // Assume you have a Loader component
 
 // Lazy load the components
 const Wow = React.lazy(() => import("./wow/Wow"));
+const Intro = React.lazy(() => import("./intro/Intro"));
 const Photo = React.lazy(() => import("./photo/photo"));
 const About = React.lazy(() => import("./about/About"));
 const Projects = React.lazy(() => import("./projects/Projects"));
@@ -32,6 +33,7 @@ export const Home = () => {
           {showContent ? (
             <Suspense fallback={<Loader />}>
               <Wow />
+              <Intro />
               <Projects />
               <Photo />
               <About />

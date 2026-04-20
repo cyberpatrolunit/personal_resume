@@ -1,0 +1,108 @@
+@import 'styles/_functions';
+
+.section {
+  padding-top: clamp(2.4rem, 4vw, 4.8rem);
+  padding-bottom: clamp(5.6rem, 7vw, 8rem);
+}
+
+.panel {
+  position: relative;
+  display: grid;
+  gap: 2.4rem;
+  padding: clamp(2.4rem, 4vw, 4rem);
+  background:
+    linear-gradient(140deg, rgba(15, 22, 17, 0.94), rgba(8, 12, 10, 0.82)),
+    radial-gradient(circle at top right, rgba(var(--brand-rgb), 0.18), transparent 32rem);
+  border: 1px solid rgba(215, 255, 99, 0.16);
+  border-radius: 0.8rem;
+  box-shadow: 0 2.4rem 8rem rgba(0, 0, 0, 0.28);
+}
+
+.panel::after {
+  content: "";
+  position: absolute;
+  inset: 1.2rem;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 0.4rem;
+  pointer-events: none;
+}
+
+.kicker {
+  font-family: 'Slussen.Med', sans-serif;
+  font-size: 1.4rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--brand-hot);
+}
+
+.content {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.95fr);
+  gap: clamp(2rem, 5vw, 5.6rem);
+  align-items: start;
+
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.title {
+  font-family: 'Slussen.Exp', sans-serif;
+  font-size: clamp(2.8rem, 3.6vw, 4.6rem);
+  line-height: 0.98;
+  text-transform: uppercase;
+  color: transparent;
+  background: linear-gradient(90deg, #f2f7f1 0%, var(--brand-hot) 88%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  max-width: 13ch;
+  text-wrap: balance;
+}
+
+.titleIntro {
+  display: block;
+  margin-bottom: 1rem;
+  font-family: 'Slussen.Med', sans-serif;
+  font-size: clamp(1.4rem, 1.1vw, 1.7rem);
+  letter-spacing: 0.2em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.titleMain {
+  display: block;
+}
+
+.copyBlock {
+  display: grid;
+  gap: 1.4rem;
+  align-content: center;
+  max-width: 58rem;
+  padding-top: 0.8rem;
+}
+
+.copy {
+  font-family: 'Slussen.Med', sans-serif;
+  font-size: clamp(1.8rem, 1.5vw, 2.05rem);
+  line-height: 1.66;
+  color: var(--text-muted);
+  max-width: 52rem;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 0.4rem;
+}
+
+.tag {
+  font-family: 'Slussen.Comp', sans-serif;
+  border: 1px solid var(--line);
+  border-radius: 0.4rem;
+  padding: 0.45rem 0.65rem;
+  background: rgba(var(--brand-rgb), 0.07);
+  font-size: var(--text-xs);
+  color: var(--brand-hot);
+  text-transform: uppercase;
+}

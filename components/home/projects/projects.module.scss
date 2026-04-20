@@ -81,6 +81,11 @@
     line-height: 0.95;
     max-width: 16ch;
     text-wrap: balance;
+    color: transparent;
+    background: linear-gradient(90deg, #edf5ec 0%, #bff77c 90%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-shadow: 0 0 2.2rem rgba(var(--brand-rgb), 0.12);
   }
 
   @media (max-width: 620px) {
