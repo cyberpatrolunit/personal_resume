@@ -2,8 +2,6 @@ import React, { Suspense, useState, useRef } from "react";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import styles from "./contact.module.scss";
-import { AiFillMail } from "react-icons/ai";
-import Link from "next/link";
 import emailjs from '@emailjs/browser';
 
 const Reveal = React.lazy(() => import("@/components/utils/Reveal"));
@@ -55,12 +53,16 @@ export const Contact = () => {
         <div className={styles.contactWrapper}>
           <Suspense fallback={<div>Loading...</div>}>
             <Reveal width="100%">
-              <h4 className={styles.contactTitle}>Contact<span>.</span></h4>
+              <div className={styles.headerBlock}>
+                <p className={styles.kicker}>Start A Conversation</p>
+                <h4 className={styles.contactTitle}>Contact<span>.</span></h4>
+              </div>
             </Reveal>
             <Reveal width="100%">
               <div>
                 <p className={styles.contactCopy}>
-                Let's Collaborate 😎
+                  Available for immersive installations, creative technology direction,
+                  interactive systems, and strategic consulting.
                 </p>
               </div>
             </Reveal>
