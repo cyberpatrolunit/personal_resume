@@ -1,0 +1,36 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+  padding: 48px var(--gutter);
+  color: var(--color-ink-muted);
+  border-top: 1px solid var(--color-line);
+}
+
+.kicker {
+  margin: 0 0 8px;
+  color: var(--color-ink);
+  font-weight: 800;
+}
+
+.copy {
+  max-width: 520px;
+  margin: 0;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  align-content: flex-start;
+}
+
+.links a {
+  border-bottom: 1px solid currentColor;
+}
+
+@media (max-width: 720px) {
+  .footer {
+    flex-direction: column;
+  }
+}

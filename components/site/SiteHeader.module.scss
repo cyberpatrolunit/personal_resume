@@ -1,0 +1,40 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 18px var(--gutter);
+  background: color-mix(in srgb, var(--color-page) 88%, transparent);
+  border-bottom: 1px solid var(--color-line);
+  backdrop-filter: blur(18px);
+}
+
+.logo {
+  font-weight: 800;
+  letter-spacing: 0.01em;
+}
+
+.nav {
+  display: flex;
+  gap: clamp(14px, 2vw, 28px);
+  color: var(--color-ink-muted);
+  font-size: 0.9rem;
+}
+
+.nav a:hover {
+  color: var(--color-ink);
+}
+
+@media (max-width: 640px) {
+  .header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .nav {
+    flex-wrap: wrap;
+  }
+}
