@@ -1,0 +1,29 @@
+.section {
+  padding: clamp(72px, 12vw, 150px) 0;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 32px;
+}
+
+.primary,
+.secondary {
+  display: inline-flex;
+  align-items: center;
+  min-height: 48px;
+  padding: 0 18px;
+  border: 1px solid var(--color-ink);
+  font-weight: 800;
+}
+
+.primary {
+  background: var(--color-ink);
+  color: var(--color-page);
+}
+
+.secondary {
+  background: transparent;
+}
