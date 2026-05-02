@@ -1,6 +1,6 @@
 .section {
   padding: clamp(64px, 10vw, 120px) 0;
-  background: var(--color-surface);
+  background: var(--gradient-about);
 }
 
 .layout {
@@ -11,6 +11,7 @@
 
 .layout h2 {
   margin: 0;
+  font-family: var(--font-display);
   font-size: clamp(2rem, 5vw, 5rem);
   line-height: 0.95;
 }

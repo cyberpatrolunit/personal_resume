@@ -1,5 +1,6 @@
 .section {
   padding: clamp(72px, 12vw, 150px) 0;
+  background: var(--gradient-contact);
 }
 
 .actions {
@@ -21,7 +22,7 @@
 
 .primary {
   background: var(--color-ink);
-  color: var(--color-page);
+  color: #ffffff;
 }
 
 .secondary {
