@@ -1,10 +1,16 @@
 import Link from "next/link";
+import type { ReactNode } from "react";
 import { siteMeta } from "@/data/site";
 import styles from "./ContactCTA.module.scss";
 
-export function ContactCTA() {
+interface ContactCTAProps {
+  background?: ReactNode;
+}
+
+export function ContactCTA({ background }: ContactCTAProps) {
   return (
-    <section className={styles.section} id="contact" data-halftone="contact">
+    <section className={styles.section} id="contact">
+      {background}
       <div className="section-shell">
         <p className="section-kicker">Contact</p>
         <h2 className="section-title">Planning a permanent installation or real-time experiential system?</h2>

@@ -7,8 +7,26 @@
   --halftone-opacity-b: 0.24;
   --halftone-angle-b: 9deg;
 
+  position: relative;
   padding: clamp(64px, 10vw, 130px) 0;
+  overflow: hidden;
   background: var(--gradient-capabilities);
+  isolation: isolate;
+}
+
+.section :global(.section-shell) {
+  position: relative;
+  z-index: 1;
+}
+
+.halftoneField {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.44;
+  pointer-events: none;
 }
 
 .grid {

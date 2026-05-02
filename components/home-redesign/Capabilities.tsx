@@ -1,9 +1,21 @@
+import { HalftoneField } from "@/components/effects/HalftoneField";
 import { capabilities } from "@/data/capabilities";
 import styles from "./Capabilities.module.scss";
 
+const capabilitiesHalftoneColors = ["#edf7eb", "#eaf7f4", "#d9ebe5", "#f4fbf8"];
+
 export function Capabilities() {
   return (
-    <section className={styles.section} id="capabilities" data-halftone="capabilities">
+    <section className={styles.section} id="capabilities">
+      <HalftoneField
+        className={styles.halftoneField}
+        colors={capabilitiesHalftoneColors}
+        spacing={18}
+        minRadius={0.5}
+        maxRadius={7}
+        angle={-8}
+        toneAngle={25}
+      />
       <div className="section-shell">
         <p className="section-kicker">Capabilities</p>
         <h2 className="section-title">Leadership across concept, system, site, and team.</h2>

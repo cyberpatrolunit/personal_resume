@@ -1,8 +1,20 @@
+import { HalftoneField } from "@/components/effects/HalftoneField";
 import styles from "./AboutCredibility.module.scss";
+
+const aboutHalftoneColors = ["#fbf3ef", "#f4f8f2", "#ffffff", "#e9f5f0"];
 
 export function AboutCredibility() {
   return (
-    <section className={styles.section} id="about" data-halftone="about">
+    <section className={styles.section} id="about">
+      <HalftoneField
+        className={styles.halftoneField}
+        colors={aboutHalftoneColors}
+        spacing={22}
+        minRadius={0.6}
+        maxRadius={8}
+        angle={7}
+        toneAngle={155}
+      />
       <div className="section-shell">
         <p className="section-kicker">About</p>
         <div className={styles.layout}>
