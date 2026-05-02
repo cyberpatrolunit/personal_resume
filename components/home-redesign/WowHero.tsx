@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { HalftoneField } from "@/components/effects/HalftoneField";
 import { ScrambleText } from "@/components/effects/ScrambleText";
 import styles from "./WowHero.module.scss";
 
@@ -12,6 +13,8 @@ const lines = [
   { primary: "Public Installations", secondary: "Field-Ready Deployment" },
   { primary: "Cinematic Moments", secondary: "Reliable Infrastructure" },
 ];
+
+const heroHalftoneColors = ["#f7f4ff", "#d9ebe5", "#edf7f2", "#f9faf6"];
 
 export function WowHero() {
   const rootRef = useRef<HTMLElement>(null);
@@ -47,7 +50,15 @@ export function WowHero() {
   }, []);
 
   return (
-    <section className={styles.hero} ref={rootRef} aria-labelledby="hero-title" data-halftone="wow">
+    <section className={styles.hero} ref={rootRef} aria-labelledby="hero-title">
+      <HalftoneField
+        className={styles.halftoneField}
+        colors={heroHalftoneColors}
+        spacing={18}
+        minRadius={0.8}
+        maxRadius={6.2}
+        angle={-14}
+      />
       <div className="section-shell">
         <p className="section-kicker">Bryant Place</p>
         <ScrambleText
