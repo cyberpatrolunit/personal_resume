@@ -87,11 +87,11 @@ function rotateHue(rgb, degrees) {
   return hslToRgb([(hue + degrees + 360) % 360, saturation, lightness]);
 }
 
-function createHalftoneDot({ colors, maxRadius, minRadius, position }) {
+function createHalftoneDot({ colors, maxRadius, minRadius, position, radiusPosition }) {
   const fill = sampleLinearGradient(colors, position);
   const background = rotateHue(sampleLinearGradient(colors, 1 - position), 180);
-  const luma = getLuma(fill);
-  const radius = Math.round(minRadius + (1 - luma) * (maxRadius - minRadius));
+  const tone = typeof radiusPosition === "number" ? clamp(radiusPosition) : 1 - getLuma(fill);
+  const radius = Math.round(minRadius + tone * (maxRadius - minRadius));
 
   return {
     background,

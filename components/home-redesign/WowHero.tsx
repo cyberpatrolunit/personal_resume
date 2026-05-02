@@ -54,10 +54,11 @@ export function WowHero() {
       <HalftoneField
         className={styles.halftoneField}
         colors={heroHalftoneColors}
-        spacing={18}
-        minRadius={0.8}
-        maxRadius={6.2}
-        angle={-14}
+        spacing={17}
+        minRadius={0.55}
+        maxRadius={8}
+        angle={0}
+        toneAngle={0}
       />
       <div className="section-shell">
         <p className="section-kicker">Bryant Place</p>

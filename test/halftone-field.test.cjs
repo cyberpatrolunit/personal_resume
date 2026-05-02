@@ -45,3 +45,23 @@ test("maps darker gradient samples to larger dots", () => {
   assert.equal(darkDot.radius, 8);
   assert.equal(lightDot.radius, 2);
 });
+
+test("can use gradient field position for an explicit dot size ramp", () => {
+  const smallDot = createHalftoneDot({
+    colors: ["#f7f4ff", "#d9ebe5"],
+    maxRadius: 8,
+    minRadius: 1,
+    position: 0,
+    radiusPosition: 0,
+  });
+  const largeDot = createHalftoneDot({
+    colors: ["#f7f4ff", "#d9ebe5"],
+    maxRadius: 8,
+    minRadius: 1,
+    position: 1,
+    radiusPosition: 1,
+  });
+
+  assert.equal(smallDot.radius, 1);
+  assert.equal(largeDot.radius, 8);
+});

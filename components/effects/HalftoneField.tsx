@@ -10,6 +10,7 @@ interface HalftoneFieldProps {
   maxRadius?: number;
   minRadius?: number;
   spacing?: number;
+  toneAngle?: number;
 }
 
 function rgb([red, green, blue]: number[]) {
@@ -23,6 +24,7 @@ export function HalftoneField({
   maxRadius = 7,
   minRadius = 1.2,
   spacing = 18,
+  toneAngle = 0,
 }: HalftoneFieldProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
@@ -69,11 +71,16 @@ export function HalftoneField({
       const startY = height / 2 - diagonal / 2;
       const endX = width / 2 + diagonal / 2;
       const endY = height / 2 + diagonal / 2;
+      const toneRadians = (toneAngle * Math.PI) / 180;
+      const toneX = Math.cos(toneRadians);
+      const toneY = Math.sin(toneRadians);
 
       for (let y = startY; y <= endY; y += spacing) {
         for (let x = startX; x <= endX; x += spacing) {
-          const position = Math.min(1, Math.max(0, (x + y - startX - startY) / (diagonal * 2)));
-          const dot = createHalftoneDot({ colors, maxRadius, minRadius, position });
+          const normalizedX = (x - startX) / (endX - startX);
+          const normalizedY = (y - startY) / (endY - startY);
+          const position = Math.min(1, Math.max(0, normalizedX * toneX + normalizedY * toneY));
+          const dot = createHalftoneDot({ colors, maxRadius, minRadius, position, radiusPosition: position });
 
           context.beginPath();
           context.fillStyle = rgb(dot.fill);
@@ -93,7 +100,7 @@ export function HalftoneField({
     return () => {
       resizeObserver.disconnect();
     };
-  }, [angle, colors, maxRadius, minRadius, spacing]);
+  }, [angle, colors, maxRadius, minRadius, spacing, toneAngle]);
 
   return <canvas ref={canvasRef} className={className} aria-hidden="true" />;
 }
