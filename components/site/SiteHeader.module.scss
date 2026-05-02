@@ -12,6 +12,21 @@
   backdrop-filter: blur(18px);
 }
 
+.skipLink {
+  position: absolute;
+  left: var(--gutter);
+  top: 8px;
+  z-index: 100;
+  padding: 8px 10px;
+  background: var(--color-ink);
+  color: var(--color-page);
+  transform: translateY(-140%);
+}
+
+.skipLink:focus {
+  transform: translateY(0);
+}
+
 .logo {
   font-weight: 800;
   letter-spacing: 0.01em;

@@ -5,6 +5,9 @@ import styles from "./SiteHeader.module.scss";
 export function SiteHeader() {
   return (
     <header className={styles.header}>
+      <a className={styles.skipLink} href="#main-content">
+        Skip to content
+      </a>
       <Link className={styles.logo} href="/" aria-label="Bryant Place home">
         Bryant Place
       </Link>

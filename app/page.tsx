@@ -7,7 +7,7 @@ import { WowHero } from "@/components/home-redesign/WowHero";
 
 export default function HomePage() {
   return (
-    <main>
+    <main id="main-content">
       <WowHero />
       <SelectedWork />
       <ProjectArchive />

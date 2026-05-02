@@ -35,6 +35,20 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body>
+        <script
+          type="application/ld+json"
+          suppressHydrationWarning
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Bryant Place",
+              jobTitle: "Creative Technologist",
+              url: siteMeta.url,
+              sameAs: siteMeta.socials.map((social) => social.href),
+            }),
+          }}
+        />
         <SiteHeader />
         {children}
         <SiteFooter />
