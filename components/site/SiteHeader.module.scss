@@ -28,8 +28,16 @@
 }
 
 .logo {
-  font-weight: 800;
-  letter-spacing: 0.01em;
+  font-family: var(--font-wide);
+  font-size: clamp(1rem, 1.4vw, 1.22rem);
+  font-weight: 900;
+  letter-spacing: 0;
+  line-height: 0.9;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--color-page) 76%, var(--color-ink));
+  transform: scaleY(0.82);
+  transform-origin: left center;
+  -webkit-text-stroke: 0.65px var(--color-ink);
 }
 
 .nav {

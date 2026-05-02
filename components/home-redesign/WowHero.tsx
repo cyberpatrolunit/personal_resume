@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrambleText } from "@/components/effects/ScrambleText";
 import styles from "./WowHero.module.scss";
 
 const lines = [
@@ -49,16 +50,20 @@ export function WowHero() {
     <section className={styles.hero} ref={rootRef} aria-labelledby="hero-title">
       <div className="section-shell">
         <p className="section-kicker">Bryant Place</p>
-        <h1 id="hero-title" className={styles.title}>
-          Experiential technology from concept to field-ready systems.
-        </h1>
+        <ScrambleText
+          as="h1"
+          id="hero-title"
+          className={styles.title}
+          duration={980}
+          text="Experiential technology from concept to field-ready systems."
+        />
         <div className={styles.lines} aria-label="Core capabilities">
           {lines.map((line) => (
             <div className={styles.line} key={line.primary}>
-              <span className={styles.primary}>{line.primary}</span>
+              <ScrambleText className={styles.primary} duration={680} text={line.primary} />
               <span className={styles.secondary}>
                 <span className={styles.fill} aria-hidden="true" />
-                <span className={styles.secondaryText}>{line.secondary}</span>
+                <ScrambleText className={styles.secondaryText} duration={760} text={line.secondary} />
               </span>
             </div>
           ))}
