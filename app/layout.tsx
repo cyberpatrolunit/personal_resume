@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     images: ["/project-imgs/thumbnail.jpg"],
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: "/bp_logo.ico",
     apple: "/project-imgs/thumbnail.jpg",
   },
   manifest: "/manifest.json",

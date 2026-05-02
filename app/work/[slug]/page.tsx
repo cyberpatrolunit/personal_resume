@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import { ContactCTA } from "@/components/home-redesign/ContactCTA";
 import { flagshipProjects, getProjectBySlug } from "@/data/projects";
 import styles from "./work-page.module.scss";
 
@@ -85,6 +86,10 @@ export default function WorkPage({ params }: WorkPageProps) {
               <dt>Disciplines</dt>
               <dd>{project.disciplines.join(", ")}</dd>
             </div>
+            <div>
+              <dt>Tools</dt>
+              <dd>{project.tools.join(", ")}</dd>
+            </div>
           </dl>
         </div>
       </section>
@@ -114,6 +119,7 @@ export default function WorkPage({ params }: WorkPageProps) {
           <Link href={`/work/${nextProject.slug}`}>{nextProject.title}</Link>
         </div>
       </section>
+      <ContactCTA />
     </main>
   );
 }
