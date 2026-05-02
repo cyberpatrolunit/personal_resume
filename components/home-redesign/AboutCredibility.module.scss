@@ -1,4 +1,12 @@
 .section {
+  --halftone-color-a: rgba(170, 118, 102, 0.1);
+  --halftone-color-b: rgba(97, 142, 121, 0.09);
+  --halftone-size-a: 24px;
+  --halftone-size-b: 36px;
+  --halftone-opacity-a: 0.28;
+  --halftone-opacity-b: 0.24;
+  --halftone-angle-b: -13deg;
+
   padding: clamp(64px, 10vw, 120px) 0;
   background: var(--gradient-about);
 }

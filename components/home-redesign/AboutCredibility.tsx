@@ -2,7 +2,7 @@ import styles from "./AboutCredibility.module.scss";
 
 export function AboutCredibility() {
   return (
-    <section className={styles.section} id="about">
+    <section className={styles.section} id="about" data-halftone="about">
       <div className="section-shell">
         <p className="section-kicker">About</p>
         <div className={styles.layout}>

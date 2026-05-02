@@ -47,7 +47,7 @@ export function WowHero() {
   }, []);
 
   return (
-    <section className={styles.hero} ref={rootRef} aria-labelledby="hero-title">
+    <section className={styles.hero} ref={rootRef} aria-labelledby="hero-title" data-halftone="wow">
       <div className="section-shell">
         <p className="section-kicker">Bryant Place</p>
         <ScrambleText

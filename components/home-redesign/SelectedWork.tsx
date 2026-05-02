@@ -5,7 +5,7 @@ import styles from "./SelectedWork.module.scss";
 
 export function SelectedWork() {
   return (
-    <section className={styles.section} id="work">
+    <section className={styles.section} id="work" data-halftone="work">
       <div className="section-shell">
         <div className={styles.header}>
           <p className="section-kicker">Selected Work</p>

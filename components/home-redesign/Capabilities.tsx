@@ -3,7 +3,7 @@ import styles from "./Capabilities.module.scss";
 
 export function Capabilities() {
   return (
-    <section className={styles.section} id="capabilities">
+    <section className={styles.section} id="capabilities" data-halftone="capabilities">
       <div className="section-shell">
         <p className="section-kicker">Capabilities</p>
         <h2 className="section-title">Leadership across concept, system, site, and team.</h2>

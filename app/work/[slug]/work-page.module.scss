@@ -1,4 +1,12 @@
 .page {
+  --halftone-color-a: rgba(95, 143, 131, 0.13);
+  --halftone-color-b: rgba(128, 115, 170, 0.1);
+  --halftone-size-a: 22px;
+  --halftone-size-b: 35px;
+  --halftone-opacity-a: 0.3;
+  --halftone-opacity-b: 0.24;
+  --halftone-angle-b: 15deg;
+
   background: var(--gradient-case);
 }
 

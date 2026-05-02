@@ -4,7 +4,7 @@ import styles from "./ProjectArchive.module.scss";
 
 export function ProjectArchive() {
   return (
-    <section className={styles.section} id="archive">
+    <section className={styles.section} id="archive" data-halftone="archive">
       <div className="section-shell">
         <p className="section-kicker">Archive</p>
         <h2 className={styles.title}>Additional proof across live shows, projection, data, and immersive systems.</h2>

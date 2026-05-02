@@ -45,7 +45,7 @@ export default function WorkPage({ params }: WorkPageProps) {
   const nextProject = flagshipProjects[(currentIndex + 1) % flagshipProjects.length];
 
   return (
-    <main className={styles.page} id="main-content">
+    <main className={styles.page} id="main-content" data-halftone="case-study">
       <section className={styles.hero}>
         <div className="section-shell">
           <Link className={styles.backLink} href="/#work">
