@@ -19,6 +19,34 @@ function createScrambleFrame(text, progress, random = Math.random) {
     .join("");
 }
 
+function createTypeOnScrambleFrame(text, progress, random = Math.random, scrambleWindow = 2) {
+  const safeProgress = clampProgress(progress);
+
+  if (safeProgress >= 1) {
+    return text;
+  }
+
+  if (safeProgress <= 0) {
+    return "";
+  }
+
+  const characters = Array.from(text);
+  const visibleCount = Math.min(characters.length, Math.ceil(characters.length * safeProgress));
+  const lockUntil = Math.max(0, visibleCount - scrambleWindow);
+
+  return characters
+    .slice(0, visibleCount)
+    .map((character, index) => {
+      if (/\s/.test(character) || index < lockUntil) {
+        return character;
+      }
+
+      return SCRAMBLE_CHARS[Math.floor(random() * SCRAMBLE_CHARS.length)];
+    })
+    .join("");
+}
+
 module.exports = {
   createScrambleFrame,
+  createTypeOnScrambleFrame,
 };

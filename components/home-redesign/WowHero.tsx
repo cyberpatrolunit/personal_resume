@@ -66,16 +66,33 @@ export function WowHero() {
           as="h1"
           id="hero-title"
           className={styles.title}
-          duration={980}
+          duration={1550}
+          mode="type-on"
           text="Experiential technology from concept to field-ready systems."
         />
         <div className={styles.lines} aria-label="Core capabilities">
-          {lines.map((line) => (
+          {lines.map((line, index) => (
             <div className={styles.line} key={line.primary}>
-              <ScrambleText className={styles.primary} duration={680} text={line.primary} />
+              <ScrambleText
+                className={styles.primary}
+                delay={index * 220}
+                duration={1120}
+                mode="type-on"
+                text={line.primary}
+                viewportAmount={0.72}
+                viewportMargin="0px 0px -38% 0px"
+              />
               <span className={styles.secondary}>
                 <span className={styles.fill} aria-hidden="true" />
-                <ScrambleText className={styles.secondaryText} duration={760} text={line.secondary} />
+                <ScrambleText
+                  className={styles.secondaryText}
+                  delay={120 + index * 220}
+                  duration={1240}
+                  mode="type-on"
+                  text={line.secondary}
+                  viewportAmount={0.72}
+                  viewportMargin="0px 0px -38% 0px"
+                />
               </span>
             </div>
           ))}

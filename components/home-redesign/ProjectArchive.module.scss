@@ -14,9 +14,10 @@
 .title {
   max-width: 780px;
   margin: 0 0 32px;
-  font-family: var(--font-display);
-  font-size: clamp(1.8rem, 4vw, 3.8rem);
-  line-height: 1;
+  font-family: var(--font-body);
+  font-size: clamp(1.65rem, 3.3vw, 3.1rem);
+  font-weight: 800;
+  line-height: 1.05;
 }
 
 .list {
@@ -51,9 +52,10 @@
 
 .item h3 {
   margin: 0 0 4px;
-  font-family: var(--font-display);
+  font-family: var(--font-body);
   font-size: clamp(1.2rem, 2.4vw, 2rem);
-  line-height: 1;
+  font-weight: 800;
+  line-height: 1.08;
 }
 
 .summary {

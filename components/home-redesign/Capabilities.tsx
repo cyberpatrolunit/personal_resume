@@ -18,7 +18,7 @@ export function Capabilities() {
       />
       <div className="section-shell">
         <p className="section-kicker">Capabilities</p>
-        <h2 className="section-title">Leadership across concept, system, site, and team.</h2>
+        <h2 className="section-title">Leadership across concept, systems, deployment and teams.</h2>
         <div className={styles.grid}>
           {capabilities.map((capability) => (
             <article className={styles.card} key={capability.title}>

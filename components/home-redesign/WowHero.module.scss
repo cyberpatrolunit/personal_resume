@@ -101,12 +101,16 @@
 
 @media (max-width: 760px) {
   .title {
-    font-size: clamp(2.2rem, 11vw, 4.8rem);
+    max-width: 100%;
+    font-size: clamp(1.65rem, 7.25vw, 3.1rem);
+    line-height: 1;
+    -webkit-text-stroke-width: 1px;
   }
 
   .line {
     grid-template-columns: 1fr;
     gap: 0;
+    font-size: clamp(1.25rem, 7vw, 2.7rem);
     padding: 14px 0;
   }
 

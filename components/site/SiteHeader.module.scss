@@ -28,16 +28,13 @@
 }
 
 .logo {
-  font-family: var(--font-wide);
-  font-size: clamp(1rem, 1.4vw, 1.22rem);
-  font-weight: 900;
+  font-family: var(--font-body);
+  font-size: clamp(0.96rem, 1.2vw, 1.08rem);
+  font-weight: 800;
   letter-spacing: 0;
-  line-height: 0.9;
+  line-height: 1;
   text-transform: uppercase;
-  color: color-mix(in srgb, var(--color-page) 76%, var(--color-ink));
-  transform: scaleY(0.82);
-  transform-origin: left center;
-  -webkit-text-stroke: 0.65px var(--color-ink);
+  color: var(--color-ink);
 }
 
 .nav {

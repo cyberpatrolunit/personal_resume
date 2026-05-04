@@ -76,8 +76,8 @@ main {
 h1,
 h2,
 h3 {
-  font-family: var(--font-display);
-  font-weight: 900;
+  font-family: var(--font-body);
+  font-weight: 800;
   letter-spacing: 0;
   text-transform: uppercase;
 }
@@ -104,11 +104,11 @@ h3 {
 .section-title {
   margin: 0;
   max-width: 760px;
-  font-family: var(--font-display);
-  font-size: clamp(2.7rem, 7vw, 6.2rem);
-  font-weight: 900;
+  font-family: var(--font-body);
+  font-size: clamp(2.2rem, 5.8vw, 5rem);
+  font-weight: 800;
   letter-spacing: 0;
-  line-height: 0.9;
+  line-height: 1;
   text-transform: uppercase;
 }
 

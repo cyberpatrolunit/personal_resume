@@ -37,9 +37,10 @@
 
 .layout h2 {
   margin: 0;
-  font-family: var(--font-display);
-  font-size: clamp(2rem, 5vw, 5rem);
-  line-height: 0.95;
+  font-family: var(--font-body);
+  font-size: clamp(1.9rem, 4.2vw, 4.1rem);
+  font-weight: 800;
+  line-height: 1.05;
 }
 
 .copy {
