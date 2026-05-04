@@ -1,0 +1,76 @@
+.section {
+  --halftone-color-a: rgba(68, 151, 135, 0.14);
+  --halftone-color-b: rgba(122, 161, 110, 0.1);
+  --halftone-size-a: 19px;
+  --halftone-size-b: 27px;
+  --halftone-opacity-a: 0.4;
+  --halftone-opacity-b: 0.24;
+  --halftone-angle-b: 9deg;
+
+  position: relative;
+  padding: clamp(64px, 10vw, 130px) 0;
+  overflow: hidden;
+  background: var(--gradient-capabilities);
+  isolation: isolate;
+}
+
+.section :global(.section-shell) {
+  position: relative;
+  z-index: 1;
+}
+
+.halftoneField {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.44;
+  pointer-events: none;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  margin-top: 42px;
+  background: var(--color-line);
+  border: 1px solid var(--color-line);
+}
+
+.card {
+  min-height: 280px;
+  padding: 24px;
+  background: var(--color-page);
+}
+
+.card h3 {
+  margin: 0 0 18px;
+  font-family: var(--font-body);
+  font-size: 1.35rem;
+  font-weight: 800;
+  line-height: 1.12;
+}
+
+.card p {
+  margin: 0 0 24px;
+  color: var(--color-ink-muted);
+}
+
+.card span {
+  display: block;
+  color: var(--color-ink);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 960px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 620px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
