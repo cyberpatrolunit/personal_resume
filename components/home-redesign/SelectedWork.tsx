@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { ScrollWordReveal } from "@/components/effects/ScrollWordReveal";
 import { flagshipProjects } from "@/data/projects";
 import styles from "./SelectedWork.module.scss";
 
@@ -8,8 +9,12 @@ export function SelectedWork() {
     <section className={styles.section} id="work" data-halftone="work">
       <div className="section-shell">
         <div className={styles.header}>
-          <p className="section-kicker">Selected Work</p>
-          <h2 className="section-title">Built for real rooms, real audiences, and real deadlines.</h2>
+          <ScrollWordReveal as="p" className="section-kicker" text="Selected Work" />
+          <ScrollWordReveal
+            as="h2"
+            className="section-title"
+            text="Built for real spaces, real audiences, and real deadlines."
+          />
         </div>
         <div className={styles.grid}>
           {flagshipProjects.map((project, index) => (

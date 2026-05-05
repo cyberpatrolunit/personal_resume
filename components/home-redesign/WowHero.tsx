@@ -61,13 +61,13 @@ export function WowHero() {
         toneAngle={0}
       />
       <div className="section-shell">
-        <p className="section-kicker">Bryant Place</p>
         <ScrambleText
           as="h1"
           id="hero-title"
           className={styles.title}
           duration={1550}
           mode="type-on"
+          reserveSpace
           text="Experiential technology from concept to field-ready systems."
         />
         <div className={styles.lines} aria-label="Core capabilities">

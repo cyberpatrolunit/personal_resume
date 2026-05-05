@@ -10,7 +10,7 @@ export function SiteHeader() {
         Skip to content
       </a>
       <Link className={styles.logo} href="/" aria-label="Bryant Place home">
-        <ScrambleText text="Bryant Place" trigger="mount" duration={620} />
+        <ScrambleText ambient text="Bryant Place" trigger="mount" duration={620} />
       </Link>
       <nav className={styles.nav} aria-label="Primary navigation">
         {navItems.map((item) => (

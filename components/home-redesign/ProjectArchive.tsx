@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { ScrollWordReveal } from "@/components/effects/ScrollWordReveal";
 import { archiveProjects } from "@/data/projects";
 import styles from "./ProjectArchive.module.scss";
 
@@ -6,8 +7,12 @@ export function ProjectArchive() {
   return (
     <section className={styles.section} id="archive" data-halftone="archive">
       <div className="section-shell">
-        <p className="section-kicker">Archive</p>
-        <h2 className={styles.title}>Additional proof across live shows, projection, data, and immersive systems.</h2>
+        <ScrollWordReveal as="p" className="section-kicker" text="Archive" />
+        <ScrollWordReveal
+          as="h2"
+          className={styles.title}
+          text="Additional proof across live shows, projection, data, and immersive systems."
+        />
         <div className={styles.list}>
           {archiveProjects.map((project) => (
             <article className={styles.item} key={project.slug}>

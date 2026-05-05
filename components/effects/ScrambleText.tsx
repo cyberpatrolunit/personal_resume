@@ -1,7 +1,14 @@
 "use client";
 
 import { ElementType, useEffect, useRef, useState } from "react";
-import { createScrambleFrame, createTypeOnScrambleFrame } from "./scrambleFrame";
+import {
+  createPartialScrambleFrame,
+  createScrambleFrame,
+  createTypeOnScrambleFrame,
+  createWaveScrambleIndexes,
+} from "./scrambleFrame";
+
+const AMBIENT_NUMBERS = "0123456789";
 
 interface ScrambleTextProps {
   as?: ElementType;
@@ -11,18 +18,22 @@ interface ScrambleTextProps {
   text: string;
   trigger?: "mount" | "view";
   mode?: "reveal" | "type-on";
+  ambient?: boolean;
+  reserveSpace?: boolean;
   viewportAmount?: number;
   viewportMargin?: string;
   id?: string;
 }
 
 export function ScrambleText({
+  ambient = false,
   as: Component = "span",
   className,
   delay = 0,
   duration = 820,
   id,
   mode = "reveal",
+  reserveSpace = false,
   text,
   trigger = "view",
   viewportAmount = 0.35,
@@ -44,7 +55,40 @@ export function ScrambleText({
     let startTime = 0;
     let observer: IntersectionObserver | null = null;
     let hasPlayed = false;
+    let ambientFrame = 0;
+    let ambientTimeout = 0;
     const createFrame = mode === "type-on" ? createTypeOnScrambleFrame : createScrambleFrame;
+    const selectableIndexes = Array.from(text)
+      .map((character, index) => (/\s/.test(character) ? -1 : index))
+      .filter((index) => index >= 0);
+
+    const scheduleAmbient = () => {
+      if (!ambient || selectableIndexes.length === 0) {
+        return;
+      }
+
+      const delayUntilNext = 2400 + Math.random() * 2600;
+      ambientTimeout = window.setTimeout(() => {
+        const ambientStart = performance.now();
+        const ambientDuration = 680;
+        const animateAmbient = (timestamp: number) => {
+          const elapsed = timestamp - ambientStart;
+
+          if (elapsed >= ambientDuration) {
+            setDisplayText(text);
+            scheduleAmbient();
+            return;
+          }
+
+          const waveStep = Math.floor((elapsed / ambientDuration) * selectableIndexes.length);
+          const indexes = createWaveScrambleIndexes(text, waveStep, 2);
+          setDisplayText(createPartialScrambleFrame(text, indexes, Math.random, AMBIENT_NUMBERS));
+          ambientFrame = window.requestAnimationFrame(animateAmbient);
+        };
+
+        ambientFrame = window.requestAnimationFrame(animateAmbient);
+      }, delayUntilNext);
+    };
 
     const animate = (timestamp: number) => {
       if (!startTime) {
@@ -61,6 +105,7 @@ export function ScrambleText({
       }
 
       setDisplayText(text);
+      scheduleAmbient();
     };
 
     const play = () => {
@@ -93,9 +138,24 @@ export function ScrambleText({
 
     return () => {
       window.cancelAnimationFrame(frame);
+      window.cancelAnimationFrame(ambientFrame);
+      window.clearTimeout(ambientTimeout);
       observer?.disconnect();
     };
-  }, [delay, duration, mode, text, trigger, viewportAmount, viewportMargin]);
+  }, [ambient, delay, duration, mode, text, trigger, viewportAmount, viewportMargin]);
+
+  if (reserveSpace) {
+    return (
+      <Component ref={elementRef} id={id} className={className} aria-label={text}>
+        <span aria-hidden="true" style={{ visibility: "hidden" }}>
+          {text}
+        </span>
+        <span aria-hidden="true" style={{ position: "absolute", inset: 0, padding: "inherit" }}>
+          {displayText}
+        </span>
+      </Component>
+    );
+  }
 
   return (
     <Component ref={elementRef} id={id} className={className} aria-label={text}>

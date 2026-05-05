@@ -1,3 +1,4 @@
+import { ScrollWordReveal } from "@/components/effects/ScrollWordReveal";
 import { HalftoneField } from "@/components/effects/HalftoneField";
 import { capabilities } from "@/data/capabilities";
 import styles from "./Capabilities.module.scss";
@@ -17,8 +18,12 @@ export function Capabilities() {
         toneAngle={25}
       />
       <div className="section-shell">
-        <p className="section-kicker">Capabilities</p>
-        <h2 className="section-title">Leadership across concept, systems, deployment and teams.</h2>
+        <ScrollWordReveal as="p" className="section-kicker" text="Capabilities" />
+        <ScrollWordReveal
+          as="h2"
+          className="section-title"
+          text="Leadership across concept, systems, deployment and teams."
+        />
         <div className={styles.grid}>
           {capabilities.map((capability) => (
             <article className={styles.card} key={capability.title}>

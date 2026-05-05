@@ -46,7 +46,31 @@ function createTypeOnScrambleFrame(text, progress, random = Math.random, scrambl
     .join("");
 }
 
+function createPartialScrambleFrame(text, indexes, random = Math.random, characters = SCRAMBLE_CHARS) {
+  const selectedIndexes = new Set(indexes);
+
+  return Array.from(text)
+    .map((character, index) => {
+      if (/\s/.test(character) || !selectedIndexes.has(index)) {
+        return character;
+      }
+
+      return characters[Math.floor(random() * characters.length)];
+    })
+    .join("");
+}
+
+function createWaveScrambleIndexes(text, waveStep, windowSize = 2) {
+  const selectableIndexes = Array.from(text)
+    .map((character, index) => (/\s/.test(character) ? -1 : index))
+    .filter((index) => index >= 0);
+
+  return selectableIndexes.slice(waveStep, waveStep + windowSize);
+}
+
 module.exports = {
+  createPartialScrambleFrame,
   createScrambleFrame,
   createTypeOnScrambleFrame,
+  createWaveScrambleIndexes,
 };
