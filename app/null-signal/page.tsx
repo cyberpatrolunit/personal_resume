@@ -12,7 +12,8 @@ import {
   nullSignalMeta,
   outputImage,
 } from "@/data/null-signal";
-import { geostar, quantico, silkscreen } from "./fonts";
+import { geo, geostar, quantico, silkscreen } from "./fonts";
+import { GridField } from "./GridField";
 import styles from "./null-signal.module.scss";
 
 export const metadata: Metadata = {
@@ -35,8 +36,9 @@ export const metadata: Metadata = {
 export default function NullSignalPage() {
   return (
     <div
-      className={`${styles.page} ${geostar.variable} ${quantico.variable} ${silkscreen.variable}`}
+      className={`${styles.page} ${geo.variable} ${geostar.variable} ${quantico.variable} ${silkscreen.variable}`}
     >
+      <GridField />
       <header className={styles.topbar}>
         <Link href="/" className={styles.topbarBack}>
           ← BRYANTPLACE.COM

@@ -33,10 +33,7 @@ $cut: 14px;
   position: relative;
   min-height: 100vh;
   background-color: #000;
-  // 34px grid, same pitch as the instrument's control-only backdrop
-  background-image: linear-gradient($line-soft 1px, transparent 1px),
-    linear-gradient(90deg, $line-soft 1px, transparent 1px);
-  background-size: 34px 34px;
+  // backdrop grid is drawn by GridField.tsx — interactive dots at 34px intersections
   color: $ink;
   font-family: var(--font-quantico), monospace;
   -webkit-font-smoothing: antialiased;
@@ -82,6 +79,13 @@ $cut: 14px;
       rgba(0, 0, 0, 0.55) 100%
     );
   }
+}
+
+.gridField {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
 }
 
 .shell {
@@ -148,12 +152,14 @@ $cut: 14px;
 
 .wordmark {
   margin: 0;
-  font-family: var(--font-geostar), monospace;
+  // Geo — the glyphs the app's lowercase title actually renders in
+  font-family: var(--font-geo), var(--font-geostar), monospace;
   font-weight: 400;
-  font-size: clamp(2.1rem, 9.5vw, 6.5rem);
+  font-size: clamp(2rem, 7.5vw, 5.8rem);
   line-height: 1;
   letter-spacing: 0.06em; // matches the app's .app-title tracking
-  overflow-wrap: anywhere;
+  text-transform: lowercase;
+  white-space: nowrap;
   color: $ink;
   text-shadow: 0 0 24px rgba(0, 255, 255, 0.28), 0 0 80px rgba(0, 255, 255, 0.12);
   animation: rise 0.6s 0.08s ease both;

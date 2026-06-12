@@ -1,6 +1,15 @@
-import { Geostar_Fill, Quantico, Silkscreen } from "next/font/google";
+import { Geo, Geostar_Fill, Quantico, Silkscreen } from "next/font/google";
 
-// Geostar Fill is the instrument's own title font (see null-signal .app-title).
+// The instrument's .app-title stack is 'Geostar Fill', 'Geo'. Geostar Fill is
+// caps-only, so the app's lowercase title renders in Geo — we load both:
+// Geo for the lowercase wordmark, Geostar Fill for all-caps section heads.
+export const geo = Geo({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-geo",
+  display: "swap",
+});
+
 export const geostar = Geostar_Fill({
   weight: "400",
   subsets: ["latin"],
