@@ -17,5 +17,6 @@ export const navItems = [
   { label: "Selected Work", href: "/#work" },
   { label: "Archive", href: "/#archive" },
   { label: "Capabilities", href: "/#capabilities" },
+  { label: "null_signal", href: "/null-signal" },
   { label: "Contact", href: "/#contact" },
 ] as const;

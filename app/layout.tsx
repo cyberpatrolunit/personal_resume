@@ -1,8 +1,6 @@
 import "@/styles/app-globals.scss";
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/react";
-import { SiteFooter } from "@/components/site/SiteFooter";
-import { SiteHeader } from "@/components/site/SiteHeader";
 import { siteMeta } from "@/data/site";
 
 export const metadata: Metadata = {
@@ -49,9 +47,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             }),
           }}
         />
-        <SiteHeader />
         {children}
-        <SiteFooter />
         <Analytics />
       </body>
     </html>
