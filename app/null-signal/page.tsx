@@ -19,17 +19,16 @@ import styles from "./null-signal.module.scss";
 export const metadata: Metadata = {
   title: nullSignalMeta.title,
   description: nullSignalMeta.description,
+  // og:image / twitter:image come from opengraph-image.tsx (file convention)
   openGraph: {
     title: nullSignalMeta.title,
     description: nullSignalMeta.description,
-    images: [{ url: nullSignalMeta.ogImage, width: 1200, height: 630 }],
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: nullSignalMeta.title,
     description: nullSignalMeta.description,
-    images: [nullSignalMeta.ogImage],
   },
 };
 
