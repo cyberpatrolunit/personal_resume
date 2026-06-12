@@ -11,12 +11,13 @@ export const alt = "null_signal — generative VJ instrument";
 
 const CYAN = "#00ffff";
 
-async function loadGeoFont(): Promise<ArrayBuffer | null> {
+async function loadGoogleFont(family: string): Promise<ArrayBuffer | null> {
   try {
     // Old UA makes Google Fonts serve TTF, which satori can consume.
-    const css = await fetch("https://fonts.googleapis.com/css2?family=Geo", {
-      headers: { "User-Agent": "Mozilla/5.0 (Windows NT 6.1; rv:10.0)" },
-    }).then((r) => r.text());
+    const css = await fetch(
+      `https://fonts.googleapis.com/css2?family=${encodeURIComponent(family)}`,
+      { headers: { "User-Agent": "Mozilla/5.0 (Windows NT 6.1; rv:10.0)" } }
+    ).then((r) => r.text());
     const url = css.match(/src: url\((.+?)\) format\('truetype'\)/)?.[1];
     if (!url) return null;
     return await fetch(url).then((r) => r.arrayBuffer());
@@ -26,7 +27,11 @@ async function loadGeoFont(): Promise<ArrayBuffer | null> {
 }
 
 export default async function OgImage() {
-  const geo = await loadGeoFont();
+  // Geostar Fill = the app's title font (wordmark); Geo = small techno lines
+  const [geostar, geo] = await Promise.all([
+    loadGoogleFont("Geostar Fill"),
+    loadGoogleFont("Geo"),
+  ]);
   const shot = await readFile(
     join(process.cwd(), "public/project-imgs/null-signal/og-null-signal.png")
   );
@@ -97,8 +102,9 @@ export default async function OgImage() {
           </div>
           <div
             style={{
+              fontFamily: "Geostar",
               color: "#ecfff7",
-              fontSize: 132,
+              fontSize: 104,
               lineHeight: 1,
               letterSpacing: 8,
               textShadow: "0 0 40px rgba(0,255,255,0.45)",
@@ -132,9 +138,14 @@ export default async function OgImage() {
     ),
     {
       ...size,
-      fonts: geo
-        ? [{ name: "Geo", data: geo, style: "normal" as const, weight: 400 as const }]
-        : undefined,
+      fonts: [
+        ...(geo
+          ? [{ name: "Geo", data: geo, style: "normal" as const, weight: 400 as const }]
+          : []),
+        ...(geostar
+          ? [{ name: "Geostar", data: geostar, style: "normal" as const, weight: 400 as const }]
+          : []),
+      ],
     }
   );
 }

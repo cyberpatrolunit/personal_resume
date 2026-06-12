@@ -23,10 +23,12 @@ export function GridField() {
     const trail: { x: number; y: number; t: number }[] = [];
     let raf = 0;
     let running = false;
+    // CSS size of the canvas element — window.innerWidth includes scrollbars,
+    // which stretches the buffer and makes dots drift from the pointer.
+    let w = 0;
+    let h = 0;
 
     const draw = (now: number) => {
-      const w = window.innerWidth;
-      const h = window.innerHeight;
       ctx.clearRect(0, 0, w, h);
       while (trail.length && now - trail[0].t > TRAIL_MS) trail.shift();
 
@@ -71,9 +73,12 @@ export function GridField() {
     };
 
     const resize = () => {
+      const rect = canvas.getBoundingClientRect();
       const dpr = Math.min(window.devicePixelRatio || 1, 2);
-      canvas.width = Math.floor(window.innerWidth * dpr);
-      canvas.height = Math.floor(window.innerHeight * dpr);
+      w = rect.width;
+      h = rect.height;
+      canvas.width = Math.round(w * dpr);
+      canvas.height = Math.round(h * dpr);
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
       draw(performance.now());
     };
