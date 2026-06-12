@@ -12,7 +12,7 @@ import {
   nullSignalMeta,
   outputImage,
 } from "@/data/null-signal";
-import { audiowide, quantico, silkscreen } from "./fonts";
+import { geostar, quantico, silkscreen } from "./fonts";
 import styles from "./null-signal.module.scss";
 
 export const metadata: Metadata = {
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
 export default function NullSignalPage() {
   return (
     <div
-      className={`${styles.page} ${audiowide.variable} ${quantico.variable} ${silkscreen.variable}`}
+      className={`${styles.page} ${geostar.variable} ${quantico.variable} ${silkscreen.variable}`}
     >
       <header className={styles.topbar}>
         <Link href="/" className={styles.topbarBack}>

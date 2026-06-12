@@ -48,6 +48,57 @@
   color: var(--color-ink);
 }
 
+// null_signal chip — a small piece of the instrument's dark UI living in the light site
+.nav a.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 12px 5px;
+  background: #000;
+  color: #00ffff;
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  line-height: 1;
+  clip-path: polygon(
+    0 0,
+    calc(100% - 8px) 0,
+    100% 8px,
+    100% 100%,
+    8px 100%,
+    0 calc(100% - 8px)
+  );
+  transition: box-shadow 0.15s ease, color 0.15s ease;
+}
+
+.nav a.chip::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #00ffff;
+  box-shadow: 0 0 6px rgba(0, 255, 255, 0.9);
+  animation: chipBlink 1.4s steps(2, start) infinite;
+}
+
+.nav a.chip:hover {
+  color: #affffd;
+  box-shadow: 0 0 14px rgba(0, 255, 255, 0.45);
+}
+
+@keyframes chipBlink {
+  50% {
+    opacity: 0.25;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav a.chip::before {
+    animation: none;
+  }
+}
+
 @media (max-width: 640px) {
   .header {
     align-items: flex-start;

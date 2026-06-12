@@ -1,9 +1,10 @@
-import { Audiowide, Quantico, Silkscreen } from "next/font/google";
+import { Geostar_Fill, Quantico, Silkscreen } from "next/font/google";
 
-export const audiowide = Audiowide({
+// Geostar Fill is the instrument's own title font (see null-signal .app-title).
+export const geostar = Geostar_Fill({
   weight: "400",
   subsets: ["latin"],
-  variable: "--font-audiowide",
+  variable: "--font-geostar",
   display: "swap",
 });
 

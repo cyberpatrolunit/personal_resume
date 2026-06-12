@@ -14,7 +14,11 @@ export function SiteHeader() {
       </Link>
       <nav className={styles.nav} aria-label="Primary navigation">
         {navItems.map((item) => (
-          <Link key={item.href} href={item.href}>
+          <Link
+            key={item.href}
+            href={item.href}
+            className={item.href === "/null-signal" ? styles.chip : undefined}
+          >
             {item.label}
           </Link>
         ))}
