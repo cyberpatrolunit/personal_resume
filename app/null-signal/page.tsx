@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -32,11 +32,19 @@ export const metadata: Metadata = {
   },
 };
 
+// black browser chrome on iOS/Android for this route
+export const viewport: Viewport = {
+  themeColor: "#000000",
+};
+
 export default function NullSignalPage() {
   return (
     <div
       className={`${styles.page} ${geo.variable} ${geostar.variable} ${quantico.variable} ${silkscreen.variable}`}
     >
+      {/* paint the document backdrop black while this route is mounted —
+          otherwise mobile overscroll exposes the main site's light bg */}
+      <style>{`html, body { background: #000; }`}</style>
       <GridField />
       <header className={styles.topbar}>
         <Link href="/" className={styles.topbarBack}>
