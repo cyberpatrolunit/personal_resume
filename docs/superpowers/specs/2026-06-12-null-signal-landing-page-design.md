@@ -34,3 +34,8 @@ Downloads hosting, video embeds, newsletter, analytics beyond existing Vercel An
 ## Verification & deploy
 
 `npm run build` passes; existing routes unaffected (URLs identical post-restructure). Commit and push → Vercel auto-deploy for mobile review.
+
+## Post-launch updates
+
+- **2026-06-12** — Wordmark/headers switched to Geostar Fill (the app's actual `.app-title` font, with Geo fallback). Static CSS grid replaced by `GridField.tsx` — an interactive dot field at 34px intersections that shifts cyan→red near the pointer with a fading trail (full-viewport canvas, idles when the pointer rests, respects reduced motion). Added `null_signal` nav chip on the main site, a build-time branded OG share card (`opengraph-image.tsx`), and a route-scoped black document backdrop so mobile overscroll doesn't expose the light main-site background.
+- **2026-06-13** — Feature 05 (PRESETS + SCENES) screenshot swapped from the full `control-deck.png` to a dedicated `presets.png` (preset memory bank with bank tabs and scene slots) for a clearer, more focused panel.

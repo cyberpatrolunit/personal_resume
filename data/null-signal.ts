@@ -109,10 +109,10 @@ export const features: NsFeature[] = [
     name: "PRESETS + SCENES",
     copy: "64 preset slots across four banks, plus an 8-step scene sequencer that advances on the beat.",
     image: img(
-      "control-deck.png",
-      1728,
-      1076,
-      "Full null_signal control deck with preset bank, mixer and FX sections"
+      "presets.png",
+      1096,
+      776,
+      "Preset memory bank with four banks of scene slots and an active scene readout"
     ),
   },
   {
