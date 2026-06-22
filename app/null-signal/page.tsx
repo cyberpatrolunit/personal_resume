@@ -9,6 +9,7 @@ import {
   heroImage,
   heroStats,
   modeCredits,
+  nullSignalDownloads,
   nullSignalMeta,
   outputImage,
 } from "@/data/null-signal";
@@ -262,10 +263,32 @@ export default function NullSignalPage() {
           >
             GITHUB.COM/CYBERPATROLUNIT/NULL-SIGNAL ↗
           </a>
-          <div className={styles.platforms}>
-            <span>WINDOWS — PORTABLE .EXE</span>
-            <span>MACOS — .DMG</span>
-            <span>BROWSER — NO INSTALL</span>
+          <div className={styles.downloads}>
+            <span className={styles.downloadsVersion}>
+              v{nullSignalDownloads.version}
+            </span>
+            <div className={styles.downloadGrid}>
+              {nullSignalDownloads.platforms.map((p) => (
+                <div
+                  key={p.os}
+                  className={
+                    p.available
+                      ? styles.downloadCard
+                      : `${styles.downloadCard} ${styles.downloadCardSoon}`
+                  }
+                >
+                  <span className={styles.downloadOs}>{p.os}</span>
+                  <span className={styles.downloadFormat}>{p.format}</span>
+                  {p.available && p.href ? (
+                    <a href={p.href} className={styles.btnPrimary}>
+                      DOWNLOAD {p.ext} ↓
+                    </a>
+                  ) : (
+                    <span className={styles.btnDisabled}>COMING SOON</span>
+                  )}
+                </div>
+              ))}
+            </div>
           </div>
         </section>
       </main>

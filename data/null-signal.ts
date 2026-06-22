@@ -21,6 +21,42 @@ export const nullSignalMeta = {
   ogImage: "/project-imgs/null-signal/og-null-signal.png",
 } as const;
 
+// ── Downloads ──────────────────────────────────────────
+// Single source of truth for the release version + per-platform installers.
+// Bump NS_VERSION each release and the macOS link/label follow automatically.
+// When the Windows build lands: set available: true and fill in its href.
+const NS_VERSION = "0.1.0";
+const NS_RELEASES = `${nullSignalMeta.repoUrl}/releases`;
+
+export type NsDownload = {
+  os: string;
+  format: string;
+  ext: string;
+  href: string | null;
+  available: boolean;
+};
+
+export const nullSignalDownloads = {
+  version: NS_VERSION,
+  releasesUrl: NS_RELEASES,
+  platforms: [
+    {
+      os: "MACOS",
+      format: "Apple Silicon · macOS 11+",
+      ext: ".DMG",
+      href: `${NS_RELEASES}/download/v${NS_VERSION}/null_signal-${NS_VERSION}-arm64.dmg`,
+      available: true,
+    },
+    {
+      os: "WINDOWS",
+      format: "Portable · x64",
+      ext: ".EXE",
+      href: null,
+      available: false,
+    },
+  ] as NsDownload[],
+};
+
 export const heroImage = img(
   "hero-full-ui.png",
   1920,

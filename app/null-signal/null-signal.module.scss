@@ -606,14 +606,86 @@ $cut: 14px;
   font-size: clamp(0.65rem, 1.8vw, 0.8rem);
 }
 
-.platforms {
+.downloads {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 14px 32px;
-  margin-top: 32px;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+  margin-top: 40px;
+}
+
+.downloadsVersion {
   @include mono-label;
+  padding: 5px 12px;
+  border: 1px solid $line;
+  color: $cyan;
+  letter-spacing: 0.18em;
+}
+
+.downloadGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 240px));
+  gap: 18px;
+  width: 100%;
+  max-width: 520px;
+
+  @media (max-width: 560px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.downloadCard {
+  @include corners;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 24px 20px;
+  border: 1px solid $line;
+  background: rgba(1, 3, 4, 0.85);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    border-color: rgba(0, 255, 255, 0.55);
+    box-shadow: 0 0 24px rgba(0, 255, 255, 0.08) inset,
+      0 0 18px rgba(0, 255, 255, 0.07);
+  }
+}
+
+.downloadCardSoon {
+  opacity: 0.55;
+
+  &:hover {
+    border-color: $line;
+    box-shadow: none;
+  }
+}
+
+.downloadOs {
+  font-family: var(--font-geostar), monospace;
+  font-size: 1.15rem;
+  letter-spacing: 0.08em;
+  color: $ink;
+}
+
+.downloadFormat {
+  @include mono-label;
+  color: $dim;
+  text-align: center;
+}
+
+.btnDisabled {
+  @include corners(10px);
+  display: inline-block;
+  padding: 14px 26px;
+  font-family: var(--font-quantico), monospace;
+  font-size: clamp(0.65rem, 1.8vw, 0.8rem);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  border: 1px solid $line-soft;
+  background: rgba(0, 255, 255, 0.04);
   color: $faint;
+  cursor: not-allowed;
 }
 
 // ── FOOTER ─────────────────────────────────────────────
