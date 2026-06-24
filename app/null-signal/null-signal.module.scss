@@ -674,6 +674,13 @@ $cut: 14px;
   text-align: center;
 }
 
+// Anchor the CTA to the bottom of the card so a one-line vs two-line
+// subtitle no longer offsets the button between cards (cards are equal height).
+.downloadCard .btnPrimary,
+.downloadCard .btnDisabled {
+  margin-top: auto;
+}
+
 .btnDisabled {
   @include corners(10px);
   display: inline-block;
