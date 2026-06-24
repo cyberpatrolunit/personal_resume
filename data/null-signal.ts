@@ -51,8 +51,8 @@ export const nullSignalDownloads = {
       os: "WINDOWS",
       format: "Portable · x64",
       ext: ".EXE",
-      href: null,
-      available: false,
+      href: `${NS_RELEASES}/download/v${NS_VERSION}/null_signal-${NS_VERSION}-portable.exe`,
+      available: true,
     },
   ] as NsDownload[],
 };
