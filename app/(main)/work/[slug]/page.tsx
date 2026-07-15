@@ -154,8 +154,16 @@ export default function WorkPage({ params }: WorkPageProps) {
       {project.images.length > 1 ? (
         <section className={styles.gallery} aria-label={`${project.title} selected images`}>
           <div className="section-shell">
-            {project.images.slice(1, 5).map((image) => (
-              <Image key={image.src} src={image.src} alt={image.alt} width={900} height={620} sizes="(max-width: 800px) 100vw, 50vw" />
+            {project.images.slice(1).map((image) => (
+              <Image
+                key={image.src}
+                className={image.layout ? styles[image.layout] : undefined}
+                src={image.src}
+                alt={image.alt}
+                width={image.layout === "portrait" ? 900 : 1600}
+                height={image.layout === "portrait" ? 1200 : 1000}
+                sizes={image.layout === "wide" ? "(max-width: 800px) 100vw, 1400px" : "(max-width: 800px) 100vw, 50vw"}
+              />
             ))}
           </div>
         </section>

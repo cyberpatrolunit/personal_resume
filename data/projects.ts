@@ -1,6 +1,7 @@
 export type ProjectImage = {
   src: string;
   alt: string;
+  layout?: "wide" | "portrait";
 };
 
 export type CaseStudySection = {
@@ -79,6 +80,56 @@ export const flagshipProjects: Project[] = [
       {
         src: "/project-imgs/gradient-canvas/gradient-canvas-hero.png",
         alt: "Aerial view of Google's Mountain View campus introducing the Gradient Canvas exhibition",
+      },
+      {
+        src: "/project-imgs/gradient-canvas/gradient-canvas-01-machine-dreams.jpg",
+        alt: "Machine Dreams: Biophilia displayed across a panoramic LED wall in Gradient Canopy",
+        layout: "wide",
+      },
+      {
+        src: "/project-imgs/gradient-canvas/gradient-canvas-02-dear-data.jpg",
+        alt: "DEAR Data installation arranged in illuminated shelving at Gradient Canvas",
+        layout: "wide",
+      },
+      {
+        src: "/project-imgs/gradient-canvas/gradient-canvas-03-pollinator-pathmaker.jpg",
+        alt: "Pollinator Pathmaker wildflower artwork displayed on a wide LED wall",
+        layout: "wide",
+      },
+      {
+        src: "/project-imgs/gradient-canvas/gradient-canvas-04-digital-triptych.jpg",
+        alt: "Three-panel digital artwork installed in a wood-lined Gradient Canopy corridor",
+        layout: "wide",
+      },
+      {
+        src: "/project-imgs/gradient-canvas/gradient-canvas-05-generative-display.jpg",
+        alt: "Generative artwork with geometric architecture and a suspended blue form on a panoramic display",
+        layout: "wide",
+      },
+      {
+        src: "/project-imgs/gradient-canvas/gradient-canvas-06-recombinant-room.jpg",
+        alt: "The Recombinant Room wooden sculpture surrounded by blue projected lines",
+        layout: "wide",
+      },
+      {
+        src: "/project-imgs/gradient-canvas/gradient-canvas-07-interactive-forest.jpg",
+        alt: "Visitor using a kiosk beside a floor-to-ceiling digital forest installation",
+        layout: "portrait",
+      },
+      {
+        src: "/project-imgs/gradient-canvas/gradient-canvas-08-tall-digital-installation.jpg",
+        alt: "Visitors viewing a tall digital installation with red and blue folded forms",
+        layout: "portrait",
+      },
+      {
+        src: "/project-imgs/gradient-canvas/gradient-canvas-09-clouds.jpg",
+        alt: "Clouds artwork displayed in Gradient Canopy with a visitor approaching",
+        layout: "wide",
+      },
+      {
+        src: "/project-imgs/gradient-canvas/gradient-canvas-10-project-team.jpg",
+        alt: "Gradient Canvas artists and project collaborators gathered in front of a digital forest artwork",
+        layout: "wide",
       },
     ],
     caseStudy: [
