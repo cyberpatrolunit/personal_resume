@@ -53,7 +53,13 @@ export default function WorkPage({ params }: WorkPageProps) {
           </Link>
           <p className="section-kicker">{project.eyebrow}</p>
           <h1>{project.title}</h1>
+          {project.formalTitle ? <p className={styles.formalTitle}>{project.formalTitle}</p> : null}
           <p className={styles.summary}>{project.summary}</p>
+          {project.projectLink ? (
+            <a className={styles.projectLink} href={project.projectLink} target="_blank" rel="noreferrer">
+              View public project
+            </a>
+          ) : null}
         </div>
         <div className={styles.heroImage}>
           <Image
@@ -90,6 +96,12 @@ export default function WorkPage({ params }: WorkPageProps) {
               <dt>Tools</dt>
               <dd>{project.tools.join(", ")}</dd>
             </div>
+            {project.timeline ? (
+              <div>
+                <dt>Timeline</dt>
+                <dd>{project.timeline}</dd>
+              </div>
+            ) : null}
           </dl>
         </div>
       </section>
@@ -105,13 +117,49 @@ export default function WorkPage({ params }: WorkPageProps) {
         </div>
       </section>
 
-      <section className={styles.gallery} aria-label={`${project.title} selected images`}>
-        <div className="section-shell">
-          {project.images.slice(1, 5).map((image) => (
-            <Image key={image.src} src={image.src} alt={image.alt} width={900} height={620} sizes="(max-width: 800px) 100vw, 50vw" />
-          ))}
-        </div>
-      </section>
+      {project.artists?.length || project.partners?.length ? (
+        <section className={styles.credits} aria-labelledby="project-credits-heading">
+          <div className="section-shell">
+            <p className="section-kicker">Project Credits</p>
+            <h2 id="project-credits-heading">Artists &amp; Partners</h2>
+            <div className={styles.creditGrid}>
+              {project.artists?.length ? (
+                <div>
+                  <h3>Featured Artists</h3>
+                  <ul>
+                    {project.artists.map((artist) => (
+                      <li key={`${artist.name}-${artist.work}`}>
+                        <span>{artist.name}</span>
+                        <cite>{artist.work}</cite>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ) : null}
+              {project.partners?.length ? (
+                <div>
+                  <h3>Project Partners</h3>
+                  <ul>
+                    {project.partners.map((partner) => (
+                      <li key={partner}>{partner}</li>
+                    ))}
+                  </ul>
+                </div>
+              ) : null}
+            </div>
+          </div>
+        </section>
+      ) : null}
+
+      {project.images.length > 1 ? (
+        <section className={styles.gallery} aria-label={`${project.title} selected images`}>
+          <div className="section-shell">
+            {project.images.slice(1, 5).map((image) => (
+              <Image key={image.src} src={image.src} alt={image.alt} width={900} height={620} sizes="(max-width: 800px) 100vw, 50vw" />
+            ))}
+          </div>
+        </section>
+      ) : null}
 
       <section className={styles.next}>
         <div className="section-shell">

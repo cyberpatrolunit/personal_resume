@@ -8,16 +8,25 @@ export type CaseStudySection = {
   body: string;
 };
 
+export type ProjectArtist = {
+  name: string;
+  work: string;
+};
+
 export type Project = {
   slug: string;
   title: string;
+  formalTitle?: string;
   eyebrow: string;
   summary: string;
   role: string;
   client: string;
   context: string;
+  timeline?: string;
   disciplines: string[];
   tools: string[];
+  artists?: ProjectArtist[];
+  partners?: string[];
   projectLink?: string;
   heroImage: ProjectImage;
   images: ProjectImage[];
@@ -25,6 +34,71 @@ export type Project = {
 };
 
 export const flagshipProjects: Project[] = [
+  {
+    slug: "google-gradient-canvas-mtv",
+    title: "Google: Gradient Canvas MTV",
+    formalTitle: "Google: Gradient Canvas, A Technology & Society Exhibition",
+    eyebrow: "Permanent art and AI exhibition",
+    summary:
+      "Technical production and systems integration for eight permanent digital artworks in Google's Gradient Canvas exhibition at its Mountain View campus.",
+    role: "Technical Producer @ Gray Area",
+    client: "Google",
+    context: "Gradient Canopy, Mountain View, California",
+    timeline: "April 2024–January 2026",
+    disciplines: [
+      "Technical production",
+      "Digital art systems",
+      "Artist collaboration",
+      "Permanent installation",
+      "Operational handoff",
+    ],
+    tools: [
+      "Custom software development",
+      "CAD and spatial studies",
+      "Google AI workflows",
+      "Secure playback and CMS integration",
+      "LED and interactive systems",
+    ],
+    artists: [
+      { name: "Refik Anadol", work: "Machine Dreams: Biophilia" },
+      { name: "Alexandra Daisy Ginsberg", work: "Pollinator Pathmaker" },
+      { name: "Rashaad Newsome", work: "Somatic Landscapes" },
+      { name: "Casey Reas", work: "In Silico" },
+      { name: "Sasha Stiles", work: "DEAR Data" },
+      { name: "Trevor Paglen", work: "Clouds" },
+      { name: "Certain Measures", work: "The Recombinant Room" },
+      { name: "Clement Valla", work: "gradient.pointcloud.garden" },
+    ],
+    partners: ["REWS", "CBX", "HLW", "Electrosonic", "Devcon"],
+    projectLink: "https://artsandculture.google.com/project/creativity-ai",
+    heroImage: {
+      src: "/project-imgs/gradient-canvas/gradient-canvas-hero.png",
+      alt: "Aerial view of Google's Mountain View campus introducing the Gradient Canvas exhibition",
+    },
+    images: [
+      {
+        src: "/project-imgs/gradient-canvas/gradient-canvas-hero.png",
+        alt: "Aerial view of Google's Mountain View campus introducing the Gradient Canvas exhibition",
+      },
+    ],
+    caseStudy: [
+      {
+        heading: "Challenge",
+        body:
+          "Translate eight artists' distinct AI-assisted practices, media formats, and software systems into permanent digital installations that preserved artistic intent while meeting Google's strict security, playback, and operational requirements.",
+      },
+      {
+        heading: "Approach",
+        body:
+          "As Technical Producer for Gray Area, I led site studies, spatial planning, display and hardware design, workflow research, software adaptation, secure playback integration, installation, and burn-in testing. This included substantially reworking select artist codebases for unattended playback, centralized scheduling, reliable recovery, and long-term operation.",
+      },
+      {
+        heading: "Outcome",
+        body:
+          "All eight digital works launched successfully and remain in permanent operation throughout Gradient Canopy's main corridor. The project concluded with technical documentation, tested maintenance and recovery workflows, and training for a newly assembled Google operations team.",
+      },
+    ],
+  },
   {
     slug: "google-sjt-nyc",
     title: "Google: SJT NYC",
@@ -110,6 +184,9 @@ export const flagshipProjects: Project[] = [
       },
     ],
   },
+];
+
+export const archiveProjects: Project[] = [
   {
     slug: "adriatique-projekt-x",
     title: "Adriatique: Projekt X",
@@ -152,9 +229,6 @@ export const flagshipProjects: Project[] = [
       },
     ],
   },
-];
-
-export const archiveProjects: Project[] = [
   {
     slug: "nike-nms-experience",
     title: "Nike NMS Experience",

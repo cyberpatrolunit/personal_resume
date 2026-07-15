@@ -68,7 +68,7 @@ test("Wow hero mobile title is constrained for long words", () => {
 });
 
 test("case study page headings use the body font", () => {
-  const css = read("app/work/[slug]/work-page.module.scss");
+  const css = read("app/(main)/work/[slug]/work-page.module.scss");
 
   assert.match(css, /\.hero h1\s*\{[^}]*font-family:\s*var\(--font-body\);/s);
   assert.match(css, /\.caseStudy h2\s*\{[^}]*font-family:\s*var\(--font-body\);/s);

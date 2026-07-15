@@ -160,13 +160,17 @@ The first three entries in `flagshipProjects` appear in Selected Work and get fu
 {
   slug: "google-sjt-nyc",
   title: "Google: SJT NYC",
+  formalTitle: "...", // optional
   eyebrow: "Permanent workplace installations",
   summary: "...",
   role: "...",
   client: "...",
   context: "...",
+  timeline: "...", // optional
   disciplines: ["..."],
   tools: ["..."],
+  artists: [{ name: "...", work: "..." }], // optional
+  partners: ["..."], // optional
   projectLink: "https://...",
   heroImage: { src: "/project-imgs/...", alt: "..." },
   images: [{ src: "/project-imgs/...", alt: "..." }],
