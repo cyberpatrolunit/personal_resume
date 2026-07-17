@@ -258,8 +258,98 @@
 }
 
 @media (max-width: 640px) {
+  .hero {
+    padding-top: 40px;
+  }
+
+  .backLink {
+    margin-bottom: 20px;
+  }
+
+  .formalTitle {
+    margin-top: 14px;
+  }
+
+  .summary {
+    margin: 16px 0;
+  }
+
+  .projectLink {
+    margin-bottom: 28px;
+  }
+
+  .facts {
+    padding: 28px 0;
+  }
+
   .facts dl,
   .gallery :global(.section-shell) {
     grid-template-columns: 1fr;
+  }
+
+  .facts div {
+    min-height: 0;
+    padding: 14px 16px;
+  }
+
+  .facts dt {
+    margin-bottom: 8px;
+  }
+
+  .caseStudy {
+    padding: 32px 0;
+  }
+
+  .caseStudy article {
+    gap: 12px;
+    padding: 20px;
+  }
+
+  .caseStudy p {
+    font-size: 1rem;
+  }
+
+  .credits {
+    padding: 36px 0;
+  }
+
+  .credits h2 {
+    margin-bottom: 22px;
+  }
+
+  .creditGrid > div {
+    padding: 18px;
+  }
+
+  .creditGrid h3 {
+    margin-bottom: 14px;
+  }
+
+  .creditGrid li {
+    padding: 7px 0;
+  }
+
+  .gallery {
+    padding: 32px 0;
+  }
+
+  .gallery :global(.section-shell) {
+    gap: 12px;
+  }
+
+  .next {
+    padding: 36px 0;
+  }
+
+  .page :global(#contact) {
+    padding: 48px 0;
+  }
+
+  .page :global(#contact .section-copy) {
+    margin: 14px 0 0;
+  }
+
+  .page :global(#contact .section-copy + div) {
+    margin-top: 20px;
   }
 }

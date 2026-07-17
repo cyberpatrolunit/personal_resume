@@ -75,6 +75,19 @@ test("case study page headings use the body font", () => {
   assert.match(css, /\.next a\s*\{[^}]*font-family:\s*var\(--font-body\);/s);
 });
 
+test("case study pages use compact spacing only at the mobile breakpoint", () => {
+  const css = read("app/(main)/work/[slug]/work-page.module.scss");
+  const mobile = css.match(/@media \(max-width: 640px\)\s*\{([\s\S]*)\}\s*$/)?.[1] ?? "";
+
+  assert.match(mobile, /\.hero\s*\{[^}]*padding-top:\s*40px;/s);
+  assert.match(mobile, /\.facts\s*\{[^}]*padding:\s*28px 0;/s);
+  assert.match(mobile, /\.facts div\s*\{[^}]*min-height:\s*0;/s);
+  assert.match(mobile, /\.caseStudy\s*\{[^}]*padding:\s*32px 0;/s);
+  assert.match(mobile, /\.credits\s*\{[^}]*padding:\s*36px 0;/s);
+  assert.match(mobile, /\.gallery\s*\{[^}]*padding:\s*32px 0;/s);
+  assert.match(mobile, /\.next\s*\{[^}]*padding:\s*36px 0;/s);
+});
+
 test("Wow line scrambles wait for deeper viewport entry", () => {
   const component = read("components/home-redesign/WowHero.tsx");
 
